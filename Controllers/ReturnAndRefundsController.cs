@@ -224,35 +224,10 @@ namespace BookStore.Controllers
         {
             try
             {
-
-                MailMessage mail = new MailMessage();
-                string emailTo = email;
-                MailAddress from = new MailAddress("africanmagicsystem@gmail.com");
-                mail.From = from;
-                mail.Subject = subject;
-                mail.Body = body;
-                mail.To.Add(emailTo);
-
-                //mail.Attachments.Add(invoicePdf);
-
-                mail.IsBodyHtml = true;
-                SmtpClient smtp = new SmtpClient();
-                smtp.Host = "smtp.gmail.com";
-                smtp.EnableSsl = true;
-                NetworkCredential networkCredential = new NetworkCredential("africanmagicsystem@gmail.com", "zbpabilmryequenp");
-                smtp.UseDefaultCredentials = true;
-                smtp.Credentials = networkCredential;
-                smtp.Port = 587;
-                smtp.Send(mail);
-                //Clean-up.
-                //Close the document.
-
-                //Dispose of email.
-                mail.Dispose();
+                new Email().SendEmail(subject, body, email);
             }
             catch (Exception)
             {
-
                 // throw;
             }
         }

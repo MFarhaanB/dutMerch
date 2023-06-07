@@ -74,44 +74,47 @@
     }
     else if (Request.IsAuthenticated && User.IsInRole("Student"))
     {
-        <li class="dropdown nav-item active nav-link" style="padding:1px">
-            <a href="#" class="dropdown-toggle nav-link" data-toggle="dropdown">Student Functions<b class="caret"></b></a>
-            <ul class="dropdown-menu">
+        <!--<li class="dropdown nav-item active nav-link" style="padding:1px">
+            <a href="#" class="dropdown-toggle nav-link" data-toggle="dropdown">Options<b class="caret"></b></a>
+            <ul class="dropdown-menu">-->
 
 
-                <li class="divider"></li>
-                <li class="dropdown-header">Functions</li>
-                <li class="nav-link">
+                @*<li class="divider"></li>*@
+                @*<li class="dropdown-header">Functions</li>*@
+                @*<li class="nav-link">
                     @Html.ActionLink("Manage Account", "Index", "Manage")
                 </li>
-                <li class="nav-link">@Html.ActionLink("Returns And Refunds", "UserReturnsAndRefunds", "ReturnAndRefunds")</li>
+                <li class="nav-link">@Html.ActionLink("Returns And Refunds", "UserReturnsAndRefunds", "ReturnAndRefunds")</li>*@
                 
-                <li class="dropdown-header">Books</li>
+                @*<li class="dropdown-header">Books</li>
                 <li class="nav-link">@Html.ActionLink("Borrow A Book", "BorrowBook", "Libraries")</li>
                 <li class="nav-link">
                     @Html.ActionLink("Request A Book", "Index", "RequestBooks")
-                </li>
-            </ul>
-        </li>
+                </li>*@
+            <!--</ul>
+        </li>-->
 
         <li class="dropdown nav-item active nav-link" style="padding:1px">
             <a href="#" class="dropdown-toggle nav-link" data-toggle="dropdown">Account<b class="caret"></b></a>
             <ul class="dropdown-menu">
+                <li class="nav-link">@Html.ActionLink("Manage Account", "Index", "Manage")</li>
+
                 <li class="dropdown-header">History</li>
                 <li class="nav-link">@Html.ActionLink("Purchase History", "PurchaseHistory", "Manage")</li>
 
-                <li class="nav-link">
+                @*<li class="nav-link">
                     @Html.ActionLink("Borrowed History", "IndexBorrowed", "BorrowedBooks")
-                </li>
-                <li class="dropdown-header">E-Library</li>
-                <li class="nav-link">
-                    @Html.ActionLink("EBook Library", "PurchasedEreader", "Checkout")
-                </li>
+                </li>*@
+                @*<li class="dropdown-header">E-Library</li>
+        <li class="nav-link">
+            @Html.ActionLink("EBook Library", "PurchasedEreader", "Checkout")
+        </li>*@
                 <li class="dropdown-header">Announcements</li>
                 <li class="nav-link">@Html.ActionLink("Forum", "Index", "ChatBoxes")</li>
                 <li class="dropdown-header">Wishlist</li>
                 <li class="nav-link">@Html.ActionLink("Wishlist", "Wlist", "WishLists")</li>
-
+                <li class="dropdown-header">Options</li>
+                <li class="nav-link">@Html.ActionLink("Returns And Refunds", "UserReturnsAndRefunds", "ReturnAndRefunds")</li>
 
             </ul>
         </li>

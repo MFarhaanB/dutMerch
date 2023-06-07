@@ -2,8 +2,10 @@
 using System.Web.Mvc;
 using BookStore.Models;
 using BookStore.Controllers;
-
-
+using System.Net.Mail;
+using System.Net;
+using BookStore.Helpers;
+using System.Web.Helpers;
 
 namespace BookStore.Controllers
 {
@@ -11,7 +13,7 @@ namespace BookStore.Controllers
     {
         public ApplicationDbContext db = new ApplicationDbContext();
         public ActionResult Index()
-        { 
+        {
             var product = db.Products.ToList();
             return View(product);
         }

@@ -6,6 +6,7 @@ using System.Linq;
 using System.Net;
 using System.Net.Mail;
 using System.Web.Mvc;
+using BookStore.Helpers;
 
 namespace BookStore.Controllers
 {
@@ -46,26 +47,18 @@ namespace BookStore.Controllers
 
         public void SendWishlistEmail(string Email)
         {
-            MailMessage mail = new MailMessage();
-            MailAddress from = new MailAddress("africanmagicsystem@gmail.com");
-            mail.From = from;
-            mail.Subject = "Shared Wishlist";
-            mail.Body = "Hi this user:" + " " + User.Identity.Name + " shared their wishlist with you" + " " + TempData["Wishlisturl"];
-            mail.To.Add(Email);
+            string subject = "Shared Wishlist";
+            string body = "Hi this user:" + " " + User.Identity.Name + " shared their wishlist with you" + " " + TempData["Wishlisturl"];
 
-            mail.IsBodyHtml = true;
-            SmtpClient smtp = new SmtpClient();
-            smtp.Host = "smtp.gmail.com";
-            smtp.EnableSsl = true;
-            NetworkCredential networkCredential = new NetworkCredential("africanmagicsystem@gmail.com", "zbpabilmryequenp");
-            smtp.UseDefaultCredentials = true;
-            smtp.Credentials = networkCredential;
-            smtp.Port = 587;
-            smtp.Send(mail);
-            //Clean-up.           
-            //Dispose of email.
-            mail.Dispose();
+            try
+            {
+                new Email().SendEmail(subject, body, Email);
+            }
+            catch (Exception)
+            {
 
+                // throw;
+            }
         }
 
 
