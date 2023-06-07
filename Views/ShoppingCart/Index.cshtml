@@ -73,7 +73,7 @@
                     {
                         <tr id="row-@item.ProductId">
                             <td class="pro-field">
-                                @Html.ActionLink(item.Products.ProductName, "Details", "Products", new { id = item.ProductId, @class = "pro-field" }, null)
+                                @Html.ActionLink(item.Products?.ProductName ?? "Item", "Details", "Products", new { id = item.ProductId, @class = "pro-field" }, null)
                             </td>
                             <td>
                                 &#82;@item.Products.ProductPrice
@@ -143,9 +143,9 @@
                 <button type="button" style="color:black; margin-bottom:10px; cursor:pointer;" class="dropbtn" onclick="location.href='@Url.Action("Payment", "Checkout")'">
                     Confirm and Pay &#82;@ViewBag.TotalCost
                 </button>
-                <button type="button" style="color:black; margin-bottom:10px; cursor:pointer;" class="dropbtn" onclick="location.href='@Url.Action("Create", "UsedCouponLists")'">
+                @*<button type="button" style="color:black; margin-bottom:10px; cursor:pointer;" class="dropbtn" onclick="location.href='@Url.Action("Create", "UsedCouponLists")'">
                     Enter coupon
-                </button>
+                </button>*@
             </div>
         </div>
 
