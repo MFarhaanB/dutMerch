@@ -1,0 +1,6 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<parameters>
+  <parameter name="DefaultConnection-Web.config Connection String" description="DefaultConnection Connection String used in web.config by the application to access the database." defaultValue="Server=tcp:townshipmotorsap-server.database.windows.net,1433;Initial Catalog=townshipmotorsap-database;Persist Security Info=False;User Id=townshipmotorsap-server-admin@townshipmotorsap-server.database.windows.net;Password=41VUS7I80G4YB402$;MultipleActiveResultSets=False;Encrypt=True;TrustServerCertificate=False;Connection Timeout=300;" tags="SqlConnectionString">
+    <parameterEntry kind="XmlFile" scope="D:\\Documents\\SPEACIAL\ BOX\\DUT\\Year\ 3\\SEM\ 2\\ADPB\\App\\APP\\BookStore\\obj\\Release\\Package\\PackageTmp\\Web\.config$" match="/configuration/connectionStrings/add[@name='DefaultConnection']/@connectionString" />
+  </parameter>
+</parameters>

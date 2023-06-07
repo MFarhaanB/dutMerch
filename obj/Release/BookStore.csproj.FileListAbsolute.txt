@@ -1,0 +1,777 @@
+D:\Documents\SPEACIAL BOX\DUT\Year 3\ADPA301\APP\BookStore\bin\BookStore.dll.config
+D:\Documents\SPEACIAL BOX\DUT\Year 3\ADPA301\APP\BookStore\bin\BookStore.dll
+D:\Documents\SPEACIAL BOX\DUT\Year 3\ADPA301\APP\BookStore\bin\BookStore.pdb
+D:\Documents\SPEACIAL BOX\DUT\Year 3\ADPA301\APP\BookStore\bin\roslyn\csc.exe
+D:\Documents\SPEACIAL BOX\DUT\Year 3\ADPA301\APP\BookStore\bin\roslyn\csc.exe.config
+D:\Documents\SPEACIAL BOX\DUT\Year 3\ADPA301\APP\BookStore\bin\roslyn\csc.rsp
+D:\Documents\SPEACIAL BOX\DUT\Year 3\ADPA301\APP\BookStore\bin\roslyn\csi.exe
+D:\Documents\SPEACIAL BOX\DUT\Year 3\ADPA301\APP\BookStore\bin\roslyn\csi.exe.config
+D:\Documents\SPEACIAL BOX\DUT\Year 3\ADPA301\APP\BookStore\bin\roslyn\csi.rsp
+D:\Documents\SPEACIAL BOX\DUT\Year 3\ADPA301\APP\BookStore\bin\roslyn\Microsoft.Build.Tasks.CodeAnalysis.dll
+D:\Documents\SPEACIAL BOX\DUT\Year 3\ADPA301\APP\BookStore\bin\roslyn\Microsoft.CodeAnalysis.CSharp.dll
+D:\Documents\SPEACIAL BOX\DUT\Year 3\ADPA301\APP\BookStore\bin\roslyn\Microsoft.CodeAnalysis.CSharp.Scripting.dll
+D:\Documents\SPEACIAL BOX\DUT\Year 3\ADPA301\APP\BookStore\bin\roslyn\Microsoft.CodeAnalysis.dll
+D:\Documents\SPEACIAL BOX\DUT\Year 3\ADPA301\APP\BookStore\bin\roslyn\Microsoft.CodeAnalysis.Scripting.dll
+D:\Documents\SPEACIAL BOX\DUT\Year 3\ADPA301\APP\BookStore\bin\roslyn\Microsoft.CodeAnalysis.VisualBasic.dll
+D:\Documents\SPEACIAL BOX\DUT\Year 3\ADPA301\APP\BookStore\bin\roslyn\Microsoft.CSharp.Core.targets
+D:\Documents\SPEACIAL BOX\DUT\Year 3\ADPA301\APP\BookStore\bin\roslyn\Microsoft.DiaSymReader.Native.amd64.dll
+D:\Documents\SPEACIAL BOX\DUT\Year 3\ADPA301\APP\BookStore\bin\roslyn\Microsoft.DiaSymReader.Native.x86.dll
+D:\Documents\SPEACIAL BOX\DUT\Year 3\ADPA301\APP\BookStore\bin\roslyn\Microsoft.Managed.Core.targets
+D:\Documents\SPEACIAL BOX\DUT\Year 3\ADPA301\APP\BookStore\bin\roslyn\Microsoft.VisualBasic.Core.targets
+D:\Documents\SPEACIAL BOX\DUT\Year 3\ADPA301\APP\BookStore\bin\roslyn\Microsoft.Win32.Primitives.dll
+D:\Documents\SPEACIAL BOX\DUT\Year 3\ADPA301\APP\BookStore\bin\roslyn\System.AppContext.dll
+D:\Documents\SPEACIAL BOX\DUT\Year 3\ADPA301\APP\BookStore\bin\roslyn\System.Collections.Immutable.dll
+D:\Documents\SPEACIAL BOX\DUT\Year 3\ADPA301\APP\BookStore\bin\roslyn\System.Console.dll
+D:\Documents\SPEACIAL BOX\DUT\Year 3\ADPA301\APP\BookStore\bin\roslyn\System.Diagnostics.DiagnosticSource.dll
+D:\Documents\SPEACIAL BOX\DUT\Year 3\ADPA301\APP\BookStore\bin\roslyn\System.Diagnostics.FileVersionInfo.dll
+D:\Documents\SPEACIAL BOX\DUT\Year 3\ADPA301\APP\BookStore\bin\roslyn\System.Diagnostics.StackTrace.dll
+D:\Documents\SPEACIAL BOX\DUT\Year 3\ADPA301\APP\BookStore\bin\roslyn\System.Globalization.Calendars.dll
+D:\Documents\SPEACIAL BOX\DUT\Year 3\ADPA301\APP\BookStore\bin\roslyn\System.IO.Compression.dll
+D:\Documents\SPEACIAL BOX\DUT\Year 3\ADPA301\APP\BookStore\bin\roslyn\System.IO.Compression.ZipFile.dll
+D:\Documents\SPEACIAL BOX\DUT\Year 3\ADPA301\APP\BookStore\bin\roslyn\System.IO.FileSystem.dll
+D:\Documents\SPEACIAL BOX\DUT\Year 3\ADPA301\APP\BookStore\bin\roslyn\System.IO.FileSystem.Primitives.dll
+D:\Documents\SPEACIAL BOX\DUT\Year 3\ADPA301\APP\BookStore\bin\roslyn\System.Net.Http.dll
+D:\Documents\SPEACIAL BOX\DUT\Year 3\ADPA301\APP\BookStore\bin\roslyn\System.Net.Sockets.dll
+D:\Documents\SPEACIAL BOX\DUT\Year 3\ADPA301\APP\BookStore\bin\roslyn\System.Reflection.Metadata.dll
+D:\Documents\SPEACIAL BOX\DUT\Year 3\ADPA301\APP\BookStore\bin\roslyn\System.Runtime.InteropServices.RuntimeInformation.dll
+D:\Documents\SPEACIAL BOX\DUT\Year 3\ADPA301\APP\BookStore\bin\roslyn\System.Security.Cryptography.Algorithms.dll
+D:\Documents\SPEACIAL BOX\DUT\Year 3\ADPA301\APP\BookStore\bin\roslyn\System.Security.Cryptography.Encoding.dll
+D:\Documents\SPEACIAL BOX\DUT\Year 3\ADPA301\APP\BookStore\bin\roslyn\System.Security.Cryptography.Primitives.dll
+D:\Documents\SPEACIAL BOX\DUT\Year 3\ADPA301\APP\BookStore\bin\roslyn\System.Security.Cryptography.X509Certificates.dll
+D:\Documents\SPEACIAL BOX\DUT\Year 3\ADPA301\APP\BookStore\bin\roslyn\System.Text.Encoding.CodePages.dll
+D:\Documents\SPEACIAL BOX\DUT\Year 3\ADPA301\APP\BookStore\bin\roslyn\System.Threading.Tasks.Extensions.dll
+D:\Documents\SPEACIAL BOX\DUT\Year 3\ADPA301\APP\BookStore\bin\roslyn\System.ValueTuple.dll
+D:\Documents\SPEACIAL BOX\DUT\Year 3\ADPA301\APP\BookStore\bin\roslyn\System.Xml.ReaderWriter.dll
+D:\Documents\SPEACIAL BOX\DUT\Year 3\ADPA301\APP\BookStore\bin\roslyn\System.Xml.XmlDocument.dll
+D:\Documents\SPEACIAL BOX\DUT\Year 3\ADPA301\APP\BookStore\bin\roslyn\System.Xml.XPath.dll
+D:\Documents\SPEACIAL BOX\DUT\Year 3\ADPA301\APP\BookStore\bin\roslyn\System.Xml.XPath.XDocument.dll
+D:\Documents\SPEACIAL BOX\DUT\Year 3\ADPA301\APP\BookStore\bin\roslyn\vbc.exe
+D:\Documents\SPEACIAL BOX\DUT\Year 3\ADPA301\APP\BookStore\bin\roslyn\vbc.exe.config
+D:\Documents\SPEACIAL BOX\DUT\Year 3\ADPA301\APP\BookStore\bin\roslyn\vbc.rsp
+D:\Documents\SPEACIAL BOX\DUT\Year 3\ADPA301\APP\BookStore\bin\roslyn\VBCSCompiler.exe
+D:\Documents\SPEACIAL BOX\DUT\Year 3\ADPA301\APP\BookStore\bin\roslyn\VBCSCompiler.exe.config
+D:\Documents\SPEACIAL BOX\DUT\Year 3\ADPA301\APP\BookStore\bin\Antlr3.Runtime.dll
+D:\Documents\SPEACIAL BOX\DUT\Year 3\ADPA301\APP\BookStore\bin\BouncyCastle.Crypto.dll
+D:\Documents\SPEACIAL BOX\DUT\Year 3\ADPA301\APP\BookStore\bin\EntityFramework.dll
+D:\Documents\SPEACIAL BOX\DUT\Year 3\ADPA301\APP\BookStore\bin\EntityFramework.SqlServer.dll
+D:\Documents\SPEACIAL BOX\DUT\Year 3\ADPA301\APP\BookStore\bin\itextsharp.dll
+D:\Documents\SPEACIAL BOX\DUT\Year 3\ADPA301\APP\BookStore\bin\Microsoft.AspNet.Identity.Core.dll
+D:\Documents\SPEACIAL BOX\DUT\Year 3\ADPA301\APP\BookStore\bin\Microsoft.AspNet.Identity.EntityFramework.dll
+D:\Documents\SPEACIAL BOX\DUT\Year 3\ADPA301\APP\BookStore\bin\Microsoft.AspNet.Identity.Owin.dll
+D:\Documents\SPEACIAL BOX\DUT\Year 3\ADPA301\APP\BookStore\bin\Microsoft.Bcl.AsyncInterfaces.dll
+D:\Documents\SPEACIAL BOX\DUT\Year 3\ADPA301\APP\BookStore\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.dll
+D:\Documents\SPEACIAL BOX\DUT\Year 3\ADPA301\APP\BookStore\bin\Microsoft.Configuration.ConfigurationBuilders.Base.dll
+D:\Documents\SPEACIAL BOX\DUT\Year 3\ADPA301\APP\BookStore\bin\Microsoft.Configuration.ConfigurationBuilders.UserSecrets.dll
+D:\Documents\SPEACIAL BOX\DUT\Year 3\ADPA301\APP\BookStore\bin\Microsoft.Owin.dll
+D:\Documents\SPEACIAL BOX\DUT\Year 3\ADPA301\APP\BookStore\bin\Microsoft.Owin.Host.SystemWeb.dll
+D:\Documents\SPEACIAL BOX\DUT\Year 3\ADPA301\APP\BookStore\bin\Microsoft.Owin.Security.Cookies.dll
+D:\Documents\SPEACIAL BOX\DUT\Year 3\ADPA301\APP\BookStore\bin\Microsoft.Owin.Security.dll
+D:\Documents\SPEACIAL BOX\DUT\Year 3\ADPA301\APP\BookStore\bin\Microsoft.Owin.Security.Facebook.dll
+D:\Documents\SPEACIAL BOX\DUT\Year 3\ADPA301\APP\BookStore\bin\Microsoft.Owin.Security.Google.dll
+D:\Documents\SPEACIAL BOX\DUT\Year 3\ADPA301\APP\BookStore\bin\Microsoft.Owin.Security.MicrosoftAccount.dll
+D:\Documents\SPEACIAL BOX\DUT\Year 3\ADPA301\APP\BookStore\bin\Microsoft.Owin.Security.OAuth.dll
+D:\Documents\SPEACIAL BOX\DUT\Year 3\ADPA301\APP\BookStore\bin\Microsoft.Owin.Security.Twitter.dll
+D:\Documents\SPEACIAL BOX\DUT\Year 3\ADPA301\APP\BookStore\bin\Microsoft.Web.Infrastructure.dll
+D:\Documents\SPEACIAL BOX\DUT\Year 3\ADPA301\APP\BookStore\bin\Newtonsoft.Json.dll
+D:\Documents\SPEACIAL BOX\DUT\Year 3\ADPA301\APP\BookStore\bin\Owin.dll
+D:\Documents\SPEACIAL BOX\DUT\Year 3\ADPA301\APP\BookStore\bin\PagedList.dll
+D:\Documents\SPEACIAL BOX\DUT\Year 3\ADPA301\APP\BookStore\bin\PagedList.Mvc.dll
+D:\Documents\SPEACIAL BOX\DUT\Year 3\ADPA301\APP\BookStore\bin\RestSharp.dll
+D:\Documents\SPEACIAL BOX\DUT\Year 3\ADPA301\APP\BookStore\bin\Select.HtmlToPdf.dll
+D:\Documents\SPEACIAL BOX\DUT\Year 3\ADPA301\APP\BookStore\bin\Syncfusion.Compression.Base.dll
+D:\Documents\SPEACIAL BOX\DUT\Year 3\ADPA301\APP\BookStore\bin\Syncfusion.Licensing.dll
+D:\Documents\SPEACIAL BOX\DUT\Year 3\ADPA301\APP\BookStore\bin\Syncfusion.Pdf.Base.dll
+D:\Documents\SPEACIAL BOX\DUT\Year 3\ADPA301\APP\BookStore\bin\System.Buffers.dll
+D:\Documents\SPEACIAL BOX\DUT\Year 3\ADPA301\APP\BookStore\bin\System.Memory.dll
+D:\Documents\SPEACIAL BOX\DUT\Year 3\ADPA301\APP\BookStore\bin\System.Numerics.Vectors.dll
+D:\Documents\SPEACIAL BOX\DUT\Year 3\ADPA301\APP\BookStore\bin\System.Runtime.CompilerServices.Unsafe.dll
+D:\Documents\SPEACIAL BOX\DUT\Year 3\ADPA301\APP\BookStore\bin\System.Text.Encodings.Web.dll
+D:\Documents\SPEACIAL BOX\DUT\Year 3\ADPA301\APP\BookStore\bin\System.Text.Json.dll
+D:\Documents\SPEACIAL BOX\DUT\Year 3\ADPA301\APP\BookStore\bin\System.Threading.Tasks.Extensions.dll
+D:\Documents\SPEACIAL BOX\DUT\Year 3\ADPA301\APP\BookStore\bin\System.ValueTuple.dll
+D:\Documents\SPEACIAL BOX\DUT\Year 3\ADPA301\APP\BookStore\bin\System.Web.Helpers.dll
+D:\Documents\SPEACIAL BOX\DUT\Year 3\ADPA301\APP\BookStore\bin\System.Web.Mvc.dll
+D:\Documents\SPEACIAL BOX\DUT\Year 3\ADPA301\APP\BookStore\bin\System.Web.Optimization.dll
+D:\Documents\SPEACIAL BOX\DUT\Year 3\ADPA301\APP\BookStore\bin\System.Web.Razor.dll
+D:\Documents\SPEACIAL BOX\DUT\Year 3\ADPA301\APP\BookStore\bin\System.Web.WebPages.Deployment.dll
+D:\Documents\SPEACIAL BOX\DUT\Year 3\ADPA301\APP\BookStore\bin\System.Web.WebPages.dll
+D:\Documents\SPEACIAL BOX\DUT\Year 3\ADPA301\APP\BookStore\bin\System.Web.WebPages.Razor.dll
+D:\Documents\SPEACIAL BOX\DUT\Year 3\ADPA301\APP\BookStore\bin\WebGrease.dll
+D:\Documents\SPEACIAL BOX\DUT\Year 3\ADPA301\APP\BookStore\bin\itextsharp.xml
+D:\Documents\SPEACIAL BOX\DUT\Year 3\ADPA301\APP\BookStore\bin\Microsoft.Bcl.AsyncInterfaces.xml
+D:\Documents\SPEACIAL BOX\DUT\Year 3\ADPA301\APP\BookStore\bin\Microsoft.Configuration.ConfigurationBuilders.Base.xml
+D:\Documents\SPEACIAL BOX\DUT\Year 3\ADPA301\APP\BookStore\bin\Microsoft.Configuration.ConfigurationBuilders.UserSecrets.xml
+D:\Documents\SPEACIAL BOX\DUT\Year 3\ADPA301\APP\BookStore\bin\PagedList.xml
+D:\Documents\SPEACIAL BOX\DUT\Year 3\ADPA301\APP\BookStore\bin\PagedList.Mvc.xml
+D:\Documents\SPEACIAL BOX\DUT\Year 3\ADPA301\APP\BookStore\bin\RestSharp.xml
+D:\Documents\SPEACIAL BOX\DUT\Year 3\ADPA301\APP\BookStore\bin\Select.HtmlToPdf.xml
+D:\Documents\SPEACIAL BOX\DUT\Year 3\ADPA301\APP\BookStore\bin\Syncfusion.Compression.Base.xml
+D:\Documents\SPEACIAL BOX\DUT\Year 3\ADPA301\APP\BookStore\bin\Syncfusion.Licensing.xml
+D:\Documents\SPEACIAL BOX\DUT\Year 3\ADPA301\APP\BookStore\bin\Syncfusion.Pdf.Base.xml
+D:\Documents\SPEACIAL BOX\DUT\Year 3\ADPA301\APP\BookStore\bin\System.Buffers.xml
+D:\Documents\SPEACIAL BOX\DUT\Year 3\ADPA301\APP\BookStore\bin\System.Memory.xml
+D:\Documents\SPEACIAL BOX\DUT\Year 3\ADPA301\APP\BookStore\bin\System.Numerics.Vectors.xml
+D:\Documents\SPEACIAL BOX\DUT\Year 3\ADPA301\APP\BookStore\bin\System.Runtime.CompilerServices.Unsafe.xml
+D:\Documents\SPEACIAL BOX\DUT\Year 3\ADPA301\APP\BookStore\bin\System.Text.Encodings.Web.xml
+D:\Documents\SPEACIAL BOX\DUT\Year 3\ADPA301\APP\BookStore\bin\System.Text.Json.xml
+D:\Documents\SPEACIAL BOX\DUT\Year 3\ADPA301\APP\BookStore\bin\System.Threading.Tasks.Extensions.xml
+D:\Documents\SPEACIAL BOX\DUT\Year 3\ADPA301\APP\BookStore\bin\System.ValueTuple.xml
+D:\Documents\SPEACIAL BOX\DUT\Year 3\ADPA301\APP\BookStore\bin\System.Web.Helpers.xml
+D:\Documents\SPEACIAL BOX\DUT\Year 3\ADPA301\APP\BookStore\bin\System.Web.Mvc.xml
+D:\Documents\SPEACIAL BOX\DUT\Year 3\ADPA301\APP\BookStore\bin\System.Web.Optimization.xml
+D:\Documents\SPEACIAL BOX\DUT\Year 3\ADPA301\APP\BookStore\bin\System.Web.Razor.xml
+D:\Documents\SPEACIAL BOX\DUT\Year 3\ADPA301\APP\BookStore\bin\System.Web.WebPages.xml
+D:\Documents\SPEACIAL BOX\DUT\Year 3\ADPA301\APP\BookStore\bin\System.Web.WebPages.Deployment.xml
+D:\Documents\SPEACIAL BOX\DUT\Year 3\ADPA301\APP\BookStore\bin\System.Web.WebPages.Razor.xml
+D:\Documents\SPEACIAL BOX\DUT\Year 3\ADPA301\APP\BookStore\bin\Newtonsoft.Json.xml
+D:\Documents\SPEACIAL BOX\DUT\Year 3\ADPA301\APP\BookStore\bin\Antlr3.Runtime.pdb
+D:\Documents\SPEACIAL BOX\DUT\Year 3\ADPA301\APP\BookStore\bin\EntityFramework.xml
+D:\Documents\SPEACIAL BOX\DUT\Year 3\ADPA301\APP\BookStore\bin\EntityFramework.SqlServer.xml
+D:\Documents\SPEACIAL BOX\DUT\Year 3\ADPA301\APP\BookStore\bin\Microsoft.AspNet.Identity.Core.xml
+D:\Documents\SPEACIAL BOX\DUT\Year 3\ADPA301\APP\BookStore\bin\Microsoft.AspNet.Identity.Owin.xml
+D:\Documents\SPEACIAL BOX\DUT\Year 3\ADPA301\APP\BookStore\bin\Microsoft.AspNet.Identity.EntityFramework.xml
+D:\Documents\SPEACIAL BOX\DUT\Year 3\ADPA301\APP\BookStore\bin\Microsoft.Owin.xml
+D:\Documents\SPEACIAL BOX\DUT\Year 3\ADPA301\APP\BookStore\bin\Microsoft.Owin.Host.SystemWeb.xml
+D:\Documents\SPEACIAL BOX\DUT\Year 3\ADPA301\APP\BookStore\bin\Microsoft.Owin.Security.xml
+D:\Documents\SPEACIAL BOX\DUT\Year 3\ADPA301\APP\BookStore\bin\Microsoft.Owin.Security.Facebook.xml
+D:\Documents\SPEACIAL BOX\DUT\Year 3\ADPA301\APP\BookStore\bin\Microsoft.Owin.Security.Cookies.xml
+D:\Documents\SPEACIAL BOX\DUT\Year 3\ADPA301\APP\BookStore\bin\Microsoft.Owin.Security.Google.xml
+D:\Documents\SPEACIAL BOX\DUT\Year 3\ADPA301\APP\BookStore\bin\Microsoft.Owin.Security.Twitter.xml
+D:\Documents\SPEACIAL BOX\DUT\Year 3\ADPA301\APP\BookStore\bin\Microsoft.Owin.Security.MicrosoftAccount.xml
+D:\Documents\SPEACIAL BOX\DUT\Year 3\ADPA301\APP\BookStore\bin\Microsoft.Owin.Security.OAuth.xml
+D:\Documents\SPEACIAL BOX\DUT\Year 3\ADPA301\APP\BookStore\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.xml
+D:\Documents\SPEACIAL BOX\DUT\Year 3\ADPA301\APP\BookStore\bin\Select.Html.dep
+D:\Documents\SPEACIAL BOX\DUT\Year 3\ADPA301\APP\BookStore\obj\Release\BookStore.csproj.AssemblyReference.cache
+D:\Documents\SPEACIAL BOX\DUT\Year 3\ADPA301\APP\BookStore\obj\Release\BookStore.csproj.CoreCompileInputs.cache
+D:\Documents\SPEACIAL BOX\DUT\Year 3\ADPA301\APP\BookStore\obj\Release\BookStore.csproj.CopyComplete
+D:\Documents\SPEACIAL BOX\DUT\Year 3\ADPA301\APP\BookStore\obj\Release\BookStore.dll
+D:\Documents\SPEACIAL BOX\DUT\Year 3\ADPA301\APP\BookStore\obj\Release\BookStore.pdb
+C:\Users\sashi\Downloads\APP-20220627T221823Z-001\APP\BookStore\bin\BookStore.dll.config
+C:\Users\sashi\Downloads\APP-20220627T221823Z-001\APP\BookStore\bin\BookStore.dll
+C:\Users\sashi\Downloads\APP-20220627T221823Z-001\APP\BookStore\bin\BookStore.pdb
+C:\Users\sashi\Downloads\APP-20220627T221823Z-001\APP\BookStore\bin\roslyn\csc.exe
+C:\Users\sashi\Downloads\APP-20220627T221823Z-001\APP\BookStore\bin\roslyn\csc.exe.config
+C:\Users\sashi\Downloads\APP-20220627T221823Z-001\APP\BookStore\bin\roslyn\csc.rsp
+C:\Users\sashi\Downloads\APP-20220627T221823Z-001\APP\BookStore\bin\roslyn\csi.exe
+C:\Users\sashi\Downloads\APP-20220627T221823Z-001\APP\BookStore\bin\roslyn\csi.exe.config
+C:\Users\sashi\Downloads\APP-20220627T221823Z-001\APP\BookStore\bin\roslyn\csi.rsp
+C:\Users\sashi\Downloads\APP-20220627T221823Z-001\APP\BookStore\bin\roslyn\Microsoft.Build.Tasks.CodeAnalysis.dll
+C:\Users\sashi\Downloads\APP-20220627T221823Z-001\APP\BookStore\bin\roslyn\Microsoft.CodeAnalysis.CSharp.dll
+C:\Users\sashi\Downloads\APP-20220627T221823Z-001\APP\BookStore\bin\roslyn\Microsoft.CodeAnalysis.CSharp.Scripting.dll
+C:\Users\sashi\Downloads\APP-20220627T221823Z-001\APP\BookStore\bin\roslyn\Microsoft.CodeAnalysis.dll
+C:\Users\sashi\Downloads\APP-20220627T221823Z-001\APP\BookStore\bin\roslyn\Microsoft.CodeAnalysis.Scripting.dll
+C:\Users\sashi\Downloads\APP-20220627T221823Z-001\APP\BookStore\bin\roslyn\Microsoft.CodeAnalysis.VisualBasic.dll
+C:\Users\sashi\Downloads\APP-20220627T221823Z-001\APP\BookStore\bin\roslyn\Microsoft.CSharp.Core.targets
+C:\Users\sashi\Downloads\APP-20220627T221823Z-001\APP\BookStore\bin\roslyn\Microsoft.DiaSymReader.Native.amd64.dll
+C:\Users\sashi\Downloads\APP-20220627T221823Z-001\APP\BookStore\bin\roslyn\Microsoft.DiaSymReader.Native.x86.dll
+C:\Users\sashi\Downloads\APP-20220627T221823Z-001\APP\BookStore\bin\roslyn\Microsoft.Managed.Core.targets
+C:\Users\sashi\Downloads\APP-20220627T221823Z-001\APP\BookStore\bin\roslyn\Microsoft.VisualBasic.Core.targets
+C:\Users\sashi\Downloads\APP-20220627T221823Z-001\APP\BookStore\bin\roslyn\Microsoft.Win32.Primitives.dll
+C:\Users\sashi\Downloads\APP-20220627T221823Z-001\APP\BookStore\bin\roslyn\System.AppContext.dll
+C:\Users\sashi\Downloads\APP-20220627T221823Z-001\APP\BookStore\bin\roslyn\System.Collections.Immutable.dll
+C:\Users\sashi\Downloads\APP-20220627T221823Z-001\APP\BookStore\bin\roslyn\System.Console.dll
+C:\Users\sashi\Downloads\APP-20220627T221823Z-001\APP\BookStore\bin\roslyn\System.Diagnostics.DiagnosticSource.dll
+C:\Users\sashi\Downloads\APP-20220627T221823Z-001\APP\BookStore\bin\roslyn\System.Diagnostics.FileVersionInfo.dll
+C:\Users\sashi\Downloads\APP-20220627T221823Z-001\APP\BookStore\bin\roslyn\System.Diagnostics.StackTrace.dll
+C:\Users\sashi\Downloads\APP-20220627T221823Z-001\APP\BookStore\bin\roslyn\System.Globalization.Calendars.dll
+C:\Users\sashi\Downloads\APP-20220627T221823Z-001\APP\BookStore\bin\roslyn\System.IO.Compression.dll
+C:\Users\sashi\Downloads\APP-20220627T221823Z-001\APP\BookStore\bin\roslyn\System.IO.Compression.ZipFile.dll
+C:\Users\sashi\Downloads\APP-20220627T221823Z-001\APP\BookStore\bin\roslyn\System.IO.FileSystem.dll
+C:\Users\sashi\Downloads\APP-20220627T221823Z-001\APP\BookStore\bin\roslyn\System.IO.FileSystem.Primitives.dll
+C:\Users\sashi\Downloads\APP-20220627T221823Z-001\APP\BookStore\bin\roslyn\System.Net.Http.dll
+C:\Users\sashi\Downloads\APP-20220627T221823Z-001\APP\BookStore\bin\roslyn\System.Net.Sockets.dll
+C:\Users\sashi\Downloads\APP-20220627T221823Z-001\APP\BookStore\bin\roslyn\System.Reflection.Metadata.dll
+C:\Users\sashi\Downloads\APP-20220627T221823Z-001\APP\BookStore\bin\roslyn\System.Runtime.InteropServices.RuntimeInformation.dll
+C:\Users\sashi\Downloads\APP-20220627T221823Z-001\APP\BookStore\bin\roslyn\System.Security.Cryptography.Algorithms.dll
+C:\Users\sashi\Downloads\APP-20220627T221823Z-001\APP\BookStore\bin\roslyn\System.Security.Cryptography.Encoding.dll
+C:\Users\sashi\Downloads\APP-20220627T221823Z-001\APP\BookStore\bin\roslyn\System.Security.Cryptography.Primitives.dll
+C:\Users\sashi\Downloads\APP-20220627T221823Z-001\APP\BookStore\bin\roslyn\System.Security.Cryptography.X509Certificates.dll
+C:\Users\sashi\Downloads\APP-20220627T221823Z-001\APP\BookStore\bin\roslyn\System.Text.Encoding.CodePages.dll
+C:\Users\sashi\Downloads\APP-20220627T221823Z-001\APP\BookStore\bin\roslyn\System.Threading.Tasks.Extensions.dll
+C:\Users\sashi\Downloads\APP-20220627T221823Z-001\APP\BookStore\bin\roslyn\System.ValueTuple.dll
+C:\Users\sashi\Downloads\APP-20220627T221823Z-001\APP\BookStore\bin\roslyn\System.Xml.ReaderWriter.dll
+C:\Users\sashi\Downloads\APP-20220627T221823Z-001\APP\BookStore\bin\roslyn\System.Xml.XmlDocument.dll
+C:\Users\sashi\Downloads\APP-20220627T221823Z-001\APP\BookStore\bin\roslyn\System.Xml.XPath.dll
+C:\Users\sashi\Downloads\APP-20220627T221823Z-001\APP\BookStore\bin\roslyn\System.Xml.XPath.XDocument.dll
+C:\Users\sashi\Downloads\APP-20220627T221823Z-001\APP\BookStore\bin\roslyn\vbc.exe
+C:\Users\sashi\Downloads\APP-20220627T221823Z-001\APP\BookStore\bin\roslyn\vbc.exe.config
+C:\Users\sashi\Downloads\APP-20220627T221823Z-001\APP\BookStore\bin\roslyn\vbc.rsp
+C:\Users\sashi\Downloads\APP-20220627T221823Z-001\APP\BookStore\bin\roslyn\VBCSCompiler.exe
+C:\Users\sashi\Downloads\APP-20220627T221823Z-001\APP\BookStore\bin\roslyn\VBCSCompiler.exe.config
+C:\Users\sashi\Downloads\APP-20220627T221823Z-001\APP\BookStore\bin\Antlr3.Runtime.dll
+C:\Users\sashi\Downloads\APP-20220627T221823Z-001\APP\BookStore\bin\BouncyCastle.Crypto.dll
+C:\Users\sashi\Downloads\APP-20220627T221823Z-001\APP\BookStore\bin\EntityFramework.dll
+C:\Users\sashi\Downloads\APP-20220627T221823Z-001\APP\BookStore\bin\EntityFramework.SqlServer.dll
+C:\Users\sashi\Downloads\APP-20220627T221823Z-001\APP\BookStore\bin\itextsharp.dll
+C:\Users\sashi\Downloads\APP-20220627T221823Z-001\APP\BookStore\bin\Microsoft.AspNet.Identity.Core.dll
+C:\Users\sashi\Downloads\APP-20220627T221823Z-001\APP\BookStore\bin\Microsoft.AspNet.Identity.EntityFramework.dll
+C:\Users\sashi\Downloads\APP-20220627T221823Z-001\APP\BookStore\bin\Microsoft.AspNet.Identity.Owin.dll
+C:\Users\sashi\Downloads\APP-20220627T221823Z-001\APP\BookStore\bin\Microsoft.Bcl.AsyncInterfaces.dll
+C:\Users\sashi\Downloads\APP-20220627T221823Z-001\APP\BookStore\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.dll
+C:\Users\sashi\Downloads\APP-20220627T221823Z-001\APP\BookStore\bin\Microsoft.Configuration.ConfigurationBuilders.Base.dll
+C:\Users\sashi\Downloads\APP-20220627T221823Z-001\APP\BookStore\bin\Microsoft.Configuration.ConfigurationBuilders.UserSecrets.dll
+C:\Users\sashi\Downloads\APP-20220627T221823Z-001\APP\BookStore\bin\Microsoft.Owin.dll
+C:\Users\sashi\Downloads\APP-20220627T221823Z-001\APP\BookStore\bin\Microsoft.Owin.Host.SystemWeb.dll
+C:\Users\sashi\Downloads\APP-20220627T221823Z-001\APP\BookStore\bin\Microsoft.Owin.Security.Cookies.dll
+C:\Users\sashi\Downloads\APP-20220627T221823Z-001\APP\BookStore\bin\Microsoft.Owin.Security.dll
+C:\Users\sashi\Downloads\APP-20220627T221823Z-001\APP\BookStore\bin\Microsoft.Owin.Security.Facebook.dll
+C:\Users\sashi\Downloads\APP-20220627T221823Z-001\APP\BookStore\bin\Microsoft.Owin.Security.Google.dll
+C:\Users\sashi\Downloads\APP-20220627T221823Z-001\APP\BookStore\bin\Microsoft.Owin.Security.MicrosoftAccount.dll
+C:\Users\sashi\Downloads\APP-20220627T221823Z-001\APP\BookStore\bin\Microsoft.Owin.Security.OAuth.dll
+C:\Users\sashi\Downloads\APP-20220627T221823Z-001\APP\BookStore\bin\Microsoft.Owin.Security.Twitter.dll
+C:\Users\sashi\Downloads\APP-20220627T221823Z-001\APP\BookStore\bin\Microsoft.Web.Infrastructure.dll
+C:\Users\sashi\Downloads\APP-20220627T221823Z-001\APP\BookStore\bin\Newtonsoft.Json.dll
+C:\Users\sashi\Downloads\APP-20220627T221823Z-001\APP\BookStore\bin\Owin.dll
+C:\Users\sashi\Downloads\APP-20220627T221823Z-001\APP\BookStore\bin\PagedList.dll
+C:\Users\sashi\Downloads\APP-20220627T221823Z-001\APP\BookStore\bin\PagedList.Mvc.dll
+C:\Users\sashi\Downloads\APP-20220627T221823Z-001\APP\BookStore\bin\RestSharp.dll
+C:\Users\sashi\Downloads\APP-20220627T221823Z-001\APP\BookStore\bin\Select.HtmlToPdf.dll
+C:\Users\sashi\Downloads\APP-20220627T221823Z-001\APP\BookStore\bin\Syncfusion.Compression.Base.dll
+C:\Users\sashi\Downloads\APP-20220627T221823Z-001\APP\BookStore\bin\Syncfusion.Licensing.dll
+C:\Users\sashi\Downloads\APP-20220627T221823Z-001\APP\BookStore\bin\Syncfusion.Pdf.Base.dll
+C:\Users\sashi\Downloads\APP-20220627T221823Z-001\APP\BookStore\bin\System.Buffers.dll
+C:\Users\sashi\Downloads\APP-20220627T221823Z-001\APP\BookStore\bin\System.Memory.dll
+C:\Users\sashi\Downloads\APP-20220627T221823Z-001\APP\BookStore\bin\System.Numerics.Vectors.dll
+C:\Users\sashi\Downloads\APP-20220627T221823Z-001\APP\BookStore\bin\System.Runtime.CompilerServices.Unsafe.dll
+C:\Users\sashi\Downloads\APP-20220627T221823Z-001\APP\BookStore\bin\System.Text.Encodings.Web.dll
+C:\Users\sashi\Downloads\APP-20220627T221823Z-001\APP\BookStore\bin\System.Text.Json.dll
+C:\Users\sashi\Downloads\APP-20220627T221823Z-001\APP\BookStore\bin\System.Threading.Tasks.Extensions.dll
+C:\Users\sashi\Downloads\APP-20220627T221823Z-001\APP\BookStore\bin\System.ValueTuple.dll
+C:\Users\sashi\Downloads\APP-20220627T221823Z-001\APP\BookStore\bin\System.Web.Helpers.dll
+C:\Users\sashi\Downloads\APP-20220627T221823Z-001\APP\BookStore\bin\System.Web.Mvc.dll
+C:\Users\sashi\Downloads\APP-20220627T221823Z-001\APP\BookStore\bin\System.Web.Optimization.dll
+C:\Users\sashi\Downloads\APP-20220627T221823Z-001\APP\BookStore\bin\System.Web.Razor.dll
+C:\Users\sashi\Downloads\APP-20220627T221823Z-001\APP\BookStore\bin\System.Web.WebPages.Deployment.dll
+C:\Users\sashi\Downloads\APP-20220627T221823Z-001\APP\BookStore\bin\System.Web.WebPages.dll
+C:\Users\sashi\Downloads\APP-20220627T221823Z-001\APP\BookStore\bin\System.Web.WebPages.Razor.dll
+C:\Users\sashi\Downloads\APP-20220627T221823Z-001\APP\BookStore\bin\WebGrease.dll
+C:\Users\sashi\Downloads\APP-20220627T221823Z-001\APP\BookStore\bin\itextsharp.xml
+C:\Users\sashi\Downloads\APP-20220627T221823Z-001\APP\BookStore\bin\Microsoft.Bcl.AsyncInterfaces.xml
+C:\Users\sashi\Downloads\APP-20220627T221823Z-001\APP\BookStore\bin\Microsoft.Configuration.ConfigurationBuilders.Base.xml
+C:\Users\sashi\Downloads\APP-20220627T221823Z-001\APP\BookStore\bin\Microsoft.Configuration.ConfigurationBuilders.UserSecrets.xml
+C:\Users\sashi\Downloads\APP-20220627T221823Z-001\APP\BookStore\bin\PagedList.xml
+C:\Users\sashi\Downloads\APP-20220627T221823Z-001\APP\BookStore\bin\PagedList.Mvc.xml
+C:\Users\sashi\Downloads\APP-20220627T221823Z-001\APP\BookStore\bin\RestSharp.xml
+C:\Users\sashi\Downloads\APP-20220627T221823Z-001\APP\BookStore\bin\Select.HtmlToPdf.xml
+C:\Users\sashi\Downloads\APP-20220627T221823Z-001\APP\BookStore\bin\Syncfusion.Compression.Base.xml
+C:\Users\sashi\Downloads\APP-20220627T221823Z-001\APP\BookStore\bin\Syncfusion.Licensing.xml
+C:\Users\sashi\Downloads\APP-20220627T221823Z-001\APP\BookStore\bin\Syncfusion.Pdf.Base.xml
+C:\Users\sashi\Downloads\APP-20220627T221823Z-001\APP\BookStore\bin\System.Buffers.xml
+C:\Users\sashi\Downloads\APP-20220627T221823Z-001\APP\BookStore\bin\System.Memory.xml
+C:\Users\sashi\Downloads\APP-20220627T221823Z-001\APP\BookStore\bin\System.Numerics.Vectors.xml
+C:\Users\sashi\Downloads\APP-20220627T221823Z-001\APP\BookStore\bin\System.Runtime.CompilerServices.Unsafe.xml
+C:\Users\sashi\Downloads\APP-20220627T221823Z-001\APP\BookStore\bin\System.Text.Encodings.Web.xml
+C:\Users\sashi\Downloads\APP-20220627T221823Z-001\APP\BookStore\bin\System.Text.Json.xml
+C:\Users\sashi\Downloads\APP-20220627T221823Z-001\APP\BookStore\bin\System.Threading.Tasks.Extensions.xml
+C:\Users\sashi\Downloads\APP-20220627T221823Z-001\APP\BookStore\bin\System.ValueTuple.xml
+C:\Users\sashi\Downloads\APP-20220627T221823Z-001\APP\BookStore\bin\System.Web.Helpers.xml
+C:\Users\sashi\Downloads\APP-20220627T221823Z-001\APP\BookStore\bin\System.Web.Mvc.xml
+C:\Users\sashi\Downloads\APP-20220627T221823Z-001\APP\BookStore\bin\System.Web.Optimization.xml
+C:\Users\sashi\Downloads\APP-20220627T221823Z-001\APP\BookStore\bin\System.Web.Razor.xml
+C:\Users\sashi\Downloads\APP-20220627T221823Z-001\APP\BookStore\bin\System.Web.WebPages.xml
+C:\Users\sashi\Downloads\APP-20220627T221823Z-001\APP\BookStore\bin\System.Web.WebPages.Deployment.xml
+C:\Users\sashi\Downloads\APP-20220627T221823Z-001\APP\BookStore\bin\System.Web.WebPages.Razor.xml
+C:\Users\sashi\Downloads\APP-20220627T221823Z-001\APP\BookStore\bin\Newtonsoft.Json.xml
+C:\Users\sashi\Downloads\APP-20220627T221823Z-001\APP\BookStore\bin\Antlr3.Runtime.pdb
+C:\Users\sashi\Downloads\APP-20220627T221823Z-001\APP\BookStore\bin\EntityFramework.xml
+C:\Users\sashi\Downloads\APP-20220627T221823Z-001\APP\BookStore\bin\EntityFramework.SqlServer.xml
+C:\Users\sashi\Downloads\APP-20220627T221823Z-001\APP\BookStore\bin\Microsoft.AspNet.Identity.Core.xml
+C:\Users\sashi\Downloads\APP-20220627T221823Z-001\APP\BookStore\bin\Microsoft.AspNet.Identity.Owin.xml
+C:\Users\sashi\Downloads\APP-20220627T221823Z-001\APP\BookStore\bin\Microsoft.AspNet.Identity.EntityFramework.xml
+C:\Users\sashi\Downloads\APP-20220627T221823Z-001\APP\BookStore\bin\Microsoft.Owin.xml
+C:\Users\sashi\Downloads\APP-20220627T221823Z-001\APP\BookStore\bin\Microsoft.Owin.Host.SystemWeb.xml
+C:\Users\sashi\Downloads\APP-20220627T221823Z-001\APP\BookStore\bin\Microsoft.Owin.Security.xml
+C:\Users\sashi\Downloads\APP-20220627T221823Z-001\APP\BookStore\bin\Microsoft.Owin.Security.Facebook.xml
+C:\Users\sashi\Downloads\APP-20220627T221823Z-001\APP\BookStore\bin\Microsoft.Owin.Security.Cookies.xml
+C:\Users\sashi\Downloads\APP-20220627T221823Z-001\APP\BookStore\bin\Microsoft.Owin.Security.Google.xml
+C:\Users\sashi\Downloads\APP-20220627T221823Z-001\APP\BookStore\bin\Microsoft.Owin.Security.Twitter.xml
+C:\Users\sashi\Downloads\APP-20220627T221823Z-001\APP\BookStore\bin\Microsoft.Owin.Security.MicrosoftAccount.xml
+C:\Users\sashi\Downloads\APP-20220627T221823Z-001\APP\BookStore\bin\Microsoft.Owin.Security.OAuth.xml
+C:\Users\sashi\Downloads\APP-20220627T221823Z-001\APP\BookStore\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.xml
+C:\Users\sashi\Downloads\APP-20220627T221823Z-001\APP\BookStore\bin\Select.Html.dep
+C:\Users\sashi\Downloads\APP-20220627T221823Z-001\APP\BookStore\obj\Release\BookStore.csproj.AssemblyReference.cache
+C:\Users\sashi\Downloads\APP-20220627T221823Z-001\APP\BookStore\obj\Release\BookStore.csproj.CoreCompileInputs.cache
+C:\Users\sashi\Downloads\APP-20220627T221823Z-001\APP\BookStore\obj\Release\BookStore.csproj.CopyComplete
+C:\Users\sashi\Downloads\APP-20220627T221823Z-001\APP\BookStore\obj\Release\BookStore.dll
+C:\Users\sashi\Downloads\APP-20220627T221823Z-001\APP\BookStore\obj\Release\BookStore.pdb
+D:\Documents\SPEACIAL BOX\DUT\Year 3\SEM 2\ADPB\drive-download-20220830T154109Z-001\APP\BookStore\bin\BookStore.dll.config
+D:\Documents\SPEACIAL BOX\DUT\Year 3\SEM 2\ADPB\drive-download-20220830T154109Z-001\APP\BookStore\bin\BookStore.dll
+D:\Documents\SPEACIAL BOX\DUT\Year 3\SEM 2\ADPB\drive-download-20220830T154109Z-001\APP\BookStore\bin\BookStore.pdb
+D:\Documents\SPEACIAL BOX\DUT\Year 3\SEM 2\ADPB\drive-download-20220830T154109Z-001\APP\BookStore\bin\roslyn\csc.exe
+D:\Documents\SPEACIAL BOX\DUT\Year 3\SEM 2\ADPB\drive-download-20220830T154109Z-001\APP\BookStore\bin\roslyn\csc.exe.config
+D:\Documents\SPEACIAL BOX\DUT\Year 3\SEM 2\ADPB\drive-download-20220830T154109Z-001\APP\BookStore\bin\roslyn\csc.rsp
+D:\Documents\SPEACIAL BOX\DUT\Year 3\SEM 2\ADPB\drive-download-20220830T154109Z-001\APP\BookStore\bin\roslyn\csi.exe
+D:\Documents\SPEACIAL BOX\DUT\Year 3\SEM 2\ADPB\drive-download-20220830T154109Z-001\APP\BookStore\bin\roslyn\csi.exe.config
+D:\Documents\SPEACIAL BOX\DUT\Year 3\SEM 2\ADPB\drive-download-20220830T154109Z-001\APP\BookStore\bin\roslyn\csi.rsp
+D:\Documents\SPEACIAL BOX\DUT\Year 3\SEM 2\ADPB\drive-download-20220830T154109Z-001\APP\BookStore\bin\roslyn\Microsoft.Build.Tasks.CodeAnalysis.dll
+D:\Documents\SPEACIAL BOX\DUT\Year 3\SEM 2\ADPB\drive-download-20220830T154109Z-001\APP\BookStore\bin\roslyn\Microsoft.CodeAnalysis.CSharp.dll
+D:\Documents\SPEACIAL BOX\DUT\Year 3\SEM 2\ADPB\drive-download-20220830T154109Z-001\APP\BookStore\bin\roslyn\Microsoft.CodeAnalysis.CSharp.Scripting.dll
+D:\Documents\SPEACIAL BOX\DUT\Year 3\SEM 2\ADPB\drive-download-20220830T154109Z-001\APP\BookStore\bin\roslyn\Microsoft.CodeAnalysis.dll
+D:\Documents\SPEACIAL BOX\DUT\Year 3\SEM 2\ADPB\drive-download-20220830T154109Z-001\APP\BookStore\bin\roslyn\Microsoft.CodeAnalysis.Scripting.dll
+D:\Documents\SPEACIAL BOX\DUT\Year 3\SEM 2\ADPB\drive-download-20220830T154109Z-001\APP\BookStore\bin\roslyn\Microsoft.CodeAnalysis.VisualBasic.dll
+D:\Documents\SPEACIAL BOX\DUT\Year 3\SEM 2\ADPB\drive-download-20220830T154109Z-001\APP\BookStore\bin\roslyn\Microsoft.CSharp.Core.targets
+D:\Documents\SPEACIAL BOX\DUT\Year 3\SEM 2\ADPB\drive-download-20220830T154109Z-001\APP\BookStore\bin\roslyn\Microsoft.DiaSymReader.Native.amd64.dll
+D:\Documents\SPEACIAL BOX\DUT\Year 3\SEM 2\ADPB\drive-download-20220830T154109Z-001\APP\BookStore\bin\roslyn\Microsoft.DiaSymReader.Native.x86.dll
+D:\Documents\SPEACIAL BOX\DUT\Year 3\SEM 2\ADPB\drive-download-20220830T154109Z-001\APP\BookStore\bin\roslyn\Microsoft.Managed.Core.targets
+D:\Documents\SPEACIAL BOX\DUT\Year 3\SEM 2\ADPB\drive-download-20220830T154109Z-001\APP\BookStore\bin\roslyn\Microsoft.VisualBasic.Core.targets
+D:\Documents\SPEACIAL BOX\DUT\Year 3\SEM 2\ADPB\drive-download-20220830T154109Z-001\APP\BookStore\bin\roslyn\Microsoft.Win32.Primitives.dll
+D:\Documents\SPEACIAL BOX\DUT\Year 3\SEM 2\ADPB\drive-download-20220830T154109Z-001\APP\BookStore\bin\roslyn\System.AppContext.dll
+D:\Documents\SPEACIAL BOX\DUT\Year 3\SEM 2\ADPB\drive-download-20220830T154109Z-001\APP\BookStore\bin\roslyn\System.Collections.Immutable.dll
+D:\Documents\SPEACIAL BOX\DUT\Year 3\SEM 2\ADPB\drive-download-20220830T154109Z-001\APP\BookStore\bin\roslyn\System.Console.dll
+D:\Documents\SPEACIAL BOX\DUT\Year 3\SEM 2\ADPB\drive-download-20220830T154109Z-001\APP\BookStore\bin\roslyn\System.Diagnostics.DiagnosticSource.dll
+D:\Documents\SPEACIAL BOX\DUT\Year 3\SEM 2\ADPB\drive-download-20220830T154109Z-001\APP\BookStore\bin\roslyn\System.Diagnostics.FileVersionInfo.dll
+D:\Documents\SPEACIAL BOX\DUT\Year 3\SEM 2\ADPB\drive-download-20220830T154109Z-001\APP\BookStore\bin\roslyn\System.Diagnostics.StackTrace.dll
+D:\Documents\SPEACIAL BOX\DUT\Year 3\SEM 2\ADPB\drive-download-20220830T154109Z-001\APP\BookStore\bin\roslyn\System.Globalization.Calendars.dll
+D:\Documents\SPEACIAL BOX\DUT\Year 3\SEM 2\ADPB\drive-download-20220830T154109Z-001\APP\BookStore\bin\roslyn\System.IO.Compression.dll
+D:\Documents\SPEACIAL BOX\DUT\Year 3\SEM 2\ADPB\drive-download-20220830T154109Z-001\APP\BookStore\bin\roslyn\System.IO.Compression.ZipFile.dll
+D:\Documents\SPEACIAL BOX\DUT\Year 3\SEM 2\ADPB\drive-download-20220830T154109Z-001\APP\BookStore\bin\roslyn\System.IO.FileSystem.dll
+D:\Documents\SPEACIAL BOX\DUT\Year 3\SEM 2\ADPB\drive-download-20220830T154109Z-001\APP\BookStore\bin\roslyn\System.IO.FileSystem.Primitives.dll
+D:\Documents\SPEACIAL BOX\DUT\Year 3\SEM 2\ADPB\drive-download-20220830T154109Z-001\APP\BookStore\bin\roslyn\System.Net.Http.dll
+D:\Documents\SPEACIAL BOX\DUT\Year 3\SEM 2\ADPB\drive-download-20220830T154109Z-001\APP\BookStore\bin\roslyn\System.Net.Sockets.dll
+D:\Documents\SPEACIAL BOX\DUT\Year 3\SEM 2\ADPB\drive-download-20220830T154109Z-001\APP\BookStore\bin\roslyn\System.Reflection.Metadata.dll
+D:\Documents\SPEACIAL BOX\DUT\Year 3\SEM 2\ADPB\drive-download-20220830T154109Z-001\APP\BookStore\bin\roslyn\System.Runtime.InteropServices.RuntimeInformation.dll
+D:\Documents\SPEACIAL BOX\DUT\Year 3\SEM 2\ADPB\drive-download-20220830T154109Z-001\APP\BookStore\bin\roslyn\System.Security.Cryptography.Algorithms.dll
+D:\Documents\SPEACIAL BOX\DUT\Year 3\SEM 2\ADPB\drive-download-20220830T154109Z-001\APP\BookStore\bin\roslyn\System.Security.Cryptography.Encoding.dll
+D:\Documents\SPEACIAL BOX\DUT\Year 3\SEM 2\ADPB\drive-download-20220830T154109Z-001\APP\BookStore\bin\roslyn\System.Security.Cryptography.Primitives.dll
+D:\Documents\SPEACIAL BOX\DUT\Year 3\SEM 2\ADPB\drive-download-20220830T154109Z-001\APP\BookStore\bin\roslyn\System.Security.Cryptography.X509Certificates.dll
+D:\Documents\SPEACIAL BOX\DUT\Year 3\SEM 2\ADPB\drive-download-20220830T154109Z-001\APP\BookStore\bin\roslyn\System.Text.Encoding.CodePages.dll
+D:\Documents\SPEACIAL BOX\DUT\Year 3\SEM 2\ADPB\drive-download-20220830T154109Z-001\APP\BookStore\bin\roslyn\System.Threading.Tasks.Extensions.dll
+D:\Documents\SPEACIAL BOX\DUT\Year 3\SEM 2\ADPB\drive-download-20220830T154109Z-001\APP\BookStore\bin\roslyn\System.ValueTuple.dll
+D:\Documents\SPEACIAL BOX\DUT\Year 3\SEM 2\ADPB\drive-download-20220830T154109Z-001\APP\BookStore\bin\roslyn\System.Xml.ReaderWriter.dll
+D:\Documents\SPEACIAL BOX\DUT\Year 3\SEM 2\ADPB\drive-download-20220830T154109Z-001\APP\BookStore\bin\roslyn\System.Xml.XmlDocument.dll
+D:\Documents\SPEACIAL BOX\DUT\Year 3\SEM 2\ADPB\drive-download-20220830T154109Z-001\APP\BookStore\bin\roslyn\System.Xml.XPath.dll
+D:\Documents\SPEACIAL BOX\DUT\Year 3\SEM 2\ADPB\drive-download-20220830T154109Z-001\APP\BookStore\bin\roslyn\System.Xml.XPath.XDocument.dll
+D:\Documents\SPEACIAL BOX\DUT\Year 3\SEM 2\ADPB\drive-download-20220830T154109Z-001\APP\BookStore\bin\roslyn\vbc.exe
+D:\Documents\SPEACIAL BOX\DUT\Year 3\SEM 2\ADPB\drive-download-20220830T154109Z-001\APP\BookStore\bin\roslyn\vbc.exe.config
+D:\Documents\SPEACIAL BOX\DUT\Year 3\SEM 2\ADPB\drive-download-20220830T154109Z-001\APP\BookStore\bin\roslyn\vbc.rsp
+D:\Documents\SPEACIAL BOX\DUT\Year 3\SEM 2\ADPB\drive-download-20220830T154109Z-001\APP\BookStore\bin\roslyn\VBCSCompiler.exe
+D:\Documents\SPEACIAL BOX\DUT\Year 3\SEM 2\ADPB\drive-download-20220830T154109Z-001\APP\BookStore\bin\roslyn\VBCSCompiler.exe.config
+D:\Documents\SPEACIAL BOX\DUT\Year 3\SEM 2\ADPB\drive-download-20220830T154109Z-001\APP\BookStore\bin\Antlr3.Runtime.dll
+D:\Documents\SPEACIAL BOX\DUT\Year 3\SEM 2\ADPB\drive-download-20220830T154109Z-001\APP\BookStore\bin\BouncyCastle.Crypto.dll
+D:\Documents\SPEACIAL BOX\DUT\Year 3\SEM 2\ADPB\drive-download-20220830T154109Z-001\APP\BookStore\bin\EntityFramework.dll
+D:\Documents\SPEACIAL BOX\DUT\Year 3\SEM 2\ADPB\drive-download-20220830T154109Z-001\APP\BookStore\bin\EntityFramework.SqlServer.dll
+D:\Documents\SPEACIAL BOX\DUT\Year 3\SEM 2\ADPB\drive-download-20220830T154109Z-001\APP\BookStore\bin\itextsharp.dll
+D:\Documents\SPEACIAL BOX\DUT\Year 3\SEM 2\ADPB\drive-download-20220830T154109Z-001\APP\BookStore\bin\Microsoft.AspNet.Identity.Core.dll
+D:\Documents\SPEACIAL BOX\DUT\Year 3\SEM 2\ADPB\drive-download-20220830T154109Z-001\APP\BookStore\bin\Microsoft.AspNet.Identity.EntityFramework.dll
+D:\Documents\SPEACIAL BOX\DUT\Year 3\SEM 2\ADPB\drive-download-20220830T154109Z-001\APP\BookStore\bin\Microsoft.AspNet.Identity.Owin.dll
+D:\Documents\SPEACIAL BOX\DUT\Year 3\SEM 2\ADPB\drive-download-20220830T154109Z-001\APP\BookStore\bin\Microsoft.Bcl.AsyncInterfaces.dll
+D:\Documents\SPEACIAL BOX\DUT\Year 3\SEM 2\ADPB\drive-download-20220830T154109Z-001\APP\BookStore\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.dll
+D:\Documents\SPEACIAL BOX\DUT\Year 3\SEM 2\ADPB\drive-download-20220830T154109Z-001\APP\BookStore\bin\Microsoft.Configuration.ConfigurationBuilders.Base.dll
+D:\Documents\SPEACIAL BOX\DUT\Year 3\SEM 2\ADPB\drive-download-20220830T154109Z-001\APP\BookStore\bin\Microsoft.Configuration.ConfigurationBuilders.UserSecrets.dll
+D:\Documents\SPEACIAL BOX\DUT\Year 3\SEM 2\ADPB\drive-download-20220830T154109Z-001\APP\BookStore\bin\Microsoft.Owin.dll
+D:\Documents\SPEACIAL BOX\DUT\Year 3\SEM 2\ADPB\drive-download-20220830T154109Z-001\APP\BookStore\bin\Microsoft.Owin.Host.SystemWeb.dll
+D:\Documents\SPEACIAL BOX\DUT\Year 3\SEM 2\ADPB\drive-download-20220830T154109Z-001\APP\BookStore\bin\Microsoft.Owin.Security.Cookies.dll
+D:\Documents\SPEACIAL BOX\DUT\Year 3\SEM 2\ADPB\drive-download-20220830T154109Z-001\APP\BookStore\bin\Microsoft.Owin.Security.dll
+D:\Documents\SPEACIAL BOX\DUT\Year 3\SEM 2\ADPB\drive-download-20220830T154109Z-001\APP\BookStore\bin\Microsoft.Owin.Security.Facebook.dll
+D:\Documents\SPEACIAL BOX\DUT\Year 3\SEM 2\ADPB\drive-download-20220830T154109Z-001\APP\BookStore\bin\Microsoft.Owin.Security.Google.dll
+D:\Documents\SPEACIAL BOX\DUT\Year 3\SEM 2\ADPB\drive-download-20220830T154109Z-001\APP\BookStore\bin\Microsoft.Owin.Security.MicrosoftAccount.dll
+D:\Documents\SPEACIAL BOX\DUT\Year 3\SEM 2\ADPB\drive-download-20220830T154109Z-001\APP\BookStore\bin\Microsoft.Owin.Security.OAuth.dll
+D:\Documents\SPEACIAL BOX\DUT\Year 3\SEM 2\ADPB\drive-download-20220830T154109Z-001\APP\BookStore\bin\Microsoft.Owin.Security.Twitter.dll
+D:\Documents\SPEACIAL BOX\DUT\Year 3\SEM 2\ADPB\drive-download-20220830T154109Z-001\APP\BookStore\bin\Microsoft.Web.Infrastructure.dll
+D:\Documents\SPEACIAL BOX\DUT\Year 3\SEM 2\ADPB\drive-download-20220830T154109Z-001\APP\BookStore\bin\Newtonsoft.Json.dll
+D:\Documents\SPEACIAL BOX\DUT\Year 3\SEM 2\ADPB\drive-download-20220830T154109Z-001\APP\BookStore\bin\Owin.dll
+D:\Documents\SPEACIAL BOX\DUT\Year 3\SEM 2\ADPB\drive-download-20220830T154109Z-001\APP\BookStore\bin\PagedList.dll
+D:\Documents\SPEACIAL BOX\DUT\Year 3\SEM 2\ADPB\drive-download-20220830T154109Z-001\APP\BookStore\bin\PagedList.Mvc.dll
+D:\Documents\SPEACIAL BOX\DUT\Year 3\SEM 2\ADPB\drive-download-20220830T154109Z-001\APP\BookStore\bin\RestSharp.dll
+D:\Documents\SPEACIAL BOX\DUT\Year 3\SEM 2\ADPB\drive-download-20220830T154109Z-001\APP\BookStore\bin\Select.HtmlToPdf.dll
+D:\Documents\SPEACIAL BOX\DUT\Year 3\SEM 2\ADPB\drive-download-20220830T154109Z-001\APP\BookStore\bin\Syncfusion.Compression.Base.dll
+D:\Documents\SPEACIAL BOX\DUT\Year 3\SEM 2\ADPB\drive-download-20220830T154109Z-001\APP\BookStore\bin\Syncfusion.Licensing.dll
+D:\Documents\SPEACIAL BOX\DUT\Year 3\SEM 2\ADPB\drive-download-20220830T154109Z-001\APP\BookStore\bin\Syncfusion.Pdf.Base.dll
+D:\Documents\SPEACIAL BOX\DUT\Year 3\SEM 2\ADPB\drive-download-20220830T154109Z-001\APP\BookStore\bin\System.Buffers.dll
+D:\Documents\SPEACIAL BOX\DUT\Year 3\SEM 2\ADPB\drive-download-20220830T154109Z-001\APP\BookStore\bin\System.ComponentModel.Annotations.dll
+D:\Documents\SPEACIAL BOX\DUT\Year 3\SEM 2\ADPB\drive-download-20220830T154109Z-001\APP\BookStore\bin\System.Drawing.Common.dll
+D:\Documents\SPEACIAL BOX\DUT\Year 3\SEM 2\ADPB\drive-download-20220830T154109Z-001\APP\BookStore\bin\System.Memory.dll
+D:\Documents\SPEACIAL BOX\DUT\Year 3\SEM 2\ADPB\drive-download-20220830T154109Z-001\APP\BookStore\bin\System.Numerics.Vectors.dll
+D:\Documents\SPEACIAL BOX\DUT\Year 3\SEM 2\ADPB\drive-download-20220830T154109Z-001\APP\BookStore\bin\System.Runtime.CompilerServices.Unsafe.dll
+D:\Documents\SPEACIAL BOX\DUT\Year 3\SEM 2\ADPB\drive-download-20220830T154109Z-001\APP\BookStore\bin\System.Text.Encodings.Web.dll
+D:\Documents\SPEACIAL BOX\DUT\Year 3\SEM 2\ADPB\drive-download-20220830T154109Z-001\APP\BookStore\bin\System.Text.Json.dll
+D:\Documents\SPEACIAL BOX\DUT\Year 3\SEM 2\ADPB\drive-download-20220830T154109Z-001\APP\BookStore\bin\System.Threading.Tasks.Extensions.dll
+D:\Documents\SPEACIAL BOX\DUT\Year 3\SEM 2\ADPB\drive-download-20220830T154109Z-001\APP\BookStore\bin\System.ValueTuple.dll
+D:\Documents\SPEACIAL BOX\DUT\Year 3\SEM 2\ADPB\drive-download-20220830T154109Z-001\APP\BookStore\bin\System.Web.Helpers.dll
+D:\Documents\SPEACIAL BOX\DUT\Year 3\SEM 2\ADPB\drive-download-20220830T154109Z-001\APP\BookStore\bin\System.Web.Mvc.dll
+D:\Documents\SPEACIAL BOX\DUT\Year 3\SEM 2\ADPB\drive-download-20220830T154109Z-001\APP\BookStore\bin\System.Web.Optimization.dll
+D:\Documents\SPEACIAL BOX\DUT\Year 3\SEM 2\ADPB\drive-download-20220830T154109Z-001\APP\BookStore\bin\System.Web.Razor.dll
+D:\Documents\SPEACIAL BOX\DUT\Year 3\SEM 2\ADPB\drive-download-20220830T154109Z-001\APP\BookStore\bin\System.Web.WebPages.Deployment.dll
+D:\Documents\SPEACIAL BOX\DUT\Year 3\SEM 2\ADPB\drive-download-20220830T154109Z-001\APP\BookStore\bin\System.Web.WebPages.dll
+D:\Documents\SPEACIAL BOX\DUT\Year 3\SEM 2\ADPB\drive-download-20220830T154109Z-001\APP\BookStore\bin\System.Web.WebPages.Razor.dll
+D:\Documents\SPEACIAL BOX\DUT\Year 3\SEM 2\ADPB\drive-download-20220830T154109Z-001\APP\BookStore\bin\WebGrease.dll
+D:\Documents\SPEACIAL BOX\DUT\Year 3\SEM 2\ADPB\drive-download-20220830T154109Z-001\APP\BookStore\bin\zxing.dll
+D:\Documents\SPEACIAL BOX\DUT\Year 3\SEM 2\ADPB\drive-download-20220830T154109Z-001\APP\BookStore\bin\zxing.presentation.dll
+D:\Documents\SPEACIAL BOX\DUT\Year 3\SEM 2\ADPB\drive-download-20220830T154109Z-001\APP\BookStore\bin\ZXing.Windows.Compatibility.dll
+D:\Documents\SPEACIAL BOX\DUT\Year 3\SEM 2\ADPB\drive-download-20220830T154109Z-001\APP\BookStore\bin\itextsharp.xml
+D:\Documents\SPEACIAL BOX\DUT\Year 3\SEM 2\ADPB\drive-download-20220830T154109Z-001\APP\BookStore\bin\Microsoft.Bcl.AsyncInterfaces.xml
+D:\Documents\SPEACIAL BOX\DUT\Year 3\SEM 2\ADPB\drive-download-20220830T154109Z-001\APP\BookStore\bin\Microsoft.Configuration.ConfigurationBuilders.Base.xml
+D:\Documents\SPEACIAL BOX\DUT\Year 3\SEM 2\ADPB\drive-download-20220830T154109Z-001\APP\BookStore\bin\Microsoft.Configuration.ConfigurationBuilders.UserSecrets.xml
+D:\Documents\SPEACIAL BOX\DUT\Year 3\SEM 2\ADPB\drive-download-20220830T154109Z-001\APP\BookStore\bin\PagedList.xml
+D:\Documents\SPEACIAL BOX\DUT\Year 3\SEM 2\ADPB\drive-download-20220830T154109Z-001\APP\BookStore\bin\PagedList.Mvc.xml
+D:\Documents\SPEACIAL BOX\DUT\Year 3\SEM 2\ADPB\drive-download-20220830T154109Z-001\APP\BookStore\bin\RestSharp.xml
+D:\Documents\SPEACIAL BOX\DUT\Year 3\SEM 2\ADPB\drive-download-20220830T154109Z-001\APP\BookStore\bin\Select.HtmlToPdf.xml
+D:\Documents\SPEACIAL BOX\DUT\Year 3\SEM 2\ADPB\drive-download-20220830T154109Z-001\APP\BookStore\bin\Syncfusion.Compression.Base.xml
+D:\Documents\SPEACIAL BOX\DUT\Year 3\SEM 2\ADPB\drive-download-20220830T154109Z-001\APP\BookStore\bin\Syncfusion.Licensing.xml
+D:\Documents\SPEACIAL BOX\DUT\Year 3\SEM 2\ADPB\drive-download-20220830T154109Z-001\APP\BookStore\bin\Syncfusion.Pdf.Base.xml
+D:\Documents\SPEACIAL BOX\DUT\Year 3\SEM 2\ADPB\drive-download-20220830T154109Z-001\APP\BookStore\bin\System.Buffers.xml
+D:\Documents\SPEACIAL BOX\DUT\Year 3\SEM 2\ADPB\drive-download-20220830T154109Z-001\APP\BookStore\bin\System.Drawing.Common.xml
+D:\Documents\SPEACIAL BOX\DUT\Year 3\SEM 2\ADPB\drive-download-20220830T154109Z-001\APP\BookStore\bin\System.Memory.xml
+D:\Documents\SPEACIAL BOX\DUT\Year 3\SEM 2\ADPB\drive-download-20220830T154109Z-001\APP\BookStore\bin\System.Numerics.Vectors.xml
+D:\Documents\SPEACIAL BOX\DUT\Year 3\SEM 2\ADPB\drive-download-20220830T154109Z-001\APP\BookStore\bin\System.Runtime.CompilerServices.Unsafe.xml
+D:\Documents\SPEACIAL BOX\DUT\Year 3\SEM 2\ADPB\drive-download-20220830T154109Z-001\APP\BookStore\bin\System.Text.Encodings.Web.xml
+D:\Documents\SPEACIAL BOX\DUT\Year 3\SEM 2\ADPB\drive-download-20220830T154109Z-001\APP\BookStore\bin\System.Text.Json.xml
+D:\Documents\SPEACIAL BOX\DUT\Year 3\SEM 2\ADPB\drive-download-20220830T154109Z-001\APP\BookStore\bin\System.Threading.Tasks.Extensions.xml
+D:\Documents\SPEACIAL BOX\DUT\Year 3\SEM 2\ADPB\drive-download-20220830T154109Z-001\APP\BookStore\bin\System.ValueTuple.xml
+D:\Documents\SPEACIAL BOX\DUT\Year 3\SEM 2\ADPB\drive-download-20220830T154109Z-001\APP\BookStore\bin\System.Web.Helpers.xml
+D:\Documents\SPEACIAL BOX\DUT\Year 3\SEM 2\ADPB\drive-download-20220830T154109Z-001\APP\BookStore\bin\System.Web.Mvc.xml
+D:\Documents\SPEACIAL BOX\DUT\Year 3\SEM 2\ADPB\drive-download-20220830T154109Z-001\APP\BookStore\bin\System.Web.Optimization.xml
+D:\Documents\SPEACIAL BOX\DUT\Year 3\SEM 2\ADPB\drive-download-20220830T154109Z-001\APP\BookStore\bin\System.Web.Razor.xml
+D:\Documents\SPEACIAL BOX\DUT\Year 3\SEM 2\ADPB\drive-download-20220830T154109Z-001\APP\BookStore\bin\System.Web.WebPages.xml
+D:\Documents\SPEACIAL BOX\DUT\Year 3\SEM 2\ADPB\drive-download-20220830T154109Z-001\APP\BookStore\bin\System.Web.WebPages.Deployment.xml
+D:\Documents\SPEACIAL BOX\DUT\Year 3\SEM 2\ADPB\drive-download-20220830T154109Z-001\APP\BookStore\bin\System.Web.WebPages.Razor.xml
+D:\Documents\SPEACIAL BOX\DUT\Year 3\SEM 2\ADPB\drive-download-20220830T154109Z-001\APP\BookStore\bin\Newtonsoft.Json.xml
+D:\Documents\SPEACIAL BOX\DUT\Year 3\SEM 2\ADPB\drive-download-20220830T154109Z-001\APP\BookStore\bin\Antlr3.Runtime.pdb
+D:\Documents\SPEACIAL BOX\DUT\Year 3\SEM 2\ADPB\drive-download-20220830T154109Z-001\APP\BookStore\bin\zxing.xml
+D:\Documents\SPEACIAL BOX\DUT\Year 3\SEM 2\ADPB\drive-download-20220830T154109Z-001\APP\BookStore\bin\zxing.presentation.xml
+D:\Documents\SPEACIAL BOX\DUT\Year 3\SEM 2\ADPB\drive-download-20220830T154109Z-001\APP\BookStore\bin\ZXing.Windows.Compatibility.pdb
+D:\Documents\SPEACIAL BOX\DUT\Year 3\SEM 2\ADPB\drive-download-20220830T154109Z-001\APP\BookStore\bin\ZXing.Windows.Compatibility.xml
+D:\Documents\SPEACIAL BOX\DUT\Year 3\SEM 2\ADPB\drive-download-20220830T154109Z-001\APP\BookStore\bin\EntityFramework.xml
+D:\Documents\SPEACIAL BOX\DUT\Year 3\SEM 2\ADPB\drive-download-20220830T154109Z-001\APP\BookStore\bin\EntityFramework.SqlServer.xml
+D:\Documents\SPEACIAL BOX\DUT\Year 3\SEM 2\ADPB\drive-download-20220830T154109Z-001\APP\BookStore\bin\Microsoft.AspNet.Identity.Core.xml
+D:\Documents\SPEACIAL BOX\DUT\Year 3\SEM 2\ADPB\drive-download-20220830T154109Z-001\APP\BookStore\bin\Microsoft.AspNet.Identity.Owin.xml
+D:\Documents\SPEACIAL BOX\DUT\Year 3\SEM 2\ADPB\drive-download-20220830T154109Z-001\APP\BookStore\bin\Microsoft.AspNet.Identity.EntityFramework.xml
+D:\Documents\SPEACIAL BOX\DUT\Year 3\SEM 2\ADPB\drive-download-20220830T154109Z-001\APP\BookStore\bin\Microsoft.Owin.xml
+D:\Documents\SPEACIAL BOX\DUT\Year 3\SEM 2\ADPB\drive-download-20220830T154109Z-001\APP\BookStore\bin\Microsoft.Owin.Host.SystemWeb.xml
+D:\Documents\SPEACIAL BOX\DUT\Year 3\SEM 2\ADPB\drive-download-20220830T154109Z-001\APP\BookStore\bin\Microsoft.Owin.Security.xml
+D:\Documents\SPEACIAL BOX\DUT\Year 3\SEM 2\ADPB\drive-download-20220830T154109Z-001\APP\BookStore\bin\Microsoft.Owin.Security.Facebook.xml
+D:\Documents\SPEACIAL BOX\DUT\Year 3\SEM 2\ADPB\drive-download-20220830T154109Z-001\APP\BookStore\bin\Microsoft.Owin.Security.Cookies.xml
+D:\Documents\SPEACIAL BOX\DUT\Year 3\SEM 2\ADPB\drive-download-20220830T154109Z-001\APP\BookStore\bin\Microsoft.Owin.Security.Google.xml
+D:\Documents\SPEACIAL BOX\DUT\Year 3\SEM 2\ADPB\drive-download-20220830T154109Z-001\APP\BookStore\bin\Microsoft.Owin.Security.Twitter.xml
+D:\Documents\SPEACIAL BOX\DUT\Year 3\SEM 2\ADPB\drive-download-20220830T154109Z-001\APP\BookStore\bin\Microsoft.Owin.Security.MicrosoftAccount.xml
+D:\Documents\SPEACIAL BOX\DUT\Year 3\SEM 2\ADPB\drive-download-20220830T154109Z-001\APP\BookStore\bin\Microsoft.Owin.Security.OAuth.xml
+D:\Documents\SPEACIAL BOX\DUT\Year 3\SEM 2\ADPB\drive-download-20220830T154109Z-001\APP\BookStore\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.xml
+D:\Documents\SPEACIAL BOX\DUT\Year 3\SEM 2\ADPB\drive-download-20220830T154109Z-001\APP\BookStore\bin\Select.Html.dep
+D:\Documents\SPEACIAL BOX\DUT\Year 3\SEM 2\ADPB\drive-download-20220830T154109Z-001\APP\BookStore\obj\Release\BookStore.csproj.AssemblyReference.cache
+D:\Documents\SPEACIAL BOX\DUT\Year 3\SEM 2\ADPB\drive-download-20220830T154109Z-001\APP\BookStore\obj\Release\BookStore.csproj.CoreCompileInputs.cache
+D:\Documents\SPEACIAL BOX\DUT\Year 3\SEM 2\ADPB\drive-download-20220830T154109Z-001\APP\BookStore\obj\Release\BookStore.sourcelink.json
+D:\Documents\SPEACIAL BOX\DUT\Year 3\SEM 2\ADPB\drive-download-20220830T154109Z-001\APP\BookStore\obj\Release\BookStore.csproj.CopyComplete
+D:\Documents\SPEACIAL BOX\DUT\Year 3\SEM 2\ADPB\drive-download-20220830T154109Z-001\APP\BookStore\obj\Release\BookStore.dll
+D:\Documents\SPEACIAL BOX\DUT\Year 3\SEM 2\ADPB\drive-download-20220830T154109Z-001\APP\BookStore\obj\Release\BookStore.pdb
+C:\Users\sashi\Downloads\drive-download-20221016T120132Z-001\APP\BookStore\bin\BookStore.dll.config
+C:\Users\sashi\Downloads\drive-download-20221016T120132Z-001\APP\BookStore\bin\BookStore.dll
+C:\Users\sashi\Downloads\drive-download-20221016T120132Z-001\APP\BookStore\bin\BookStore.pdb
+C:\Users\sashi\Downloads\drive-download-20221016T120132Z-001\APP\BookStore\bin\roslyn\csc.exe
+C:\Users\sashi\Downloads\drive-download-20221016T120132Z-001\APP\BookStore\bin\roslyn\csc.exe.config
+C:\Users\sashi\Downloads\drive-download-20221016T120132Z-001\APP\BookStore\bin\roslyn\csc.rsp
+C:\Users\sashi\Downloads\drive-download-20221016T120132Z-001\APP\BookStore\bin\roslyn\csi.exe
+C:\Users\sashi\Downloads\drive-download-20221016T120132Z-001\APP\BookStore\bin\roslyn\csi.exe.config
+C:\Users\sashi\Downloads\drive-download-20221016T120132Z-001\APP\BookStore\bin\roslyn\csi.rsp
+C:\Users\sashi\Downloads\drive-download-20221016T120132Z-001\APP\BookStore\bin\roslyn\Microsoft.Build.Tasks.CodeAnalysis.dll
+C:\Users\sashi\Downloads\drive-download-20221016T120132Z-001\APP\BookStore\bin\roslyn\Microsoft.CodeAnalysis.CSharp.dll
+C:\Users\sashi\Downloads\drive-download-20221016T120132Z-001\APP\BookStore\bin\roslyn\Microsoft.CodeAnalysis.CSharp.Scripting.dll
+C:\Users\sashi\Downloads\drive-download-20221016T120132Z-001\APP\BookStore\bin\roslyn\Microsoft.CodeAnalysis.dll
+C:\Users\sashi\Downloads\drive-download-20221016T120132Z-001\APP\BookStore\bin\roslyn\Microsoft.CodeAnalysis.Scripting.dll
+C:\Users\sashi\Downloads\drive-download-20221016T120132Z-001\APP\BookStore\bin\roslyn\Microsoft.CodeAnalysis.VisualBasic.dll
+C:\Users\sashi\Downloads\drive-download-20221016T120132Z-001\APP\BookStore\bin\roslyn\Microsoft.CSharp.Core.targets
+C:\Users\sashi\Downloads\drive-download-20221016T120132Z-001\APP\BookStore\bin\roslyn\Microsoft.DiaSymReader.Native.amd64.dll
+C:\Users\sashi\Downloads\drive-download-20221016T120132Z-001\APP\BookStore\bin\roslyn\Microsoft.DiaSymReader.Native.x86.dll
+C:\Users\sashi\Downloads\drive-download-20221016T120132Z-001\APP\BookStore\bin\roslyn\Microsoft.Managed.Core.targets
+C:\Users\sashi\Downloads\drive-download-20221016T120132Z-001\APP\BookStore\bin\roslyn\Microsoft.VisualBasic.Core.targets
+C:\Users\sashi\Downloads\drive-download-20221016T120132Z-001\APP\BookStore\bin\roslyn\Microsoft.Win32.Primitives.dll
+C:\Users\sashi\Downloads\drive-download-20221016T120132Z-001\APP\BookStore\bin\roslyn\System.AppContext.dll
+C:\Users\sashi\Downloads\drive-download-20221016T120132Z-001\APP\BookStore\bin\roslyn\System.Collections.Immutable.dll
+C:\Users\sashi\Downloads\drive-download-20221016T120132Z-001\APP\BookStore\bin\roslyn\System.Console.dll
+C:\Users\sashi\Downloads\drive-download-20221016T120132Z-001\APP\BookStore\bin\roslyn\System.Diagnostics.DiagnosticSource.dll
+C:\Users\sashi\Downloads\drive-download-20221016T120132Z-001\APP\BookStore\bin\roslyn\System.Diagnostics.FileVersionInfo.dll
+C:\Users\sashi\Downloads\drive-download-20221016T120132Z-001\APP\BookStore\bin\roslyn\System.Diagnostics.StackTrace.dll
+C:\Users\sashi\Downloads\drive-download-20221016T120132Z-001\APP\BookStore\bin\roslyn\System.Globalization.Calendars.dll
+C:\Users\sashi\Downloads\drive-download-20221016T120132Z-001\APP\BookStore\bin\roslyn\System.IO.Compression.dll
+C:\Users\sashi\Downloads\drive-download-20221016T120132Z-001\APP\BookStore\bin\roslyn\System.IO.Compression.ZipFile.dll
+C:\Users\sashi\Downloads\drive-download-20221016T120132Z-001\APP\BookStore\bin\roslyn\System.IO.FileSystem.dll
+C:\Users\sashi\Downloads\drive-download-20221016T120132Z-001\APP\BookStore\bin\roslyn\System.IO.FileSystem.Primitives.dll
+C:\Users\sashi\Downloads\drive-download-20221016T120132Z-001\APP\BookStore\bin\roslyn\System.Net.Http.dll
+C:\Users\sashi\Downloads\drive-download-20221016T120132Z-001\APP\BookStore\bin\roslyn\System.Net.Sockets.dll
+C:\Users\sashi\Downloads\drive-download-20221016T120132Z-001\APP\BookStore\bin\roslyn\System.Reflection.Metadata.dll
+C:\Users\sashi\Downloads\drive-download-20221016T120132Z-001\APP\BookStore\bin\roslyn\System.Runtime.InteropServices.RuntimeInformation.dll
+C:\Users\sashi\Downloads\drive-download-20221016T120132Z-001\APP\BookStore\bin\roslyn\System.Security.Cryptography.Algorithms.dll
+C:\Users\sashi\Downloads\drive-download-20221016T120132Z-001\APP\BookStore\bin\roslyn\System.Security.Cryptography.Encoding.dll
+C:\Users\sashi\Downloads\drive-download-20221016T120132Z-001\APP\BookStore\bin\roslyn\System.Security.Cryptography.Primitives.dll
+C:\Users\sashi\Downloads\drive-download-20221016T120132Z-001\APP\BookStore\bin\roslyn\System.Security.Cryptography.X509Certificates.dll
+C:\Users\sashi\Downloads\drive-download-20221016T120132Z-001\APP\BookStore\bin\roslyn\System.Text.Encoding.CodePages.dll
+C:\Users\sashi\Downloads\drive-download-20221016T120132Z-001\APP\BookStore\bin\roslyn\System.Threading.Tasks.Extensions.dll
+C:\Users\sashi\Downloads\drive-download-20221016T120132Z-001\APP\BookStore\bin\roslyn\System.ValueTuple.dll
+C:\Users\sashi\Downloads\drive-download-20221016T120132Z-001\APP\BookStore\bin\roslyn\System.Xml.ReaderWriter.dll
+C:\Users\sashi\Downloads\drive-download-20221016T120132Z-001\APP\BookStore\bin\roslyn\System.Xml.XmlDocument.dll
+C:\Users\sashi\Downloads\drive-download-20221016T120132Z-001\APP\BookStore\bin\roslyn\System.Xml.XPath.dll
+C:\Users\sashi\Downloads\drive-download-20221016T120132Z-001\APP\BookStore\bin\roslyn\System.Xml.XPath.XDocument.dll
+C:\Users\sashi\Downloads\drive-download-20221016T120132Z-001\APP\BookStore\bin\roslyn\vbc.exe
+C:\Users\sashi\Downloads\drive-download-20221016T120132Z-001\APP\BookStore\bin\roslyn\vbc.exe.config
+C:\Users\sashi\Downloads\drive-download-20221016T120132Z-001\APP\BookStore\bin\roslyn\vbc.rsp
+C:\Users\sashi\Downloads\drive-download-20221016T120132Z-001\APP\BookStore\bin\roslyn\VBCSCompiler.exe
+C:\Users\sashi\Downloads\drive-download-20221016T120132Z-001\APP\BookStore\bin\roslyn\VBCSCompiler.exe.config
+C:\Users\sashi\Downloads\drive-download-20221016T120132Z-001\APP\BookStore\bin\Antlr3.Runtime.dll
+C:\Users\sashi\Downloads\drive-download-20221016T120132Z-001\APP\BookStore\bin\BouncyCastle.Crypto.dll
+C:\Users\sashi\Downloads\drive-download-20221016T120132Z-001\APP\BookStore\bin\EntityFramework.dll
+C:\Users\sashi\Downloads\drive-download-20221016T120132Z-001\APP\BookStore\bin\EntityFramework.SqlServer.dll
+C:\Users\sashi\Downloads\drive-download-20221016T120132Z-001\APP\BookStore\bin\itextsharp.dll
+C:\Users\sashi\Downloads\drive-download-20221016T120132Z-001\APP\BookStore\bin\Microsoft.AspNet.Identity.Core.dll
+C:\Users\sashi\Downloads\drive-download-20221016T120132Z-001\APP\BookStore\bin\Microsoft.AspNet.Identity.EntityFramework.dll
+C:\Users\sashi\Downloads\drive-download-20221016T120132Z-001\APP\BookStore\bin\Microsoft.AspNet.Identity.Owin.dll
+C:\Users\sashi\Downloads\drive-download-20221016T120132Z-001\APP\BookStore\bin\Microsoft.Bcl.AsyncInterfaces.dll
+C:\Users\sashi\Downloads\drive-download-20221016T120132Z-001\APP\BookStore\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.dll
+C:\Users\sashi\Downloads\drive-download-20221016T120132Z-001\APP\BookStore\bin\Microsoft.Configuration.ConfigurationBuilders.Base.dll
+C:\Users\sashi\Downloads\drive-download-20221016T120132Z-001\APP\BookStore\bin\Microsoft.Configuration.ConfigurationBuilders.UserSecrets.dll
+C:\Users\sashi\Downloads\drive-download-20221016T120132Z-001\APP\BookStore\bin\Microsoft.Owin.dll
+C:\Users\sashi\Downloads\drive-download-20221016T120132Z-001\APP\BookStore\bin\Microsoft.Owin.Host.SystemWeb.dll
+C:\Users\sashi\Downloads\drive-download-20221016T120132Z-001\APP\BookStore\bin\Microsoft.Owin.Security.Cookies.dll
+C:\Users\sashi\Downloads\drive-download-20221016T120132Z-001\APP\BookStore\bin\Microsoft.Owin.Security.dll
+C:\Users\sashi\Downloads\drive-download-20221016T120132Z-001\APP\BookStore\bin\Microsoft.Owin.Security.Facebook.dll
+C:\Users\sashi\Downloads\drive-download-20221016T120132Z-001\APP\BookStore\bin\Microsoft.Owin.Security.Google.dll
+C:\Users\sashi\Downloads\drive-download-20221016T120132Z-001\APP\BookStore\bin\Microsoft.Owin.Security.MicrosoftAccount.dll
+C:\Users\sashi\Downloads\drive-download-20221016T120132Z-001\APP\BookStore\bin\Microsoft.Owin.Security.OAuth.dll
+C:\Users\sashi\Downloads\drive-download-20221016T120132Z-001\APP\BookStore\bin\Microsoft.Owin.Security.Twitter.dll
+C:\Users\sashi\Downloads\drive-download-20221016T120132Z-001\APP\BookStore\bin\Microsoft.Web.Infrastructure.dll
+C:\Users\sashi\Downloads\drive-download-20221016T120132Z-001\APP\BookStore\bin\Newtonsoft.Json.dll
+C:\Users\sashi\Downloads\drive-download-20221016T120132Z-001\APP\BookStore\bin\Owin.dll
+C:\Users\sashi\Downloads\drive-download-20221016T120132Z-001\APP\BookStore\bin\PagedList.dll
+C:\Users\sashi\Downloads\drive-download-20221016T120132Z-001\APP\BookStore\bin\PagedList.Mvc.dll
+C:\Users\sashi\Downloads\drive-download-20221016T120132Z-001\APP\BookStore\bin\RestSharp.dll
+C:\Users\sashi\Downloads\drive-download-20221016T120132Z-001\APP\BookStore\bin\Select.HtmlToPdf.dll
+C:\Users\sashi\Downloads\drive-download-20221016T120132Z-001\APP\BookStore\bin\Syncfusion.Compression.Base.dll
+C:\Users\sashi\Downloads\drive-download-20221016T120132Z-001\APP\BookStore\bin\Syncfusion.Licensing.dll
+C:\Users\sashi\Downloads\drive-download-20221016T120132Z-001\APP\BookStore\bin\Syncfusion.Pdf.Base.dll
+C:\Users\sashi\Downloads\drive-download-20221016T120132Z-001\APP\BookStore\bin\System.Buffers.dll
+C:\Users\sashi\Downloads\drive-download-20221016T120132Z-001\APP\BookStore\bin\System.ComponentModel.Annotations.dll
+C:\Users\sashi\Downloads\drive-download-20221016T120132Z-001\APP\BookStore\bin\System.Drawing.Common.dll
+C:\Users\sashi\Downloads\drive-download-20221016T120132Z-001\APP\BookStore\bin\System.Memory.dll
+C:\Users\sashi\Downloads\drive-download-20221016T120132Z-001\APP\BookStore\bin\System.Numerics.Vectors.dll
+C:\Users\sashi\Downloads\drive-download-20221016T120132Z-001\APP\BookStore\bin\System.Runtime.CompilerServices.Unsafe.dll
+C:\Users\sashi\Downloads\drive-download-20221016T120132Z-001\APP\BookStore\bin\System.Text.Encodings.Web.dll
+C:\Users\sashi\Downloads\drive-download-20221016T120132Z-001\APP\BookStore\bin\System.Text.Json.dll
+C:\Users\sashi\Downloads\drive-download-20221016T120132Z-001\APP\BookStore\bin\System.Threading.Tasks.Extensions.dll
+C:\Users\sashi\Downloads\drive-download-20221016T120132Z-001\APP\BookStore\bin\System.ValueTuple.dll
+C:\Users\sashi\Downloads\drive-download-20221016T120132Z-001\APP\BookStore\bin\System.Web.Helpers.dll
+C:\Users\sashi\Downloads\drive-download-20221016T120132Z-001\APP\BookStore\bin\System.Web.Mvc.dll
+C:\Users\sashi\Downloads\drive-download-20221016T120132Z-001\APP\BookStore\bin\System.Web.Optimization.dll
+C:\Users\sashi\Downloads\drive-download-20221016T120132Z-001\APP\BookStore\bin\System.Web.Razor.dll
+C:\Users\sashi\Downloads\drive-download-20221016T120132Z-001\APP\BookStore\bin\System.Web.WebPages.Deployment.dll
+C:\Users\sashi\Downloads\drive-download-20221016T120132Z-001\APP\BookStore\bin\System.Web.WebPages.dll
+C:\Users\sashi\Downloads\drive-download-20221016T120132Z-001\APP\BookStore\bin\System.Web.WebPages.Razor.dll
+C:\Users\sashi\Downloads\drive-download-20221016T120132Z-001\APP\BookStore\bin\WebGrease.dll
+C:\Users\sashi\Downloads\drive-download-20221016T120132Z-001\APP\BookStore\bin\zxing.dll
+C:\Users\sashi\Downloads\drive-download-20221016T120132Z-001\APP\BookStore\bin\zxing.presentation.dll
+C:\Users\sashi\Downloads\drive-download-20221016T120132Z-001\APP\BookStore\bin\ZXing.Windows.Compatibility.dll
+C:\Users\sashi\Downloads\drive-download-20221016T120132Z-001\APP\BookStore\bin\itextsharp.xml
+C:\Users\sashi\Downloads\drive-download-20221016T120132Z-001\APP\BookStore\bin\Microsoft.Bcl.AsyncInterfaces.xml
+C:\Users\sashi\Downloads\drive-download-20221016T120132Z-001\APP\BookStore\bin\Microsoft.Configuration.ConfigurationBuilders.Base.xml
+C:\Users\sashi\Downloads\drive-download-20221016T120132Z-001\APP\BookStore\bin\Microsoft.Configuration.ConfigurationBuilders.UserSecrets.xml
+C:\Users\sashi\Downloads\drive-download-20221016T120132Z-001\APP\BookStore\bin\PagedList.xml
+C:\Users\sashi\Downloads\drive-download-20221016T120132Z-001\APP\BookStore\bin\PagedList.Mvc.xml
+C:\Users\sashi\Downloads\drive-download-20221016T120132Z-001\APP\BookStore\bin\RestSharp.xml
+C:\Users\sashi\Downloads\drive-download-20221016T120132Z-001\APP\BookStore\bin\Select.HtmlToPdf.xml
+C:\Users\sashi\Downloads\drive-download-20221016T120132Z-001\APP\BookStore\bin\Syncfusion.Compression.Base.xml
+C:\Users\sashi\Downloads\drive-download-20221016T120132Z-001\APP\BookStore\bin\Syncfusion.Licensing.xml
+C:\Users\sashi\Downloads\drive-download-20221016T120132Z-001\APP\BookStore\bin\Syncfusion.Pdf.Base.xml
+C:\Users\sashi\Downloads\drive-download-20221016T120132Z-001\APP\BookStore\bin\System.Buffers.xml
+C:\Users\sashi\Downloads\drive-download-20221016T120132Z-001\APP\BookStore\bin\System.Drawing.Common.xml
+C:\Users\sashi\Downloads\drive-download-20221016T120132Z-001\APP\BookStore\bin\System.Memory.xml
+C:\Users\sashi\Downloads\drive-download-20221016T120132Z-001\APP\BookStore\bin\System.Numerics.Vectors.xml
+C:\Users\sashi\Downloads\drive-download-20221016T120132Z-001\APP\BookStore\bin\System.Runtime.CompilerServices.Unsafe.xml
+C:\Users\sashi\Downloads\drive-download-20221016T120132Z-001\APP\BookStore\bin\System.Text.Encodings.Web.xml
+C:\Users\sashi\Downloads\drive-download-20221016T120132Z-001\APP\BookStore\bin\System.Text.Json.xml
+C:\Users\sashi\Downloads\drive-download-20221016T120132Z-001\APP\BookStore\bin\System.Threading.Tasks.Extensions.xml
+C:\Users\sashi\Downloads\drive-download-20221016T120132Z-001\APP\BookStore\bin\System.ValueTuple.xml
+C:\Users\sashi\Downloads\drive-download-20221016T120132Z-001\APP\BookStore\bin\System.Web.Helpers.xml
+C:\Users\sashi\Downloads\drive-download-20221016T120132Z-001\APP\BookStore\bin\System.Web.Mvc.xml
+C:\Users\sashi\Downloads\drive-download-20221016T120132Z-001\APP\BookStore\bin\System.Web.Optimization.xml
+C:\Users\sashi\Downloads\drive-download-20221016T120132Z-001\APP\BookStore\bin\System.Web.Razor.xml
+C:\Users\sashi\Downloads\drive-download-20221016T120132Z-001\APP\BookStore\bin\System.Web.WebPages.xml
+C:\Users\sashi\Downloads\drive-download-20221016T120132Z-001\APP\BookStore\bin\System.Web.WebPages.Deployment.xml
+C:\Users\sashi\Downloads\drive-download-20221016T120132Z-001\APP\BookStore\bin\System.Web.WebPages.Razor.xml
+C:\Users\sashi\Downloads\drive-download-20221016T120132Z-001\APP\BookStore\bin\Newtonsoft.Json.xml
+C:\Users\sashi\Downloads\drive-download-20221016T120132Z-001\APP\BookStore\bin\Antlr3.Runtime.pdb
+C:\Users\sashi\Downloads\drive-download-20221016T120132Z-001\APP\BookStore\bin\zxing.xml
+C:\Users\sashi\Downloads\drive-download-20221016T120132Z-001\APP\BookStore\bin\zxing.presentation.xml
+C:\Users\sashi\Downloads\drive-download-20221016T120132Z-001\APP\BookStore\bin\ZXing.Windows.Compatibility.pdb
+C:\Users\sashi\Downloads\drive-download-20221016T120132Z-001\APP\BookStore\bin\ZXing.Windows.Compatibility.xml
+C:\Users\sashi\Downloads\drive-download-20221016T120132Z-001\APP\BookStore\bin\EntityFramework.xml
+C:\Users\sashi\Downloads\drive-download-20221016T120132Z-001\APP\BookStore\bin\EntityFramework.SqlServer.xml
+C:\Users\sashi\Downloads\drive-download-20221016T120132Z-001\APP\BookStore\bin\Microsoft.AspNet.Identity.Core.xml
+C:\Users\sashi\Downloads\drive-download-20221016T120132Z-001\APP\BookStore\bin\Microsoft.AspNet.Identity.Owin.xml
+C:\Users\sashi\Downloads\drive-download-20221016T120132Z-001\APP\BookStore\bin\Microsoft.AspNet.Identity.EntityFramework.xml
+C:\Users\sashi\Downloads\drive-download-20221016T120132Z-001\APP\BookStore\bin\Microsoft.Owin.xml
+C:\Users\sashi\Downloads\drive-download-20221016T120132Z-001\APP\BookStore\bin\Microsoft.Owin.Host.SystemWeb.xml
+C:\Users\sashi\Downloads\drive-download-20221016T120132Z-001\APP\BookStore\bin\Microsoft.Owin.Security.xml
+C:\Users\sashi\Downloads\drive-download-20221016T120132Z-001\APP\BookStore\bin\Microsoft.Owin.Security.Facebook.xml
+C:\Users\sashi\Downloads\drive-download-20221016T120132Z-001\APP\BookStore\bin\Microsoft.Owin.Security.Cookies.xml
+C:\Users\sashi\Downloads\drive-download-20221016T120132Z-001\APP\BookStore\bin\Microsoft.Owin.Security.Google.xml
+C:\Users\sashi\Downloads\drive-download-20221016T120132Z-001\APP\BookStore\bin\Microsoft.Owin.Security.Twitter.xml
+C:\Users\sashi\Downloads\drive-download-20221016T120132Z-001\APP\BookStore\bin\Microsoft.Owin.Security.MicrosoftAccount.xml
+C:\Users\sashi\Downloads\drive-download-20221016T120132Z-001\APP\BookStore\bin\Microsoft.Owin.Security.OAuth.xml
+C:\Users\sashi\Downloads\drive-download-20221016T120132Z-001\APP\BookStore\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.xml
+C:\Users\sashi\Downloads\drive-download-20221016T120132Z-001\APP\BookStore\bin\Select.Html.dep
+C:\Users\sashi\Downloads\drive-download-20221016T120132Z-001\APP\BookStore\obj\Release\BookStore.csproj.AssemblyReference.cache
+C:\Users\sashi\Downloads\drive-download-20221016T120132Z-001\APP\BookStore\obj\Release\BookStore.csproj.CoreCompileInputs.cache
+C:\Users\sashi\Downloads\drive-download-20221016T120132Z-001\APP\BookStore\obj\Release\BookStore.sourcelink.json
+C:\Users\sashi\Downloads\drive-download-20221016T120132Z-001\APP\BookStore\obj\Release\BookStore.csproj.CopyComplete
+C:\Users\sashi\Downloads\drive-download-20221016T120132Z-001\APP\BookStore\obj\Release\BookStore.dll
+C:\Users\sashi\Downloads\drive-download-20221016T120132Z-001\APP\BookStore\obj\Release\BookStore.pdb
+D:\Documents\SPEACIAL BOX\DUT\Year 3\SEM 2\ADPB\APP\APP\BookStore\bin\BookStore.dll.config
+D:\Documents\SPEACIAL BOX\DUT\Year 3\SEM 2\ADPB\APP\APP\BookStore\bin\BookStore.dll
+D:\Documents\SPEACIAL BOX\DUT\Year 3\SEM 2\ADPB\APP\APP\BookStore\bin\BookStore.pdb
+D:\Documents\SPEACIAL BOX\DUT\Year 3\SEM 2\ADPB\APP\APP\BookStore\bin\roslyn\csc.exe
+D:\Documents\SPEACIAL BOX\DUT\Year 3\SEM 2\ADPB\APP\APP\BookStore\bin\roslyn\csc.exe.config
+D:\Documents\SPEACIAL BOX\DUT\Year 3\SEM 2\ADPB\APP\APP\BookStore\bin\roslyn\csc.rsp
+D:\Documents\SPEACIAL BOX\DUT\Year 3\SEM 2\ADPB\APP\APP\BookStore\bin\roslyn\csi.exe
+D:\Documents\SPEACIAL BOX\DUT\Year 3\SEM 2\ADPB\APP\APP\BookStore\bin\roslyn\csi.exe.config
+D:\Documents\SPEACIAL BOX\DUT\Year 3\SEM 2\ADPB\APP\APP\BookStore\bin\roslyn\csi.rsp
+D:\Documents\SPEACIAL BOX\DUT\Year 3\SEM 2\ADPB\APP\APP\BookStore\bin\roslyn\Microsoft.Build.Tasks.CodeAnalysis.dll
+D:\Documents\SPEACIAL BOX\DUT\Year 3\SEM 2\ADPB\APP\APP\BookStore\bin\roslyn\Microsoft.CodeAnalysis.CSharp.dll
+D:\Documents\SPEACIAL BOX\DUT\Year 3\SEM 2\ADPB\APP\APP\BookStore\bin\roslyn\Microsoft.CodeAnalysis.CSharp.Scripting.dll
+D:\Documents\SPEACIAL BOX\DUT\Year 3\SEM 2\ADPB\APP\APP\BookStore\bin\roslyn\Microsoft.CodeAnalysis.dll
+D:\Documents\SPEACIAL BOX\DUT\Year 3\SEM 2\ADPB\APP\APP\BookStore\bin\roslyn\Microsoft.CodeAnalysis.Scripting.dll
+D:\Documents\SPEACIAL BOX\DUT\Year 3\SEM 2\ADPB\APP\APP\BookStore\bin\roslyn\Microsoft.CodeAnalysis.VisualBasic.dll
+D:\Documents\SPEACIAL BOX\DUT\Year 3\SEM 2\ADPB\APP\APP\BookStore\bin\roslyn\Microsoft.CSharp.Core.targets
+D:\Documents\SPEACIAL BOX\DUT\Year 3\SEM 2\ADPB\APP\APP\BookStore\bin\roslyn\Microsoft.DiaSymReader.Native.amd64.dll
+D:\Documents\SPEACIAL BOX\DUT\Year 3\SEM 2\ADPB\APP\APP\BookStore\bin\roslyn\Microsoft.DiaSymReader.Native.x86.dll
+D:\Documents\SPEACIAL BOX\DUT\Year 3\SEM 2\ADPB\APP\APP\BookStore\bin\roslyn\Microsoft.Managed.Core.targets
+D:\Documents\SPEACIAL BOX\DUT\Year 3\SEM 2\ADPB\APP\APP\BookStore\bin\roslyn\Microsoft.VisualBasic.Core.targets
+D:\Documents\SPEACIAL BOX\DUT\Year 3\SEM 2\ADPB\APP\APP\BookStore\bin\roslyn\Microsoft.Win32.Primitives.dll
+D:\Documents\SPEACIAL BOX\DUT\Year 3\SEM 2\ADPB\APP\APP\BookStore\bin\roslyn\System.AppContext.dll
+D:\Documents\SPEACIAL BOX\DUT\Year 3\SEM 2\ADPB\APP\APP\BookStore\bin\roslyn\System.Collections.Immutable.dll
+D:\Documents\SPEACIAL BOX\DUT\Year 3\SEM 2\ADPB\APP\APP\BookStore\bin\roslyn\System.Console.dll
+D:\Documents\SPEACIAL BOX\DUT\Year 3\SEM 2\ADPB\APP\APP\BookStore\bin\roslyn\System.Diagnostics.DiagnosticSource.dll
+D:\Documents\SPEACIAL BOX\DUT\Year 3\SEM 2\ADPB\APP\APP\BookStore\bin\roslyn\System.Diagnostics.FileVersionInfo.dll
+D:\Documents\SPEACIAL BOX\DUT\Year 3\SEM 2\ADPB\APP\APP\BookStore\bin\roslyn\System.Diagnostics.StackTrace.dll
+D:\Documents\SPEACIAL BOX\DUT\Year 3\SEM 2\ADPB\APP\APP\BookStore\bin\roslyn\System.Globalization.Calendars.dll
+D:\Documents\SPEACIAL BOX\DUT\Year 3\SEM 2\ADPB\APP\APP\BookStore\bin\roslyn\System.IO.Compression.dll
+D:\Documents\SPEACIAL BOX\DUT\Year 3\SEM 2\ADPB\APP\APP\BookStore\bin\roslyn\System.IO.Compression.ZipFile.dll
+D:\Documents\SPEACIAL BOX\DUT\Year 3\SEM 2\ADPB\APP\APP\BookStore\bin\roslyn\System.IO.FileSystem.dll
+D:\Documents\SPEACIAL BOX\DUT\Year 3\SEM 2\ADPB\APP\APP\BookStore\bin\roslyn\System.IO.FileSystem.Primitives.dll
+D:\Documents\SPEACIAL BOX\DUT\Year 3\SEM 2\ADPB\APP\APP\BookStore\bin\roslyn\System.Net.Http.dll
+D:\Documents\SPEACIAL BOX\DUT\Year 3\SEM 2\ADPB\APP\APP\BookStore\bin\roslyn\System.Net.Sockets.dll
+D:\Documents\SPEACIAL BOX\DUT\Year 3\SEM 2\ADPB\APP\APP\BookStore\bin\roslyn\System.Reflection.Metadata.dll
+D:\Documents\SPEACIAL BOX\DUT\Year 3\SEM 2\ADPB\APP\APP\BookStore\bin\roslyn\System.Runtime.InteropServices.RuntimeInformation.dll
+D:\Documents\SPEACIAL BOX\DUT\Year 3\SEM 2\ADPB\APP\APP\BookStore\bin\roslyn\System.Security.Cryptography.Algorithms.dll
+D:\Documents\SPEACIAL BOX\DUT\Year 3\SEM 2\ADPB\APP\APP\BookStore\bin\roslyn\System.Security.Cryptography.Encoding.dll
+D:\Documents\SPEACIAL BOX\DUT\Year 3\SEM 2\ADPB\APP\APP\BookStore\bin\roslyn\System.Security.Cryptography.Primitives.dll
+D:\Documents\SPEACIAL BOX\DUT\Year 3\SEM 2\ADPB\APP\APP\BookStore\bin\roslyn\System.Security.Cryptography.X509Certificates.dll
+D:\Documents\SPEACIAL BOX\DUT\Year 3\SEM 2\ADPB\APP\APP\BookStore\bin\roslyn\System.Text.Encoding.CodePages.dll
+D:\Documents\SPEACIAL BOX\DUT\Year 3\SEM 2\ADPB\APP\APP\BookStore\bin\roslyn\System.Threading.Tasks.Extensions.dll
+D:\Documents\SPEACIAL BOX\DUT\Year 3\SEM 2\ADPB\APP\APP\BookStore\bin\roslyn\System.ValueTuple.dll
+D:\Documents\SPEACIAL BOX\DUT\Year 3\SEM 2\ADPB\APP\APP\BookStore\bin\roslyn\System.Xml.ReaderWriter.dll
+D:\Documents\SPEACIAL BOX\DUT\Year 3\SEM 2\ADPB\APP\APP\BookStore\bin\roslyn\System.Xml.XmlDocument.dll
+D:\Documents\SPEACIAL BOX\DUT\Year 3\SEM 2\ADPB\APP\APP\BookStore\bin\roslyn\System.Xml.XPath.dll
+D:\Documents\SPEACIAL BOX\DUT\Year 3\SEM 2\ADPB\APP\APP\BookStore\bin\roslyn\System.Xml.XPath.XDocument.dll
+D:\Documents\SPEACIAL BOX\DUT\Year 3\SEM 2\ADPB\APP\APP\BookStore\bin\roslyn\vbc.exe
+D:\Documents\SPEACIAL BOX\DUT\Year 3\SEM 2\ADPB\APP\APP\BookStore\bin\roslyn\vbc.exe.config
+D:\Documents\SPEACIAL BOX\DUT\Year 3\SEM 2\ADPB\APP\APP\BookStore\bin\roslyn\vbc.rsp
+D:\Documents\SPEACIAL BOX\DUT\Year 3\SEM 2\ADPB\APP\APP\BookStore\bin\roslyn\VBCSCompiler.exe
+D:\Documents\SPEACIAL BOX\DUT\Year 3\SEM 2\ADPB\APP\APP\BookStore\bin\roslyn\VBCSCompiler.exe.config
+D:\Documents\SPEACIAL BOX\DUT\Year 3\SEM 2\ADPB\APP\APP\BookStore\bin\Antlr3.Runtime.dll
+D:\Documents\SPEACIAL BOX\DUT\Year 3\SEM 2\ADPB\APP\APP\BookStore\bin\BouncyCastle.Crypto.dll
+D:\Documents\SPEACIAL BOX\DUT\Year 3\SEM 2\ADPB\APP\APP\BookStore\bin\EntityFramework.dll
+D:\Documents\SPEACIAL BOX\DUT\Year 3\SEM 2\ADPB\APP\APP\BookStore\bin\EntityFramework.SqlServer.dll
+D:\Documents\SPEACIAL BOX\DUT\Year 3\SEM 2\ADPB\APP\APP\BookStore\bin\itextsharp.dll
+D:\Documents\SPEACIAL BOX\DUT\Year 3\SEM 2\ADPB\APP\APP\BookStore\bin\Microsoft.AspNet.Identity.Core.dll
+D:\Documents\SPEACIAL BOX\DUT\Year 3\SEM 2\ADPB\APP\APP\BookStore\bin\Microsoft.AspNet.Identity.EntityFramework.dll
+D:\Documents\SPEACIAL BOX\DUT\Year 3\SEM 2\ADPB\APP\APP\BookStore\bin\Microsoft.AspNet.Identity.Owin.dll
+D:\Documents\SPEACIAL BOX\DUT\Year 3\SEM 2\ADPB\APP\APP\BookStore\bin\Microsoft.Bcl.AsyncInterfaces.dll
+D:\Documents\SPEACIAL BOX\DUT\Year 3\SEM 2\ADPB\APP\APP\BookStore\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.dll
+D:\Documents\SPEACIAL BOX\DUT\Year 3\SEM 2\ADPB\APP\APP\BookStore\bin\Microsoft.Configuration.ConfigurationBuilders.Base.dll
+D:\Documents\SPEACIAL BOX\DUT\Year 3\SEM 2\ADPB\APP\APP\BookStore\bin\Microsoft.Configuration.ConfigurationBuilders.UserSecrets.dll
+D:\Documents\SPEACIAL BOX\DUT\Year 3\SEM 2\ADPB\APP\APP\BookStore\bin\Microsoft.Owin.dll
+D:\Documents\SPEACIAL BOX\DUT\Year 3\SEM 2\ADPB\APP\APP\BookStore\bin\Microsoft.Owin.Host.SystemWeb.dll
+D:\Documents\SPEACIAL BOX\DUT\Year 3\SEM 2\ADPB\APP\APP\BookStore\bin\Microsoft.Owin.Security.Cookies.dll
+D:\Documents\SPEACIAL BOX\DUT\Year 3\SEM 2\ADPB\APP\APP\BookStore\bin\Microsoft.Owin.Security.dll
+D:\Documents\SPEACIAL BOX\DUT\Year 3\SEM 2\ADPB\APP\APP\BookStore\bin\Microsoft.Owin.Security.Facebook.dll
+D:\Documents\SPEACIAL BOX\DUT\Year 3\SEM 2\ADPB\APP\APP\BookStore\bin\Microsoft.Owin.Security.Google.dll
+D:\Documents\SPEACIAL BOX\DUT\Year 3\SEM 2\ADPB\APP\APP\BookStore\bin\Microsoft.Owin.Security.MicrosoftAccount.dll
+D:\Documents\SPEACIAL BOX\DUT\Year 3\SEM 2\ADPB\APP\APP\BookStore\bin\Microsoft.Owin.Security.OAuth.dll
+D:\Documents\SPEACIAL BOX\DUT\Year 3\SEM 2\ADPB\APP\APP\BookStore\bin\Microsoft.Owin.Security.Twitter.dll
+D:\Documents\SPEACIAL BOX\DUT\Year 3\SEM 2\ADPB\APP\APP\BookStore\bin\Microsoft.Web.Infrastructure.dll
+D:\Documents\SPEACIAL BOX\DUT\Year 3\SEM 2\ADPB\APP\APP\BookStore\bin\Newtonsoft.Json.dll
+D:\Documents\SPEACIAL BOX\DUT\Year 3\SEM 2\ADPB\APP\APP\BookStore\bin\Owin.dll
+D:\Documents\SPEACIAL BOX\DUT\Year 3\SEM 2\ADPB\APP\APP\BookStore\bin\PagedList.dll
+D:\Documents\SPEACIAL BOX\DUT\Year 3\SEM 2\ADPB\APP\APP\BookStore\bin\PagedList.Mvc.dll
+D:\Documents\SPEACIAL BOX\DUT\Year 3\SEM 2\ADPB\APP\APP\BookStore\bin\RestSharp.dll
+D:\Documents\SPEACIAL BOX\DUT\Year 3\SEM 2\ADPB\APP\APP\BookStore\bin\Select.HtmlToPdf.dll
+D:\Documents\SPEACIAL BOX\DUT\Year 3\SEM 2\ADPB\APP\APP\BookStore\bin\Syncfusion.Compression.Base.dll
+D:\Documents\SPEACIAL BOX\DUT\Year 3\SEM 2\ADPB\APP\APP\BookStore\bin\Syncfusion.Licensing.dll
+D:\Documents\SPEACIAL BOX\DUT\Year 3\SEM 2\ADPB\APP\APP\BookStore\bin\Syncfusion.Pdf.Base.dll
+D:\Documents\SPEACIAL BOX\DUT\Year 3\SEM 2\ADPB\APP\APP\BookStore\bin\System.Buffers.dll
+D:\Documents\SPEACIAL BOX\DUT\Year 3\SEM 2\ADPB\APP\APP\BookStore\bin\System.ComponentModel.Annotations.dll
+D:\Documents\SPEACIAL BOX\DUT\Year 3\SEM 2\ADPB\APP\APP\BookStore\bin\System.Drawing.Common.dll
+D:\Documents\SPEACIAL BOX\DUT\Year 3\SEM 2\ADPB\APP\APP\BookStore\bin\System.Memory.dll
+D:\Documents\SPEACIAL BOX\DUT\Year 3\SEM 2\ADPB\APP\APP\BookStore\bin\System.Numerics.Vectors.dll
+D:\Documents\SPEACIAL BOX\DUT\Year 3\SEM 2\ADPB\APP\APP\BookStore\bin\System.Runtime.CompilerServices.Unsafe.dll
+D:\Documents\SPEACIAL BOX\DUT\Year 3\SEM 2\ADPB\APP\APP\BookStore\bin\System.Text.Encodings.Web.dll
+D:\Documents\SPEACIAL BOX\DUT\Year 3\SEM 2\ADPB\APP\APP\BookStore\bin\System.Text.Json.dll
+D:\Documents\SPEACIAL BOX\DUT\Year 3\SEM 2\ADPB\APP\APP\BookStore\bin\System.Threading.Tasks.Extensions.dll
+D:\Documents\SPEACIAL BOX\DUT\Year 3\SEM 2\ADPB\APP\APP\BookStore\bin\System.ValueTuple.dll
+D:\Documents\SPEACIAL BOX\DUT\Year 3\SEM 2\ADPB\APP\APP\BookStore\bin\System.Web.Helpers.dll
+D:\Documents\SPEACIAL BOX\DUT\Year 3\SEM 2\ADPB\APP\APP\BookStore\bin\System.Web.Mvc.dll
+D:\Documents\SPEACIAL BOX\DUT\Year 3\SEM 2\ADPB\APP\APP\BookStore\bin\System.Web.Optimization.dll
+D:\Documents\SPEACIAL BOX\DUT\Year 3\SEM 2\ADPB\APP\APP\BookStore\bin\System.Web.Razor.dll
+D:\Documents\SPEACIAL BOX\DUT\Year 3\SEM 2\ADPB\APP\APP\BookStore\bin\System.Web.WebPages.Deployment.dll
+D:\Documents\SPEACIAL BOX\DUT\Year 3\SEM 2\ADPB\APP\APP\BookStore\bin\System.Web.WebPages.dll
+D:\Documents\SPEACIAL BOX\DUT\Year 3\SEM 2\ADPB\APP\APP\BookStore\bin\System.Web.WebPages.Razor.dll
+D:\Documents\SPEACIAL BOX\DUT\Year 3\SEM 2\ADPB\APP\APP\BookStore\bin\WebGrease.dll
+D:\Documents\SPEACIAL BOX\DUT\Year 3\SEM 2\ADPB\APP\APP\BookStore\bin\zxing.dll
+D:\Documents\SPEACIAL BOX\DUT\Year 3\SEM 2\ADPB\APP\APP\BookStore\bin\zxing.presentation.dll
+D:\Documents\SPEACIAL BOX\DUT\Year 3\SEM 2\ADPB\APP\APP\BookStore\bin\ZXing.Windows.Compatibility.dll
+D:\Documents\SPEACIAL BOX\DUT\Year 3\SEM 2\ADPB\APP\APP\BookStore\bin\EntityFramework.xml
+D:\Documents\SPEACIAL BOX\DUT\Year 3\SEM 2\ADPB\APP\APP\BookStore\bin\EntityFramework.SqlServer.xml
+D:\Documents\SPEACIAL BOX\DUT\Year 3\SEM 2\ADPB\APP\APP\BookStore\bin\itextsharp.xml
+D:\Documents\SPEACIAL BOX\DUT\Year 3\SEM 2\ADPB\APP\APP\BookStore\bin\Microsoft.Bcl.AsyncInterfaces.xml
+D:\Documents\SPEACIAL BOX\DUT\Year 3\SEM 2\ADPB\APP\APP\BookStore\bin\Microsoft.Configuration.ConfigurationBuilders.Base.xml
+D:\Documents\SPEACIAL BOX\DUT\Year 3\SEM 2\ADPB\APP\APP\BookStore\bin\Microsoft.Configuration.ConfigurationBuilders.UserSecrets.xml
+D:\Documents\SPEACIAL BOX\DUT\Year 3\SEM 2\ADPB\APP\APP\BookStore\bin\Microsoft.Owin.xml
+D:\Documents\SPEACIAL BOX\DUT\Year 3\SEM 2\ADPB\APP\APP\BookStore\bin\Microsoft.Owin.Security.xml
+D:\Documents\SPEACIAL BOX\DUT\Year 3\SEM 2\ADPB\APP\APP\BookStore\bin\Newtonsoft.Json.xml
+D:\Documents\SPEACIAL BOX\DUT\Year 3\SEM 2\ADPB\APP\APP\BookStore\bin\PagedList.xml
+D:\Documents\SPEACIAL BOX\DUT\Year 3\SEM 2\ADPB\APP\APP\BookStore\bin\PagedList.Mvc.xml
+D:\Documents\SPEACIAL BOX\DUT\Year 3\SEM 2\ADPB\APP\APP\BookStore\bin\RestSharp.xml
+D:\Documents\SPEACIAL BOX\DUT\Year 3\SEM 2\ADPB\APP\APP\BookStore\bin\Select.HtmlToPdf.xml
+D:\Documents\SPEACIAL BOX\DUT\Year 3\SEM 2\ADPB\APP\APP\BookStore\bin\Syncfusion.Compression.Base.xml
+D:\Documents\SPEACIAL BOX\DUT\Year 3\SEM 2\ADPB\APP\APP\BookStore\bin\Syncfusion.Licensing.xml
+D:\Documents\SPEACIAL BOX\DUT\Year 3\SEM 2\ADPB\APP\APP\BookStore\bin\Syncfusion.Pdf.Base.xml
+D:\Documents\SPEACIAL BOX\DUT\Year 3\SEM 2\ADPB\APP\APP\BookStore\bin\System.Buffers.xml
+D:\Documents\SPEACIAL BOX\DUT\Year 3\SEM 2\ADPB\APP\APP\BookStore\bin\System.Drawing.Common.xml
+D:\Documents\SPEACIAL BOX\DUT\Year 3\SEM 2\ADPB\APP\APP\BookStore\bin\System.Memory.xml
+D:\Documents\SPEACIAL BOX\DUT\Year 3\SEM 2\ADPB\APP\APP\BookStore\bin\System.Numerics.Vectors.xml
+D:\Documents\SPEACIAL BOX\DUT\Year 3\SEM 2\ADPB\APP\APP\BookStore\bin\System.Runtime.CompilerServices.Unsafe.xml
+D:\Documents\SPEACIAL BOX\DUT\Year 3\SEM 2\ADPB\APP\APP\BookStore\bin\System.Text.Encodings.Web.xml
+D:\Documents\SPEACIAL BOX\DUT\Year 3\SEM 2\ADPB\APP\APP\BookStore\bin\System.Text.Json.xml
+D:\Documents\SPEACIAL BOX\DUT\Year 3\SEM 2\ADPB\APP\APP\BookStore\bin\System.Threading.Tasks.Extensions.xml
+D:\Documents\SPEACIAL BOX\DUT\Year 3\SEM 2\ADPB\APP\APP\BookStore\bin\System.ValueTuple.xml
+D:\Documents\SPEACIAL BOX\DUT\Year 3\SEM 2\ADPB\APP\APP\BookStore\bin\System.Web.Helpers.xml
+D:\Documents\SPEACIAL BOX\DUT\Year 3\SEM 2\ADPB\APP\APP\BookStore\bin\System.Web.Mvc.xml
+D:\Documents\SPEACIAL BOX\DUT\Year 3\SEM 2\ADPB\APP\APP\BookStore\bin\System.Web.Razor.xml
+D:\Documents\SPEACIAL BOX\DUT\Year 3\SEM 2\ADPB\APP\APP\BookStore\bin\System.Web.WebPages.xml
+D:\Documents\SPEACIAL BOX\DUT\Year 3\SEM 2\ADPB\APP\APP\BookStore\bin\System.Web.WebPages.Deployment.xml
+D:\Documents\SPEACIAL BOX\DUT\Year 3\SEM 2\ADPB\APP\APP\BookStore\bin\System.Web.WebPages.Razor.xml
+D:\Documents\SPEACIAL BOX\DUT\Year 3\SEM 2\ADPB\APP\APP\BookStore\bin\System.Web.Optimization.xml
+D:\Documents\SPEACIAL BOX\DUT\Year 3\SEM 2\ADPB\APP\APP\BookStore\bin\Antlr3.Runtime.pdb
+D:\Documents\SPEACIAL BOX\DUT\Year 3\SEM 2\ADPB\APP\APP\BookStore\bin\zxing.xml
+D:\Documents\SPEACIAL BOX\DUT\Year 3\SEM 2\ADPB\APP\APP\BookStore\bin\zxing.presentation.xml
+D:\Documents\SPEACIAL BOX\DUT\Year 3\SEM 2\ADPB\APP\APP\BookStore\bin\ZXing.Windows.Compatibility.pdb
+D:\Documents\SPEACIAL BOX\DUT\Year 3\SEM 2\ADPB\APP\APP\BookStore\bin\ZXing.Windows.Compatibility.xml
+D:\Documents\SPEACIAL BOX\DUT\Year 3\SEM 2\ADPB\APP\APP\BookStore\bin\Microsoft.AspNet.Identity.Core.xml
+D:\Documents\SPEACIAL BOX\DUT\Year 3\SEM 2\ADPB\APP\APP\BookStore\bin\Microsoft.AspNet.Identity.Owin.xml
+D:\Documents\SPEACIAL BOX\DUT\Year 3\SEM 2\ADPB\APP\APP\BookStore\bin\Microsoft.AspNet.Identity.EntityFramework.xml
+D:\Documents\SPEACIAL BOX\DUT\Year 3\SEM 2\ADPB\APP\APP\BookStore\bin\Microsoft.Owin.Host.SystemWeb.xml
+D:\Documents\SPEACIAL BOX\DUT\Year 3\SEM 2\ADPB\APP\APP\BookStore\bin\Microsoft.Owin.Security.Facebook.xml
+D:\Documents\SPEACIAL BOX\DUT\Year 3\SEM 2\ADPB\APP\APP\BookStore\bin\Microsoft.Owin.Security.Cookies.xml
+D:\Documents\SPEACIAL BOX\DUT\Year 3\SEM 2\ADPB\APP\APP\BookStore\bin\Microsoft.Owin.Security.Google.xml
+D:\Documents\SPEACIAL BOX\DUT\Year 3\SEM 2\ADPB\APP\APP\BookStore\bin\Microsoft.Owin.Security.Twitter.xml
+D:\Documents\SPEACIAL BOX\DUT\Year 3\SEM 2\ADPB\APP\APP\BookStore\bin\Microsoft.Owin.Security.MicrosoftAccount.xml
+D:\Documents\SPEACIAL BOX\DUT\Year 3\SEM 2\ADPB\APP\APP\BookStore\bin\Microsoft.Owin.Security.OAuth.xml
+D:\Documents\SPEACIAL BOX\DUT\Year 3\SEM 2\ADPB\APP\APP\BookStore\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.xml
+D:\Documents\SPEACIAL BOX\DUT\Year 3\SEM 2\ADPB\APP\APP\BookStore\bin\Select.Html.dep
+D:\Documents\SPEACIAL BOX\DUT\Year 3\SEM 2\ADPB\APP\APP\BookStore\obj\Release\BookStore.csproj.AssemblyReference.cache
+D:\Documents\SPEACIAL BOX\DUT\Year 3\SEM 2\ADPB\APP\APP\BookStore\obj\Release\BookStore.csproj.CoreCompileInputs.cache
+D:\Documents\SPEACIAL BOX\DUT\Year 3\SEM 2\ADPB\APP\APP\BookStore\obj\Release\BookStore.sourcelink.json
+D:\Documents\SPEACIAL BOX\DUT\Year 3\SEM 2\ADPB\APP\APP\BookStore\obj\Release\BookStore.csproj.CopyComplete
+D:\Documents\SPEACIAL BOX\DUT\Year 3\SEM 2\ADPB\APP\APP\BookStore\obj\Release\BookStore.dll
+D:\Documents\SPEACIAL BOX\DUT\Year 3\SEM 2\ADPB\APP\APP\BookStore\obj\Release\BookStore.pdb
+D:\Documents\SPEACIAL BOX\DUT\Year 3\SEM 2\ADPB\APP\APP\BookStore\bin\Microsoft.Web.Delegation.dll
+D:\Documents\SPEACIAL BOX\DUT\Year 3\SEM 2\ADPB\APP\APP\BookStore\bin\Microsoft.Web.Deployment.dll
+D:\Documents\SPEACIAL BOX\DUT\Year 3\SEM 2\ADPB\APP\APP\BookStore\bin\Microsoft.Web.Deployment.Tracing.dll
+D:\Documents\SPEACIAL BOX\DUT\Year 3\SEM 2\ADPB\APP\APP\BookStore\bin\Microsoft.Web.Administration.dll
