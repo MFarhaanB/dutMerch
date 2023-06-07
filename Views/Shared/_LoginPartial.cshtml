@@ -71,12 +71,9 @@
     }
     else if (Request.IsAuthenticated && User.IsInRole("Student"))
     {
-        <ul class="navbar-nav ml-auto">
-            <li class="nav-item active nav-link" style="color:azure; height:32px "><a class="nav-link ">@{Html.RenderAction("CartSummary", "ShoppingCart", new { @class = "a_exception" });}</a></li>
-        </ul>
-        <li class="dropdown nav-item active nav-link" style="padding:1px">
-            <a href="#" class="dropdown-toggle nav-link" data-toggle="dropdown">Student Functions<b class="caret"></b></a>
-            <ul class="dropdown-menu">
+        <!--<li class="dropdown nav-item active nav-link" style="padding:1px">
+            <a href="#" class="dropdown-toggle nav-link" data-toggle="dropdown">Options<b class="caret"></b></a>
+            <ul class="dropdown-menu">-->
 
 
                 <li class="divider"></li>
@@ -84,9 +81,9 @@
                 <li class="nav-link">
                     @Html.ActionLink("Manage Account", "Index", "Manage")
                 </li>
-                <li class="nav-link">@Html.ActionLink("Returns And Refunds", "UserReturnsAndRefunds", "ReturnAndRefunds")</li>
-
-                <li class="dropdown-header">Books</li>
+                <li class="nav-link">@Html.ActionLink("Returns And Refunds", "UserReturnsAndRefunds", "ReturnAndRefunds")</li>*@
+                
+                @*<li class="dropdown-header">Books</li>
                 <li class="nav-link">@Html.ActionLink("Borrow A Book", "BorrowBook", "Libraries")</li>
                 <li class="nav-link">
                     @Html.ActionLink("Request A Book", "Index", "RequestBooks")

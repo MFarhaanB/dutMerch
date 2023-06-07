@@ -1,4 +1,5 @@
-﻿using BookStore.Models;
+﻿using BookStore.Helpers;
+using BookStore.Models;
 using System;
 using System.Data;
 using System.Data.Entity;
@@ -155,32 +156,17 @@ namespace BookStore.Controllers
 
         public void SendCouponEmail(string Email, string Name, string CouponCode)
         {
-            MailMessage mail = new MailMessage();
-            MailAddress from = new MailAddress("africanmagicsystem@gmail.com");
-            mail.From = from;
-            mail.Subject = "Get a Dicount";
-            mail.Body = "Hi  " + Name + ".Use our Coupon to get discount on your purchase -  " + CouponCode;
-            mail.To.Add(Email);
+            string subject = "Get a Discount";
+            string body = "Hi  " + Name + ".Use our Coupon to get discount on your purchase -  " + CouponCode;
+            try
+            {
+                new Email().SendEmail(subject, body, Email);
+            }
+            catch (Exception)
+            {
 
-            mail.IsBodyHtml = true;
-            SmtpClient smtp = new SmtpClient();
-            smtp.Host = "smtp.gmail.com";
-            smtp.EnableSsl = true;
-            NetworkCredential networkCredential = new NetworkCredential("africanmagicsystem@gmail.com", "zbpabilmryequenp");
-            smtp.UseDefaultCredentials = true;
-            smtp.Credentials = networkCredential;
-            smtp.Port = 587;
-            smtp.Send(mail);
-            //Clean-up.           
-            //Dispose of email.
-            mail.Dispose();
-
+                // throw;
+            }
         }
-
-
-
-
-
-
     }
 }

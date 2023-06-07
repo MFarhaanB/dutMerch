@@ -12,6 +12,7 @@ using System.Threading.Tasks;
 using System.Web;
 using System.Web.Mvc;
 using System.Net.Mail;
+using System.Web.Helpers;
 
 
 namespace BookStore.Controllers
@@ -375,26 +376,18 @@ namespace BookStore.Controllers
             //Send email only if the current is more than the expected return date
             if (CurrentDate > ExpectedReturn)
             {
-                MailMessage mail = new MailMessage();
-                string emailTo = StudentEmail;
-                MailAddress from = new MailAddress("africanmagicsystem@gmail.com");
-                mail.From = from;
-                mail.Subject = "You Have A Overdue Book";
-                mail.Body = "Please Return Your Outstanding Book";
-                mail.To.Add(emailTo);
+                string subject = "You Have A Overdue Book";
+                string body = "Please Return Your Outstanding Book";
 
-                mail.IsBodyHtml = true;
-                SmtpClient smtp = new SmtpClient();
-                smtp.Host = "smtp.gmail.com";
-                smtp.EnableSsl = true;
-                NetworkCredential networkCredential = new NetworkCredential("africanmagicsystem@gmail.com", "zbpabilmryequenp");
-                smtp.UseDefaultCredentials = true;
-                smtp.Credentials = networkCredential;
-                smtp.Port = 587;
-                smtp.Send(mail);
-                //Clean-up.           
-                //Dispose of email.
-                mail.Dispose();
+                try
+                {
+                    new Email().SendEmail(subject, body, StudentEmail);
+                }
+                catch (Exception)
+                {
+
+                    // throw;
+                }
             }
         }
 

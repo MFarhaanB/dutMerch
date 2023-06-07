@@ -44,7 +44,11 @@
             @Html.DisplayNameFor(model => model.Address)
         </th>
         <th style="padding-right: 50px">
-            @Html.DisplayNameFor(model => model.SaleTotal)
+            @*@Html.DisplayNameFor(model => model.SaleTotal)*@
+            Total
+        </th>
+        <th>
+            Actions
         </th>
         
     </tr>
@@ -65,9 +69,7 @@
     </td>
     <td>
         @Html.ActionLink("View And Track", "Details", "Sales", new { id = item.SaleId }, new { @class = "my-class" })
-    </td>
-
-    <td>
+        <br />
         @Html.ActionLink("Review", "Details", "Sales", new { id = item.SaleId },  new { @class = "my-class" })
     </td>
 </tr>

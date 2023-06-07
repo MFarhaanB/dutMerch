@@ -12,6 +12,7 @@ using System.Net.Mail;
 using BookStore.ViewModels;
 using BookStore.Helpers;
 using System.EnterpriseServices;
+using System.Web.Helpers;
 
 namespace BookStore.Controllers
 {
@@ -75,28 +76,18 @@ namespace BookStore.Controllers
             delivery.isDelivered = true;
 
 
-            //Successful Delivery...
-            MailMessage mail = new MailMessage();
-            string emailTo = sale.Email;
-            MailAddress from = new MailAddress("africanmagicsystem@gmail.com");
-            mail.From = from;
-            mail.Subject = "Successful Delivery For Order Number #" + sale.SaleId;
-            mail.Body = "Dear Customer " + sale.Name + ", your order has been delivered successfully.";
-            mail.To.Add(emailTo);
 
-            mail.IsBodyHtml = true;
-            SmtpClient smtp = new SmtpClient();
-            smtp.Host = "smtp.gmail.com";
-            smtp.EnableSsl = true;
-            NetworkCredential networkCredential = new NetworkCredential("africanmagicsystem@gmail.com", "zbpabilmryequenp");
-            smtp.UseDefaultCredentials = true;
-            smtp.Credentials = networkCredential;
-            smtp.Port = 587;
-            smtp.Send(mail);
-            //Clean-up.           
-            //Dispose of email.
-            sale.ConfirmDelivery = true;
-            mail.Dispose();
+            string subject = "Successful Delivery For Order Number #" + sale.SaleId;
+            string body = "Dear Customer " + sale.Name + ", your order has been delivered successfully.";
+            try
+            {
+                new Email().SendEmail(subject, body, sale.Email);
+            }
+            catch (Exception)
+            {
+
+                // throw;
+            }
 
             //Set Sale State to Complete once delivered
             var completedSaleId = delivery.SaleId;
@@ -124,26 +115,18 @@ namespace BookStore.Controllers
             //  ViewBag.ConfirmOrder = CO;
 
             //Successful Delivery...
-            MailMessage mail = new MailMessage();
-            string emailTo = sale.Email;
-            MailAddress from = new MailAddress("africanmagicsystem@gmail.com");
-            mail.From = from;
-            mail.Subject = "Approved Delivery For Order Number #" + sale.SaleId;
-            mail.Body = "Dear Customer" + sale.Name + " your order has been Dispatched." + " https://2022grp32.azurewebsites.net/Manage/PurchaseHistory  " + "Use this link to confirm you have received your order";
-            mail.To.Add(emailTo);
+            string subject = "Approved Delivery For Order Number #" + sale.SaleId;
+            string body = "Dear Customer" + sale.Name + " your order has been Dispatched." + " https://2022grp32.azurewebsites.net/Manage/PurchaseHistory  " + "Use this link to confirm you have received your order";
+            try
+            {
+                new Email().SendEmail(subject, body, sale.Email);
+            }
+            catch (Exception)
+            {
 
-            mail.IsBodyHtml = true;
-            SmtpClient smtp = new SmtpClient();
-            smtp.Host = "smtp.gmail.com";
-            smtp.EnableSsl = true;
-            NetworkCredential networkCredential = new NetworkCredential("africanmagicsystem@gmail.com", "zbpabilmryequenp");
-            smtp.UseDefaultCredentials = true;
-            smtp.Credentials = networkCredential;
-            smtp.Port = 587;
-            //smtp.Send(mail);
-            //Clean-up.           
-            //Dispose of email.
-            mail.Dispose();
+                // throw;
+            }
+
             sale.ConfirmOrder = false;
             sale.Dispatched = true;
             sale.ConfirmDelivery = null;

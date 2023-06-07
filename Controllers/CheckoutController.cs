@@ -16,6 +16,7 @@ using System.Net;
 using System.Net.Mail;
 using System.Text;
 using System.Web;
+using System.Web.Helpers;
 using System.Web.Mvc;
 
 namespace BookStore.Controllers
@@ -363,30 +364,14 @@ namespace BookStore.Controllers
             string docname = "Invoice.pdf";
             invoicePdf.ContentDisposition.FileName = docname;
 
-            MailMessage mail = new MailMessage();
-            string emailTo = sale.Email;
-            MailAddress from = new MailAddress("africanmagicsystem@gmail.com");
-            mail.From = from;
-            mail.Subject = "Your invoice for order number #" + sale.SaleId;
-            mail.Body = "Dear Customer" + sale.Name + " find your invoice in the attached PDF document.";
-            mail.To.Add(emailTo);
+            string email = sale.Email;
+            string subject = "Your invoice for order number #" + sale.SaleId;
+            string body = "Dear Customer" + sale.Name + " find your invoice in the attached PDF document.";
 
             mail.Attachments.Add(invoicePdf);
 
-            mail.IsBodyHtml = true;
-            SmtpClient smtp = new SmtpClient();
-            smtp.Host = "smtp.gmail.com";
-            smtp.EnableSsl = true;
-            NetworkCredential networkCredential = new NetworkCredential("africanmagicsystem@gmail.com", "zbpabilmryequenp");
-            smtp.UseDefaultCredentials = true;
-            smtp.Credentials = networkCredential;
-            smtp.Port = 587;
-            //smtp.Send(mail);
-            //Clean-up.
-            //Close the document.
-            document.Close(true);
-            //Dispose of email.
-            mail.Dispose();
+                // throw;
+            }
 
 
             //Payment...
@@ -499,13 +484,13 @@ namespace BookStore.Controllers
             ViewBag.Name = FullName;
             if (TypeOfPayment == Keys.PY_COD)
                 ViewBag.NewShow = $"Your items have been order Please note that you will be liable to pay the amount of ZAR{Amount} on the day of delivery" +
-                     $"<br/>Transcation No : {TranscationRefNo}" +
+                     $"Transcation No : {TranscationRefNo}" +
                     $"Thanks for Ordering Enjoy";
 
             else
                 ViewBag.NewShow = $"Your items have been ordered and payment of the amount ZAR{Amount} has been received  " +
                     $"Transcation No : {TranscationRefNo}" +
-                    $"<br/>Thanks for Ordering Enjoy";
+                    $"Thanks for Ordering Enjoy";
 
 
 

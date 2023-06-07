@@ -5,7 +5,7 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta name="theme-color" content="#000000" />
-    <title>@ViewBag.Title - My ASP.NET Application</title>
+    <title>@ViewBag.Title - Clothing Shop</title>
     @Styles.Render("~/Content/css")
     @Scripts.Render("~/bundles/modernizr")
     <Style>
@@ -64,8 +64,8 @@
                                 <li>@Html.ActionLink("Fantasy", "Fantasy", "Products" )</li>
                                 <li>@Html.ActionLink("Horror", "Horror", "Products" )</li>
                                 <li class="divider"></li>*@
-                            <li class="dropdown-header" style="color:black">View All Books</li>
-                            <li>@Html.ActionLink("Our Books", "OurProducts", "Products")</li>
+                            @*<li class="dropdown-header" style="color:black">View All Books</li>*@
+                            <li>@Html.ActionLink("Shop", "OurProducts", "Products")</li>
                         </ul>
                     </li>
                     @Html.Partial("_LoginPartial")

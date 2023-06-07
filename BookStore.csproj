@@ -281,6 +281,7 @@
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
     <Compile Include="Helpers\AnalyticsHelper.cs" />
+    <Compile Include="Helpers\Email.cs" />
     <Compile Include="Helpers\ImageHelper.cs" />
     <Compile Include="Helpers\QrCodeHelper.cs" />
     <Compile Include="Helpers\StatusHelper.cs" />
@@ -565,6 +566,36 @@
     <Content Include="Content\Theme1\images\CustomIMAges\BookStore\TenthMan Down.jpg" />
     <Content Include="Content\Theme1\images\CustomIMAges\BookStore\throne of fire.jpg" />
     <Content Include="Content\Theme1\images\CustomIMAges\BookStore\W1.jpeg" />
+    <Content Include="Content\Theme1\images\CustomIMAges\ClothingStore\0002672_mens-short-sleeve-shirts_1024.webp" />
+    <Content Include="Content\Theme1\images\CustomIMAges\ClothingStore\49830787AC_999_f.avif" />
+    <Content Include="Content\Theme1\images\CustomIMAges\ClothingStore\49830787ac_999_f.jpg" />
+    <Content Include="Content\Theme1\images\CustomIMAges\ClothingStore\54212999-800-800.jpg" />
+    <Content Include="Content\Theme1\images\CustomIMAges\ClothingStore\55370305-1-pdpxl.jpeg" />
+    <Content Include="Content\Theme1\images\CustomIMAges\ClothingStore\56295055-800-800 %281%29.jpg" />
+    <Content Include="Content\Theme1\images\CustomIMAges\ClothingStore\56295055-800-800.jpg" />
+    <Content Include="Content\Theme1\images\CustomIMAges\ClothingStore\56302280-800-800.jpg" />
+    <Content Include="Content\Theme1\images\CustomIMAges\ClothingStore\6-3.jpg" />
+    <Content Include="Content\Theme1\images\CustomIMAges\ClothingStore\7223023427_6_30_1.jpg" />
+    <Content Include="Content\Theme1\images\CustomIMAges\ClothingStore\874-shirts-new-teal.webp" />
+    <Content Include="Content\Theme1\images\CustomIMAges\ClothingStore\alexander-kovacs-GMGdhtYeROY-unsplash.jpg" />
+    <Content Include="Content\Theme1\images\CustomIMAges\ClothingStore\ba8f1187-f252-4257-a5b2-4a5dfc5129f6.webp" />
+    <Content Include="Content\Theme1\images\CustomIMAges\ClothingStore\bella-boyfriend-ripped-jeans-woman-light-denim_71312.jpg" />
+    <Content Include="Content\Theme1\images\CustomIMAges\ClothingStore\best-shopify-apps-for-clothing-store.jpg" />
+    <Content Include="Content\Theme1\images\CustomIMAges\ClothingStore\BRIDES-23-best-places-to-buy-bridesmaids-dresses-online-4783902-recirc-e794adce6aba4c19aafeec03b75d5307.jpg" />
+    <Content Include="Content\Theme1\images\CustomIMAges\ClothingStore\clothing-store-logo-design-inspiration-vector-illustration_500223-481.jpg" />
+    <Content Include="Content\Theme1\images\CustomIMAges\ClothingStore\ee9acfe0-blog_clothing-store-business-plan_1200x628.jpg" />
+    <Content Include="Content\Theme1\images\CustomIMAges\ClothingStore\EvaBlouseCream_2000x.png" />
+    <Content Include="Content\Theme1\images\CustomIMAges\ClothingStore\hannah-morgan-ycVFts5Ma4s-unsplash.jpg" />
+    <Content Include="Content\Theme1\images\CustomIMAges\ClothingStore\image %281%29.jpg" />
+    <Content Include="Content\Theme1\images\CustomIMAges\ClothingStore\image.webp" />
+    <Content Include="Content\Theme1\images\CustomIMAges\ClothingStore\jeans.jpg" />
+    <Content Include="Content\Theme1\images\CustomIMAges\ClothingStore\Layer_5.webp" />
+    <Content Include="Content\Theme1\images\CustomIMAges\ClothingStore\pexels-willo-m-3768005.jpg" />
+    <Content Include="Content\Theme1\images\CustomIMAges\ClothingStore\priscilla-du-preez-dlxLGIy-2VU-unsplash.jpg" />
+    <Content Include="Content\Theme1\images\CustomIMAges\ClothingStore\Pro-Capture-One-0044_clipped_rev_1.jpg" />
+    <Content Include="Content\Theme1\images\CustomIMAges\ClothingStore\Sarah-Leaf-Blouse-Front-Website-jpg.webp" />
+    <Content Include="Content\Theme1\images\CustomIMAges\ClothingStore\uniq-launch-b.jpeg" />
+    <Content Include="Content\Theme1\images\CustomIMAges\ClothingStore\unnamed.jpg" />
     <Content Include="Content\Theme1\images\download.jfif" />
     <Content Include="Content\Theme1\images\footer-bg.jpg" />
     <Content Include="Content\Theme1\images\gallery-img-01.jpg" />
