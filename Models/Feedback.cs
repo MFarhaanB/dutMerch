@@ -15,7 +15,7 @@ namespace BookStore.Models
        
 
         public int SaleId { get; set; }
-        public int BookId { get; set; }
+        public int? BookId { get; set; }
 
 
         public DateTime? Created { get; set; }

@@ -579,7 +579,8 @@ namespace BookStore.Controllers
         // more details see https://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public ActionResult Create([Bind(Include = "ProductCatergoryId,CatergoryName,ProductCatergory,ProductPrice,ProductImage,ProductDescription,ProductStock,ProductAuthor,ProductName,ProductCatergory")] Products product, HttpPostedFileBase img_upload, ProductCatergory productCatergory)
+        public ActionResult Create([Bind(Include = "ProductCatergoryId,CatergoryName,ProductCatergory,ProductPrice,ProductImage,ProductDescription,ProductStock,ProductAuthor,ProductName,ProductCatergory")] 
+        Products product, HttpPostedFileBase img_upload, ProductCatergory productCatergory)
         {
 
             byte[] data;
@@ -594,6 +595,8 @@ namespace BookStore.Controllers
                 using (ApplicationDbContext _context = new ApplicationDbContext())
                 {
                     _context.Database.CommandTimeout = 200;
+                    product.ProductCatergory = null;
+                    product.ProductCatergoryId = int.Parse(productCatergory.CatergoryName);
                     _context.Products.Add(product);
                     changeCount = _context.SaveChanges();
                     if (changeCount > 0) return RedirectToAction("Index");

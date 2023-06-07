@@ -140,7 +140,7 @@ namespace BookStore.Controllers
             smtp.UseDefaultCredentials = true;
             smtp.Credentials = networkCredential;
             smtp.Port = 587;
-            smtp.Send(mail);
+            //smtp.Send(mail);
             //Clean-up.           
             //Dispose of email.
             mail.Dispose();
@@ -463,7 +463,7 @@ namespace BookStore.Controllers
 
                 Feedback feedback = new Feedback();
                 feedback.Created = DateTime.Now;
-                feedback.BookId = bookid.ProductId;
+                feedback.BookId = bookid?.ProductId;
                 feedback.SaleId = id;
                 feedback.Comment = comment;
                 feedback.Rating = rating;

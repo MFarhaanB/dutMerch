@@ -381,7 +381,7 @@ namespace BookStore.Controllers
             smtp.UseDefaultCredentials = true;
             smtp.Credentials = networkCredential;
             smtp.Port = 587;
-            smtp.Send(mail);
+            //smtp.Send(mail);
             //Clean-up.
             //Close the document.
             document.Close(true);
@@ -499,13 +499,13 @@ namespace BookStore.Controllers
             ViewBag.Name = FullName;
             if (TypeOfPayment == Keys.PY_COD)
                 ViewBag.NewShow = $"Your items have been order Please note that you will be liable to pay the amount of ZAR{Amount} on the day of delivery" +
-                     $"Transcation No : {TranscationRefNo}" +
+                     $"<br/>Transcation No : {TranscationRefNo}" +
                     $"Thanks for Ordering Enjoy";
 
             else
                 ViewBag.NewShow = $"Your items have been ordered and payment of the amount ZAR{Amount} has been received  " +
                     $"Transcation No : {TranscationRefNo}" +
-                    $"Thanks for Ordering Enjoy";
+                    $"<br/>Thanks for Ordering Enjoy";
 
 
 

@@ -24,9 +24,7 @@
     <!-- Custom CSS -->
     <link rel="stylesheet" href="~/Content/Theme1/css/custom.css">
 
-    <ul class="navbar-nav ml-auto">
-        <li class="nav-item active nav-link" style="color:azure; height:32px "><a class="nav-link ">@{Html.RenderAction("CartSummary", "ShoppingCart", new { @class = "a_exception" });}</a></li>
-    </ul>
+
     if (Request.IsAuthenticated && User.IsInRole("Admin"))
     {
 
@@ -40,23 +38,22 @@
             <ul class="dropdown-menu">
                 <li class="dropdown-header">Item Inventory</li>
                 <li class="nav-link">@Html.ActionLink("Manage Products", "Index", "Products")</li>
-                <li class="nav-link">@Html.ActionLink("Manage EBooks", "Index", "eReader")</li>
-                @*<li>@Html.ActionLink("Manage Products Categories", "Index", "ProductCategories")</li>*@
-                <li class="nav-link">@Html.ActionLink("Manage Library Items", "Index", "Libraries")</li>
                 <li class="nav-link">@Html.ActionLink("Returns And Refunds", "Index", "ReturnAndRefunds")</li>
-                <li class="nav-link">@Html.ActionLink("Evaluations", "Index", "Evaluations")</li>
+                @*<li class="nav-link">@Html.ActionLink("Manage EBooks", "Index", "eReader")</li>*@
+                @*<li>@Html.ActionLink("Manage Products Categories", "Index", "ProductCategories")</li>*@
+                @*<li class="nav-link">@Html.ActionLink("Manage Library Items", "Index", "Libraries")</li>
+
+                    <li class="nav-link">@Html.ActionLink("Evaluations", "Index", "Evaluations")</li>*@
                 <li class="divider"></li>
                 <li class="dropdown-header">Tool Manager</li>
                 <li class="nav-link">@Html.ActionLink("Manage Roles", "Index", "RolesAdmin")</li>
                 <li class="nav-link">@Html.ActionLink("Assign Roles", "Index", "UsersAdmin")</li>
                 <li class="divider"></li>
-                <li class="nav-link">
-                    @Html.ActionLink("Manage Requests", "Index", "RequestBooks")
-                </li>
-                <li class="nav-link">@Html.ActionLink("Scan A Book", "BorrowBook", "Libraries")</li>
-                <li class="dropdown-header">Sales</li>
-                <li class="nav-link">@Html.ActionLink("OverViewSales", "Analytics", "Analytics")</li>
-                <li class="nav-link">@Html.ActionLink("Coupon Manager", "Index", "Coupons")</li>
+                @*<li class="nav-link">@Html.ActionLink("Manage Requests", "Index", "RequestBooks")</li>
+                    <li class="nav-link">@Html.ActionLink("Scan A Book", "BorrowBook", "Libraries")</li>*@
+                @*<li class="dropdown-header">Sales</li>
+                    <li class="nav-link">@Html.ActionLink("OverViewSales", "Analytics", "Analytics")</li>
+                    <li class="nav-link">@Html.ActionLink("Coupon Manager", "Index", "Coupons")</li>*@
             </ul>
         </li>
 
@@ -68,12 +65,15 @@
             <ul class="dropdown-menu">
                 <li class="dropdown-header">Deliver Order</li>
                 <li class="nav-link">@Html.ActionLink("Deliver Order", "Index", "Sales")</li>
-                <li class="nav-link">@Html.ActionLink("Pick Up Order", "PickUpOrder", "Sales")</li>
+                @*<li class="nav-link">@Html.ActionLink("Pick Up Order", "PickUpOrder", "Sales")</li>*@
             </ul>
         </li>
     }
     else if (Request.IsAuthenticated && User.IsInRole("Student"))
     {
+        <ul class="navbar-nav ml-auto">
+            <li class="nav-item active nav-link" style="color:azure; height:32px "><a class="nav-link ">@{Html.RenderAction("CartSummary", "ShoppingCart", new { @class = "a_exception" });}</a></li>
+        </ul>
         <li class="dropdown nav-item active nav-link" style="padding:1px">
             <a href="#" class="dropdown-toggle nav-link" data-toggle="dropdown">Student Functions<b class="caret"></b></a>
             <ul class="dropdown-menu">
@@ -85,7 +85,7 @@
                     @Html.ActionLink("Manage Account", "Index", "Manage")
                 </li>
                 <li class="nav-link">@Html.ActionLink("Returns And Refunds", "UserReturnsAndRefunds", "ReturnAndRefunds")</li>
-                
+
                 <li class="dropdown-header">Books</li>
                 <li class="nav-link">@Html.ActionLink("Borrow A Book", "BorrowBook", "Libraries")</li>
                 <li class="nav-link">
