@@ -27,7 +27,7 @@ namespace BookStore.Controllers
         private ApplicationSignInManager _signInManager;
         private ApplicationUserManager _userManager;
         string[] cmt = { "Excellent", "Good experience", "Satisfactory service", "Amazing Book" };
-        int[] rt = { 5, 4, 3, 2, 1 }; 
+        int[] rt = { 5, 4, 3, 2, 1 };
         public CheckoutController()
         {
         }
@@ -142,7 +142,7 @@ namespace BookStore.Controllers
 
             //Customer Details
             foreach (var user in getUsers)
-            {   
+            {
                 sale.Email = User.Identity.Name;
                 sale.Name = user.Name;
                 sale.Address = user.Address;
@@ -154,7 +154,7 @@ namespace BookStore.Controllers
             }
 
             var ebook = dB.eBooks.Where(c => c.UserId == null).ToList();
-            foreach(var book in ebook)
+            foreach (var book in ebook)
             {
                 book.UserId = sale.Email;
             }
@@ -227,7 +227,7 @@ namespace BookStore.Controllers
             dB.Deliveries.Add(delivery);
 
 
-           
+
 
             // double? FinalCost;
             double? FinalCost = cart.GetTotal() + cart.GetDeliveryFee();
@@ -243,10 +243,10 @@ namespace BookStore.Controllers
                     if (discount.CouponUserIsValid == true)
                     {
                         discount.CouponUserIsValid = false;
-                       // discount.Coupon.CouponCounter = discount.Coupon.CouponCounter + 1;
+                        // discount.Coupon.CouponCounter = discount.Coupon.CouponCounter + 1;
                     }
                 }
-            } 
+            }
             dB.SaveChanges();
 
 
@@ -368,7 +368,12 @@ namespace BookStore.Controllers
             string subject = "Your invoice for order number #" + sale.SaleId;
             string body = "Dear Customer" + sale.Name + " find your invoice in the attached PDF document.";
 
-            mail.Attachments.Add(invoicePdf);
+            try
+            {
+                new Email().SendEmail(subject, body, email);
+            }
+            catch (Exception)
+            {
 
                 // throw;
             }
