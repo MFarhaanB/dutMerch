@@ -96,7 +96,7 @@ namespace BookStore.Controllers
                 Sale completedSale = db.Sales.Find(completedSaleId);
                 completedSale.Complete = true;
             }
-
+            db.Entry(delivery).State = EntityState.Modified;
             await db.SaveChangesAsync();
             return RedirectToAction("Details" + "/" + id);
         }
@@ -191,7 +191,7 @@ namespace BookStore.Controllers
                                where db.SaleId == id
                                select db;
 
-
+            
 
             ViewBag.SaleDetails = productList;
             ViewBag.DeliveryDetails = confirmation;
@@ -202,6 +202,7 @@ namespace BookStore.Controllers
             }
 
             Delivery delivery = await db.Deliveries.FindAsync(DelId);
+            sale.ConfirmDelivery = delivery.isDelivered;
             ViewBag.Date = delivery.DeliveryDate;
             ViewBag.Delivery = delivery.CurrentLocation;
             ViewBag.SalesId = id;
