@@ -368,10 +368,19 @@ namespace BookStore.Controllers
             string subject = "Your invoice for order number #" + sale.SaleId;
             string body = "Dear Customer" + sale.Name + " find your invoice in the attached PDF document.";
 
-            mail.Attachments.Add(invoicePdf);
+            try
+            {
+                new Email().SendEmail(subject, body, email, invoicePdf);
+            }
+            catch (Exception)
+            {
 
                 // throw;
             }
+
+
+                // throw;
+            //}
 
 
             //Payment...

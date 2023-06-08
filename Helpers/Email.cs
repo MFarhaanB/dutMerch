@@ -11,7 +11,7 @@ namespace BookStore.Helpers
 {
     public class Email
     {
-        public void SendEmail(string subject, string body, string email)
+        public void SendEmail(string subject, string body, string email, Attachment attachment = null)
         {
             try
             {
@@ -20,6 +20,10 @@ namespace BookStore.Helpers
                 mail.From = from;
                 mail.Subject = subject;
                 mail.IsBodyHtml = true;
+                if (attachment != null)
+                {
+                    mail.Attachments.Add(attachment);
+                }
                 mail.To.Add(email);
 
                 //mail.IsBodyHtml = true;
