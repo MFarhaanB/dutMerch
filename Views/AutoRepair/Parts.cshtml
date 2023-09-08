@@ -1,0 +1,258 @@
+﻿@model PagedList.IPagedList<BookStore.Models.Products>
+@using PagedList.Mvc
+
+<link href="~/Content/PagedList.css" rel="stylesheet" type="text/css" />
+<link href="~/Styles/StyleSheet2.css" rel="stylesheet" type="text/css" />
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.2/css/all.min.css" />
+
+@{
+    ViewBag.Title = "Auto Parts";
+}
+
+<h2 class="text-center text-info" style="color:azure">Store Parts</h2>
+
+<style>
+    .fa-heart {
+        background-color: #fcc072;
+    }
+
+    .footer-area {
+        margin-top: 0px;
+    }
+</style>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
+<script type="text/javascript">
+
+    $(function () {
+        // Document.ready -> link up remove event handler
+        $(".AddLink").click(function () {
+            // Get the id from the link
+            var recordToAdd = $(this).attr("data-id");
+            if (recordToAdd != '') {
+                // Perform the ajax post
+                $.post("/ShoppingCart/AddToCart", { "id": recordToAdd },
+                    function (data) {
+                        $('#cart-status').text(data.CartCount);
+                    });
+            }
+        });
+    });</script>
+<div class="bs-docs-section container">
+    <div class="row d-flex justify-content-center">
+        @using (Html.BeginForm("OurProducts", "Products", FormMethod.Get))
+        {
+            <div class="form-group">
+                <div class="input-group">
+                    <div class="searchdiv">
+                        @Html.TextBox("SearchString", ViewBag.CurrentFilter as string, new { placeholder = "Enter a parts name here.", @class = "search-input" })
+                        <input type="submit" class="dropbtn" value="Search" style="border-radius:4px;cursor:pointer" />
+                    </div>
+                </div>
+            </div>
+        }
+
+    </div>
+</div>
+
+<div class="bs-docs-section container" style="background-color: #ededed91; width: 100%; padding-top: 20px; border-radius: 8px; ">
+    <div class="row d-flex justify-content-center">
+        @using (Html.BeginForm("OurProducts", "Products", FormMethod.Get))
+        {
+            <div class="form-group">
+                <div class="input-group">
+                    <div class="searchdiv">
+                        @Html.DropDownList("manufacture", (SelectList)ViewBag.manufacture, "-- Select vehicle manufacture --", new { @class = "search-input", @Name = "manufacture" })
+                        @Html.DropDownList("vModel", (SelectList)ViewBag.model, "-- Select vehicle model --", new { @class = "search-input", @Name = "vModel" })
+                        @Html.DropDownList("bType", (SelectList)ViewBag.bType, "-- Select vehicle model --", new { @class = "search-input", @Name = "bType" })
+                        <input type="submit" class="dropbtn" value="Filter" style="border-radius:4px;cursor:pointer" />
+                        <input type="button" class="dropbtn" value="Reset" style="border-radius:4px;cursor:pointer" onclick="window.location.href='@Url.Action("OurProducts","Products")'" />
+                    </div>
+                </div>
+            </div>
+        }
+
+    </div>
+</div>
+
+<!-- Button trigger modal -->
+<div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+
+    <div aria-hidden="true" class="alert alert-dismissable alert-success">
+        <button type="button" class="close" data-dismiss="alert">×</button>
+        <strong>An item was added to your cart.</strong> To check out now simply <a href="#" class="alert-link">click here</a>.
+    </div>
+
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal" aria-hidden="true">×</button>
+                @*<h4 class="modal-title">Confirm check out.</h4>*@
+            </div>
+            <div class="modal-body">
+                <p>Are you sure you want to checkout?</p>
+
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-default" data-dismiss="modal">Keep Shopping</button>
+                <button type="submit" class="btn btn-primary" onclick="location.href='@Url.Action("Index", "ShoppingCart")'">Check Out</button>
+            </div>
+        </div>
+    </div>
+</div>
+
+<body>
+    <div id="SubmitModal" class="modal fade" role="dialog">
+        <div class="modal-dialog">
+            <!-- Modal content-->
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h4 class="modal-title dropbtn" id="modalTitleText">Description</h4>
+                </div>
+                <div class="modal-body">
+                    <div class="container col-md-12">
+                        <div id="appendDes" class="col-md-12">
+
+                        </div>
+                    </div>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="dropbtn" data-dismiss="modal">Ok</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <hr />
+    @if (Model.Count > 0)
+    {
+        foreach (var item in Model)
+        {
+            <div class="card1-columns px-3">
+                @{
+
+                    ViewBag.ProductId = item.ProductId;
+                    ViewBag.ProductName = item.ProductName;
+
+
+                }
+
+                <div class="column1 d-flex justify-content-center p-3">
+                    <div class="grid1-container px-4" style="box-shadow: 0 4px 3px black; background:rgb(245, 245, 245);border-radius:4px">
+                        <div class="grid1-item">
+
+                            <div class="card1 .center">
+                                <div class="card1-img .center">
+                                    <img src="data:image;base64,@System.Convert.ToBase64String(item.ProductImage)"
+                                         style="width:300px; height:300px; margin:0px; padding:10px" alt="no photo" class="adsm-image; center-url" />
+                                </div>
+
+                                <div class="card1-body">
+                                    <h4 class="card1-title">Name: <span class="card-value">@item.ProductName</span> </h4>
+                                </div>
+
+                                <div class="card1-body">
+                                    <h4 class="card1-title">Price: <span class="card-value">R @item.ProductPrice</span></h4>
+                                </div>
+                                <div class="card1-body d-flex justify-content-center">
+                                    <div class="d-flex p-0 pb-1">
+                                        @if (item.ProductCatergoryId != 11)
+                                        {
+                                            if (item.ProductStock > 10)
+                                            {
+                                                <h4 class="m-0 p-0 mx-3" style="color:green;" id="quantity">Available Currently<span class="card-value"> @item.ProductStock </span></h4>
+                                            }
+                                            else
+                                            {
+                                                <h4 class="m-0 p-0 mx-3" style="color:red;" id="quantity">Available Currently<span class="card-value"> @item.ProductStock - low in stock</span> </h4>
+                                            }
+                                        }
+                                    </div>
+                                </div>
+
+                                <div class="card1-footer">
+                                    <div class="dropdown">
+                                        <input type="button" id="btnShowMore" class="dropbtn" onclick="showDesFunction('@item.ProductDescription')" value="Show More">
+                                        <div id="Textbox" class="dropdown-content">
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="d-flex justify-content-center pt-2">
+                                    @using (Html.BeginForm("AddPartToRepair", "AutoRepair", FormMethod.Post))
+                                    {
+                                        @Html.Hidden("Id", (object)ViewBag.AutoEnquiryId)
+                                        @Html.Hidden("PartId", (object)ViewBag.ProductId)
+
+                                    <button type="submit" style="text-align:center; align-content:center; position:center; border-color:#fffcfc00; cursor:pointer" class="AddLink AddLinkTab" href="#" >
+                                        <span  class="fa fa-plus-square-o"></span>
+                                    </button>
+                                    }
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+        }
+
+    }
+    else
+    {
+        <div class="bs-docs-section container" style="background-color:aliceblue; width:100%;padding-top:20px; border-radius:8px;margin-top:60px;">
+            <div class="row d-flex justify-content-center">
+                <div class="form-group">
+                    <div class="input-group">
+                        <div class="searchdiv">
+                            <p style="width:100%; color:red; padding-top:10px;"> <strong>No parts found/Search result empty</strong> </p>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    }
+</body>
+<style>
+    .card-value {
+        font-weight: bold;
+    }
+
+    .search-input {
+        width: 300px;
+        outline: none;
+        border-radius: 4px;
+        border: 1px solid black;
+        padding-left: 12px;
+    }
+
+        .search-input:focus {
+            border-color: rgb(181 112 112)
+        }
+</style>
+
+<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"></script>
+<script src="https://cdn.jsdelivr.net/gh/vast-engineering/jquery-popup-overlay@2/jquery.popupoverlay.min.js"></script>
+
+<script>
+    function showDesFunction(description) {
+        const [desc, cat] = description.split('|');
+        var des = document.getElementById("appendDes");
+        des.style.color = "black";
+        des.innerHTML = desc;
+        $("#SubmitModal").modal("show");
+    };
+</script>
+
+<br />
+<br />
+<br />
+<br />
+<br />
+<div class="row col-md-12" style="justify-content:center;">
+    <div class="px-5" style="justify-content:center;">
+        Page @(Model.PageCount < Model.PageNumber ? 0 : Model.PageNumber) of @Model.PageCount
+
+        @Html.PagedListPager(Model, page => Url.Action("OurProducts", new { page, sortOrder = ViewBag.CurrentSort, currentFilter = ViewBag.CurrentFilter }))
+    </div>
+</div>

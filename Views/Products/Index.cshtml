@@ -1,5 +1,5 @@
 ﻿@model IEnumerable<BookStore.Models.Products>
-
+@using BookStore.Helpers;
 @{
     ViewBag.Title = "Index";
     Layout = "~/Views/Shared/_Layout1.cshtml";
@@ -12,36 +12,20 @@
     </p>
     <table class="table">
         <tr>
-            <th>
-                @Html.DisplayNameFor(model => model.ProductCatergory.CatergoryName)
-            </th>
-            <th>
-                @Html.DisplayNameFor(model => model.ProductName)
-            </th>
-            <th>
-                @Html.DisplayNameFor(model => model.ProductAuthor)
-            </th>
-            <th>
-                @Html.DisplayNameFor(model => model.ProductPrice)
-            </th>
+            <th>Catergory</th>
+            <th>Vehicle Model</th>
+            <th>Part Name </th>
+            <th>Part Price </th>
             <th></th>
         </tr>
 
         @foreach (var item in Model)
         {
             <tr>
-                <td>
-                    @Html.DisplayFor(modelItem => item.ProductCatergory.CatergoryName)
-                </td>
-                <td>
-                    @Html.DisplayFor(modelItem => item.ProductName)
-                </td>
-                <td>
-                    @Html.DisplayFor(modelItem => item.ProductAuthor)
-                </td>
-                <td>
-                    @Html.DisplayFor(modelItem => item.ProductPrice)
-                </td>
+                <td>@Html.DisplayFor(modelItem => item.ProductCatergory.CatergoryName) </td>
+                <td>@Html.Raw(item.vModelKey !=null?ViewHelper.getVehicleModel(Guid.Parse(item.vModelKey)):"N/A") </td>
+                <td> @Html.DisplayFor(modelItem => item.ProductName) </td>
+                <td> @Html.DisplayFor(modelItem => item.ProductPrice) </td>
                 <td>
                     @Html.ActionLink("Modify", "Edit", new { id = item.ProductId }) |
                     @Html.ActionLink("Info", "Details", new { id = item.ProductId }) |

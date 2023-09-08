@@ -60,6 +60,12 @@
     <Reference Include="itextsharp, Version=5.5.13.3, Culture=neutral, PublicKeyToken=8354ae6d2174ddca, processorArchitecture=MSIL">
       <HintPath>packages\iTextSharp.5.5.13.3\lib\itextsharp.dll</HintPath>
     </Reference>
+    <Reference Include="Microsoft.AspNetCore.Http.Abstractions, Version=2.2.0.0, Culture=neutral, PublicKeyToken=adb9793829ddae60, processorArchitecture=MSIL">
+      <HintPath>packages\Microsoft.AspNetCore.Http.Abstractions.2.2.0\lib\netstandard2.0\Microsoft.AspNetCore.Http.Abstractions.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.AspNetCore.Http.Features, Version=2.2.0.0, Culture=neutral, PublicKeyToken=adb9793829ddae60, processorArchitecture=MSIL">
+      <HintPath>packages\Microsoft.AspNetCore.Http.Features.2.2.0\lib\netstandard2.0\Microsoft.AspNetCore.Http.Features.dll</HintPath>
+    </Reference>
     <Reference Include="Microsoft.Bcl.AsyncInterfaces, Version=5.0.0.0, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51, processorArchitecture=MSIL">
       <HintPath>packages\Microsoft.Bcl.AsyncInterfaces.5.0.0\lib\net461\Microsoft.Bcl.AsyncInterfaces.dll</HintPath>
     </Reference>
@@ -71,6 +77,9 @@
       <HintPath>packages\Microsoft.Configuration.ConfigurationBuilders.UserSecrets.2.0.0\lib\Net471\Microsoft.Configuration.ConfigurationBuilders.UserSecrets.dll</HintPath>
     </Reference>
     <Reference Include="Microsoft.CSharp" />
+    <Reference Include="Microsoft.Extensions.Primitives, Version=2.2.0.0, Culture=neutral, PublicKeyToken=adb9793829ddae60, processorArchitecture=MSIL">
+      <HintPath>packages\Microsoft.Extensions.Primitives.2.2.0\lib\netstandard2.0\Microsoft.Extensions.Primitives.dll</HintPath>
+    </Reference>
     <Reference Include="Microsoft.Owin, Version=4.2.2.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
       <HintPath>packages\Microsoft.Owin.4.2.2\lib\net45\Microsoft.Owin.dll</HintPath>
     </Reference>
@@ -254,6 +263,7 @@
     <Compile Include="App_Start\Startup.Auth.cs" />
     <Compile Include="Controllers\AccountController.cs" />
     <Compile Include="Controllers\AnalyticsController.cs" />
+    <Compile Include="Controllers\AutoRepairController.cs" />
     <Compile Include="Controllers\BankInfoesController.cs" />
     <Compile Include="Controllers\BookQrCodesController.cs" />
     <Compile Include="Controllers\BorrowedBooksController.cs" />
@@ -268,7 +278,7 @@
     <Compile Include="Controllers\PaymentMethodsController.cs" />
     <Compile Include="Controllers\ProductCatergoriesController.cs" />
     <Compile Include="Controllers\ProductsController.cs" />
-    <Compile Include="Controllers\RequestBooksController.cs" />
+    <Compile Include="Controllers\RequestPartsController.cs" />
     <Compile Include="Controllers\ReturnAndRefundsController.cs" />
     <Compile Include="Controllers\RolesAdminController.cs" />
     <Compile Include="Controllers\SalesController.cs" />
@@ -281,13 +291,22 @@
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
     <Compile Include="Helpers\AnalyticsHelper.cs" />
+    <Compile Include="Helpers\AutoRepairHelper.cs" />
+    <Compile Include="Helpers\BaseHelper.cs" />
+    <Compile Include="Helpers\DatabaseInjector.cs" />
     <Compile Include="Helpers\Email.cs" />
+    <Compile Include="Helpers\EmailTemplates.cs" />
     <Compile Include="Helpers\ImageHelper.cs" />
     <Compile Include="Helpers\QrCodeHelper.cs" />
     <Compile Include="Helpers\StatusHelper.cs" />
+    <Compile Include="Helpers\ViewHelper.cs" />
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\AccountViewModels.cs" />
     <Compile Include="Models\Analytic.cs" />
+    <Compile Include="Models\Appointments\CheckListItems.cs" />
+    <Compile Include="Models\Appointments\InspectionViewModel.cs" />
+    <Compile Include="Models\Appointments\ScheduledAppointment.cs" />
+    <Compile Include="Models\AutoEnquiry.cs" />
     <Compile Include="Models\BookQrCodes.cs" />
     <Compile Include="Models\Coupon.cs" />
     <Compile Include="Models\eBook.cs" />
@@ -308,9 +327,14 @@
     <Compile Include="Models\IdentityModels.cs" />
     <Compile Include="Models\Library.cs" />
     <Compile Include="Models\ManageViewModels.cs" />
+    <Compile Include="Models\PartRequest.cs" />
     <Compile Include="Models\PaymentMethod.cs" />
     <Compile Include="Models\Product.cs" />
     <Compile Include="Models\ProductCatergory.cs" />
+    <Compile Include="Models\Product\Manufacture.cs" />
+    <Compile Include="Models\Product\Vehicle.cs" />
+    <Compile Include="Models\Product\VehicleModel.cs" />
+    <Compile Include="Models\Product\VehicleType.cs" />
     <Compile Include="Models\ReasonDrop.cs" />
     <Compile Include="Models\RequestBook.cs" />
     <Compile Include="Models\ReturnAndRefund.cs" />
@@ -334,6 +358,7 @@
     <Compile Include="Startup.cs" />
     <Compile Include="ViewModels\FeedbackVM.cs" />
     <Compile Include="ViewModels\BorrowViewModel.cs" />
+    <Compile Include="ViewModels\InquiriesVMBase.cs" />
     <Compile Include="ViewModels\ShoppingCartRemoveViewModel.cs" />
     <Compile Include="ViewModels\ShoppingCartViewModel.cs" />
   </ItemGroup>
@@ -511,6 +536,12 @@
     <Content Include="Content\ReferencesMKV\waves.min.js" />
     <Content Include="Content\sidPopupStyle.min.css" />
     <Content Include="Content\SpLayoutPage.css" />
+    <Content Include="Content\tabsnacornd\app.min.css" />
+    <Content Include="Content\tabsnacornd\bootstrap.bundle.min.js" />
+    <Content Include="Content\tabsnacornd\bootstrap.min.css" />
+    <Content Include="Content\tabsnacornd\feather.min.js" />
+    <Content Include="Content\tabsnacornd\metismenujs.esm.min.js" />
+    <Content Include="Content\tabsnacornd\simplebar.min.js" />
     <Content Include="Content\Theme1\css\animate.css" />
     <Content Include="Content\Theme1\css\baguetteBox.min.css" />
     <Content Include="Content\Theme1\css\bootstrap.min.css" />
@@ -645,6 +676,7 @@
     <Content Include="Content\Theme1\js\picker.js" />
     <Content Include="Content\Theme1\js\picker.time.js" />
     <Content Include="Content\Theme1\js\popper.min.js" />
+    <Content Include="Content\Theme1\logo.png" />
     <Content Include="Content\themes\base\accordion.css" />
     <Content Include="Content\themes\base\all.css" />
     <Content Include="Content\themes\base\autocomplete.css" />
@@ -717,6 +749,12 @@
     <Content Include="Images\H1.jpg" />
     <Content Include="Images\H2.jpg" />
     <Content Include="Images\H3.jpg" />
+    <Content Include="Images\HomeProducts\istockphoto-495873497-2048x2048-transformed.jpeg" />
+    <Content Include="Images\home\alex-suprun-AHnhdjyTNGM-unsplash.jpg" />
+    <Content Include="Images\home\bruno-van-der-kraan-aq3FzYWK5Xw-unsplash %281%29.jpg" />
+    <Content Include="Images\home\bruno-van-der-kraan-aq3FzYWK5Xw-unsplash.jpg" />
+    <Content Include="Images\home\florian-olivo-Y3eGhgFu7ns-unsplash.jpg" />
+    <Content Include="Images\home\lorenzo-hamers-K2bNjPOUzSQ-unsplash.jpg" />
     <Content Include="Images\K1.jpg" />
     <Content Include="Images\Logo.jpg" />
     <Content Include="Images\W1.jpeg" />
@@ -915,6 +953,8 @@
     <None Include="Properties\PublishProfiles\Bookstorev1 - Web Deploy7.pubxml" />
     <None Include="Properties\PublishProfiles\Bookstorev1 - Web Deploy8.pubxml" />
     <None Include="Properties\PublishProfiles\Bookstorev1 - Web Deploy9.pubxml" />
+    <None Include="Properties\PublishProfiles\DutMerch25 - FTP.pubxml" />
+    <None Include="Properties\PublishProfiles\DutMerch25 - Web Deploy.pubxml" />
     <None Include="Properties\PublishProfiles\FolderProfile.pubxml" />
     <None Include="Properties\PublishProfiles\TheBookstore - FTP.pubxml" />
     <None Include="Properties\PublishProfiles\TheBookstore - FTP1.pubxml" />
@@ -1175,8 +1215,8 @@
     <Content Include="Views\ProductCategories\Edit.cshtml" />
     <Content Include="Views\ProductCategories\Details.cshtml" />
     <Content Include="Views\Manage\PurchaseHistory.cshtml" />
-    <Content Include="Views\RequestBooks\Create.cshtml" />
-    <Content Include="Views\RequestBooks\Delete.cshtml" />
+    <Content Include="Views\RequestParts\Create.cshtml" />
+    <Content Include="Views\RequestParts\Delete.cshtml" />
     <Content Include="Views\Libraries\Create.cshtml" />
     <Content Include="Views\Libraries\Delete.cshtml" />
     <Content Include="Views\Libraries\Edit.cshtml" />
@@ -1185,9 +1225,9 @@
     <Content Include="Views\ChatBoxes\Create.cshtml" />
     <Content Include="Views\ChatBoxes\Delete.cshtml" />
     <Content Include="Views\ChatBoxes\Index.cshtml" />
-    <Content Include="Views\RequestBooks\Details.cshtml" />
-    <Content Include="Views\RequestBooks\Edit.cshtml" />
-    <Content Include="Views\RequestBooks\Index.cshtml" />
+    <Content Include="Views\RequestParts\Details.cshtml" />
+    <Content Include="Views\RequestParts\Edit.cshtml" />
+    <Content Include="Views\RequestParts\Index.cshtml" />
     <Content Include="Views\Libraries\BorrowBook.cshtml" />
     <Content Include="Views\BorrowedBooks\Create.cshtml" />
     <Content Include="Views\BorrowedBooks\Delete.cshtml" />
@@ -1287,6 +1327,18 @@
     <Content Include="Views\SavedProducts\DisplayWishlist.cshtml" />
     <Content Include="Views\Sales\AddReview.cshtml" />
     <Content Include="Views\Checkout\PurchasedEreader.cshtml" />
+    <Content Include="Views\AutoRepair\Inqueries.cshtml" />
+    <Content Include="Views\AutoRepair\Index.cshtml" />
+    <Content Include="Views\AutoRepair\Appointment.cshtml" />
+    <Content Include="Views\AutoRepair\MySchedued.cshtml" />
+    <Content Include="Views\AutoRepair\VehicleCheckIns.cshtml" />
+    <Content Include="Views\AutoRepair\CustomerInqueries.cshtml" />
+    <Content Include="Views\AutoRepair\CustomerInqueryDetails.cshtml" />
+    <Content Include="Views\AutoRepair\VehicleInspection.cshtml" />
+    <Content Include="Views\AutoRepair\InspectionDetails.cshtml" />
+    <Content Include="Views\AutoRepair\AutoRepairVehicle.cshtml" />
+    <Content Include="Views\AutoRepair\Parts.cshtml" />
+    <Content Include="Views\AutoRepair\AutoRepairCheckOut.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />

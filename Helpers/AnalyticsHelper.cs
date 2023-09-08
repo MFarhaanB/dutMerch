@@ -44,5 +44,13 @@ namespace BookStore.Helpers
                 return feed;
             }
         }
+
+        public static SaleDetail SaleDetail(int saleId, int Id)
+        {
+            using (ApplicationDbContext core = new ApplicationDbContext())
+            {
+                return core.SaleDetails.FirstOrDefault(a => a.SaleId == saleId && a.ProductId==Id);
+            }
+        }
     }
 }

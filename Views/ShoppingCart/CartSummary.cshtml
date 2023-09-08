@@ -1,2 +1,25 @@
-﻿<a href='@Url.Action("Index", "ShoppingCart")'><strong>Cart</strong>  <span id="cart-status" class="badge">@ViewData["CartCount"]</span></a>
+﻿<a href='@Url.Action("Index", "ShoppingCart")'><strong class="txt_c">Cart</strong>  <span  id="cart-status" class="badge">@ViewData["CartCount"]</span></a>
 
+<style>
+    .badge {
+        display: inline-block;
+        width: 25px;
+        height: 25px;
+        line-height: 20px;
+        border-radius: 50%;
+        background-color: #17a2b8 !important;
+        color: white;
+        text-align: center;
+        /* Adjust the vertical alignment of the text */
+        position: relative;
+        top: -5px;
+    }
+    .txt_c {
+        display: inline-block;
+        line-height: 20px;
+        position: relative;
+        top: -3px;
+        color: white;
+        font-weight:300;
+    }
+</style>

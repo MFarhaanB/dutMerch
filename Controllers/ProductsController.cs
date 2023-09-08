@@ -9,6 +9,8 @@ using System.Web;
 using System.Web.Mvc;
 using PagedList;
 using System.Collections.Generic;
+using Newtonsoft.Json.Linq;
+using static System.Net.Mime.MediaTypeNames;
 
 namespace BookStore.Controllers
 {
@@ -51,12 +53,14 @@ namespace BookStore.Controllers
         }
 
         // GET: Products 
-        public ActionResult OurProducts(string sortOrder, string currentFilter, string searchString, int? page)
+        public ActionResult OurProducts(string sortOrder, string currentFilter, string searchString, string manufacture, string vModel, string bType, int? page)
         {
             ViewBag.CurrentSort = sortOrder;
             ViewBag.NameSortParm = String.IsNullOrEmpty(sortOrder) ? "name_desc" : "";
             ViewBag.PriceSortParm = sortOrder == "Price" ? "price_desc" : "Price";
-
+            ViewBag.manufacture = new SelectList(db.Manufactures, "Id", "Name");
+            ViewBag.vModel = new SelectList(db.VehicleModels, "Id", "Name");
+            ViewBag.bType = new SelectList(db.VehicleTypes, "Id", "Name");
             if (searchString != null)
             {
                 page = 1;
@@ -75,6 +79,23 @@ namespace BookStore.Controllers
                 items = items.Where(s => s.ProductName.ToUpper().Contains(searchString.ToUpper())
                                        || s.ProductCatergory.CatergoryName.ToUpper().Contains(searchString.ToUpper()));
             }
+
+            if (!String.IsNullOrEmpty(manufacture) || !String.IsNullOrEmpty(vModel) || !String.IsNullOrEmpty(bType))
+            {
+                if (!String.IsNullOrEmpty(manufacture))
+                {
+                    items = items.Where(s => s.vManufactureKey.Contains(manufacture));
+                }
+                if (!String.IsNullOrEmpty(vModel))
+                {
+                    items = items.Where(s => s.vModelKey.Contains(vModel));
+                }
+                if (!String.IsNullOrEmpty(bType))
+                {
+                    items = items.Where(s => s.vTypeKey.Contains(bType));
+                }
+            }
+
             switch (sortOrder)
             {
                 case "name_desc":
@@ -94,6 +115,17 @@ namespace BookStore.Controllers
             int pageSize = 6;
             int pageNumber = (page ?? 1);
             return View(items.ToPagedList(pageNumber, pageSize));
+        }
+
+        public ActionResult getVModels(String guid)
+        {
+            var data = db.VehicleModels.Where(a => a.ManufactureKey == guid).Select(a => new { Value = a.Id, Text = a.Name }).ToList();
+            return Json(data, JsonRequestBehavior.AllowGet);
+        }
+        public ActionResult getVTypes(String guid)
+        {
+            var data = db.VehicleTypes.Where(a => a.VehicleModelKey == guid).Select(a => new { Value = a.Id, Text = a.Name }).ToList();
+            return Json(data, JsonRequestBehavior.AllowGet);
         }
 
         // GET: Products 
@@ -557,7 +589,7 @@ namespace BookStore.Controllers
             {
                 return new HttpStatusCodeResult(HttpStatusCode.BadRequest);
             }
-            Products product = await db.Products.FindAsync(id);
+            Products product = db.Products.Include(a => a.ProductCatergory).FirstOrDefault(a => a.ProductId == id);
             if (product == null)
             {
                 return HttpNotFound();
@@ -571,6 +603,7 @@ namespace BookStore.Controllers
         {
             ViewBag.ListId = new SelectList(db.WishLists, "ListId", "ListName");
             ViewBag.ProductCatergories = new SelectList(db.ProductCategories, "ProductCatergoryId", "CatergoryName");
+            ViewBag.Manufactures = new SelectList(db.Manufactures.OrderBy(a => a.Name), "Id", "Name");
             return View();
         }
 
@@ -579,8 +612,7 @@ namespace BookStore.Controllers
         // more details see https://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public ActionResult Create([Bind(Include = "ProductCatergoryId,CatergoryName,ProductCatergory,ProductPrice,ProductImage,ProductDescription,ProductStock,ProductAuthor,ProductName,ProductCatergory")] 
-        Products product, HttpPostedFileBase img_upload, ProductCatergory productCatergory)
+        public ActionResult Create(Products product, HttpPostedFileBase img_upload, ProductCatergory productCatergory)
         {
 
             byte[] data;
@@ -596,6 +628,9 @@ namespace BookStore.Controllers
                 {
                     _context.Database.CommandTimeout = 200;
                     product.ProductCatergory = null;
+                    product.vManufactureKey = product.vManufactureKey;
+                    product.vModelKey = product.vModelKey;
+                    product.vTypeKey = product.vTypeKey;
                     product.ProductCatergoryId = int.Parse(productCatergory.CatergoryName);
                     _context.Products.Add(product);
                     changeCount = _context.SaveChanges();
@@ -634,7 +669,7 @@ namespace BookStore.Controllers
         // more details see https://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public async Task<ActionResult> Edit([Bind(Include = "ProductId,ProductCategoryId,ProductName,ProductStock,ProductPrice,ProductImage,isActive")] Products product)
+        public async Task<ActionResult> Edit(Products product)
         {
             if (ModelState.IsValid)
             {

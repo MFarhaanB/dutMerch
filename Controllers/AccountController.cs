@@ -10,6 +10,7 @@ using Microsoft.AspNet.Identity.Owin;
 using Microsoft.Owin.Security;
 using BookStore.Models;
 using BookStore.Helpers;
+using System.Collections.Generic;
 
 namespace BookStore.Controllers
 {
@@ -159,9 +160,9 @@ namespace BookStore.Controllers
         // POST: /Account/Register
         [HttpPost]
         [AllowAnonymous]
-        [ValidateAntiForgeryToken] 
+        [ValidateAntiForgeryToken]
         public async Task<ActionResult> Register(RegisterViewModel model)
-       { 
+        {
             if (ModelState.IsValid)
             {
 
@@ -169,6 +170,9 @@ namespace BookStore.Controllers
                 var result = await UserManager.CreateAsync(user, model.Password);
                 if (result.Succeeded)
                 {
+                    var role = new List<string>();
+                    role.Add("Customer");
+                    await UserManager.AddUserToRolesAsync(user.Id, role);
                     await SignInManager.SignInAsync(user, isPersistent: false, rememberBrowser: false);
 
                     // For more information on how to enable account confirmation and password reset please visit https://go.microsoft.com/fwlink/?LinkID=320771

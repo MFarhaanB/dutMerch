@@ -4,37 +4,38 @@
     ViewBag.Title = "Manage Roles";
 }
 
+<div style="margin:0 30px 0 30px;">
+    <h2 class="AddLinkTab" style="margin-top:70px">Manage Roles</h2>
+    <hr />
+    <h3 class="AddLinkTab">Create Or Manage User Roles Here</h3>
+    <hr />
 
-<h2 class="AddLinkTab" style="margin-top:70px">Manage Roles</h2>
-<hr />
-<h3 class="AddLinkTab">Create Or Manage User Roles Here</h3>
-<hr />
-
-<p>
-    @Html.ActionLink("Create New Role", "Create")
-</p>
-<div class="square">
-    <table class="table">
-        <tr>
-            <th>
-                @Html.DisplayNameFor(model => model.Name)
-            </th>
-            <th>
-
-            </th>
-        </tr>
-
-        @foreach (var item in Model)
-        {
+    <p>
+        @Html.ActionLink("Create New Role", "Create")
+    </p>
+    <div class="square">
+        <table class="table">
             <tr>
-                <td>
-                    @Html.DisplayFor(modelItem => item.Name)
-                </td>
-                <td>
-                    @Html.ActionLink("Edit Role", "Edit", new { id = item.Id }) |
-                    @Html.ActionLink("Delete Role", "Delete", new { id = item.Id })
-                </td>
+                <th>
+                    @Html.DisplayNameFor(model => model.Name)
+                </th>
+                <th>
+
+                </th>
             </tr>
-        }
-    </table>
+
+            @foreach (var item in Model)
+            {
+                <tr>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.Name)
+                    </td>
+                    <td>
+                        @Html.ActionLink("Edit Role", "Edit", new { id = item.Id }) |
+                        @Html.ActionLink("Delete Role", "Delete", new { id = item.Id })
+                    </td>
+                </tr>
+            }
+        </table>
+    </div>
 </div>

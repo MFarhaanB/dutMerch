@@ -1,5 +1,6 @@
 ﻿@model BookStore.Models.Sale
-
+@using BookStore.Models
+@using BookStore.Helpers
 @{
     ViewBag.Title = "Order Details";
     var list = BookStore.Helpers.AnalyticsHelper.getfeedback(Model.SaleId);
@@ -90,7 +91,7 @@
                         <th>
                             <h1>Product Price</h1>
                         </th>
-                        @if (User.IsInRole("Student"))
+                        @if (User.IsInRole("Customer"))
                         {
 
                             <th></th>
@@ -110,7 +111,7 @@
                             <td>
                                 @item.ProductPrice
                             </td>
-                            @if (User.IsInRole("Student"))
+                            @if (User.IsInRole("Customer"))
                             {
                                 if (item.ProductCatergoryId != 11)
                                 {
@@ -118,14 +119,14 @@
                                         @*@Html.ActionLink("Request Return Or  Refund", "Returns", "Sales", new { id = ViewBag.SalesId, ProductionId = item.ProductId })*@
 
                                         @Html.ActionLink("Request Return Or  Refund", "Returns", new { id = ViewBag.SalesId, ProductionId = item.ProductId })
-
+                                            
                                     </td>
                                 }else
                                 {
                                     <td>Refunds and/Or Return not Applicable</td>
                                 }
                                 <td>
-                                    @Html.Partial("~/Views/Sales/_addfeedback.cshtml", Model.SaleId)
+                                    @Html.Partial("~/Views/Sales/_addfeedback.cshtml", new Sale { ProductId = ViewBag.SalesId })
                                     @* @Html.Partial("~/Views/Sales/GetFeedback.cshtml", list);*@
                                 </td>
                             }
@@ -133,7 +134,7 @@
                     </tbody>
 
 
-                }
+                 }
             </table>
         </div>
 
@@ -200,7 +201,7 @@
                 }
             }
         }
-        @if (User.IsInRole("Student"))
+        @if (User.IsInRole("Customer"))
         {
             if (Model.ConfirmOrder == false)
             {

@@ -14,6 +14,7 @@ namespace BookStore.Controllers
         public ApplicationDbContext db = new ApplicationDbContext();
         public ActionResult Index()
         {
+            DatabaseInjector.DBInjector();
             var product = db.Products.ToList();
             return View(product);
         }

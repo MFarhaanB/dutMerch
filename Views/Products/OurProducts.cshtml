@@ -15,6 +15,9 @@
     .fa-heart {
         background-color: #fcc072;
     }
+    .footer-area {
+        margin-top: 0px;
+    }
 </style>
 
 <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
@@ -34,23 +37,6 @@
             }
         });
     });</script>
-
-@*<li class="navbar1" style="padding:1px">
-    <ul class="navbar b">
-        <li class="nav-link1">@Html.ActionLink("Home", "OurProducts", "Products", null, htmlAttributes: new { @class = "nav-item nav-link", style = "color: #F77D0A !important; font-size: 25px !important" })</li>
-        <li class="nav-link1">@Html.ActionLink("Action", "Action", "Products", null, htmlAttributes: new { @class = "nav-item nav-link", style = "color: #F77D0A !important; font-size: 25px !important" })</li>
-        <li class="nav-link1">@Html.ActionLink("Comedy", "Comedy", "Products", null, htmlAttributes: new { @class = "nav-item nav-link", style = "color: #F77D0A !important; font-size: 25px !important" })</li>
-        <li class="nav-link1">@Html.ActionLink("Cooking", "Cooking", "Products", null, htmlAttributes: new { @class = "nav-item nav-link", style = "color: #F77D0A !important; font-size: 25px !important" })</li>
-        <li class="nav-link1">@Html.ActionLink("Drama", "Drama", "Products", null, htmlAttributes: new { @class = "nav-item nav-link", style = "color: #F77D0A !important; font-size: 25px !important" })</li>
-        <li class="nav-link1">@Html.ActionLink("Education", "Education", "Products", null, htmlAttributes: new { @class = "nav-item nav-link", style = "color: #F77D0A !important; font-size: 25px !important" })</li>
-        <li class="nav-link1">@Html.ActionLink("Fantasy", "Fantasy", "Products", null, htmlAttributes: new { @class = "nav-item nav-link", style = "color: #F77D0A !important; font-size: 25px !important" })</li>
-        <li class="nav-link1">@Html.ActionLink("History", "History", "Products", null, htmlAttributes: new { @class = "nav-item nav-link", style = "color: #F77D0A !important; font-size: 25px !important" })</li>
-        <li class="nav-link1">@Html.ActionLink("Religion", "Religion", "Products", null, htmlAttributes: new { @class = "nav-item nav-link", style = "color: #F77D0A !important; font-size: 25px !important" })</li>
-        <li class="nav-link1">@Html.ActionLink("Romance", "Romance", "Products", null, htmlAttributes: new { @class = "nav-item nav-link", style = "color: #F77D0A !important; font-size: 25px !important" })</li>
-        <li class="nav-link1">@Html.ActionLink("Sci_fi", "Sci_fi", "Products", null, htmlAttributes: new { @class = "nav-item nav-link", style = "color: #F77D0A !important; font-size: 25px !important" })</li>
-    </ul>
-</li>*@
-
 <div class="bs-docs-section container">
     <div class="row d-flex justify-content-center">
         @using (Html.BeginForm("OurProducts", "Products", FormMethod.Get))
@@ -60,6 +46,26 @@
                     <div class="searchdiv">
                         @Html.TextBox("SearchString", ViewBag.CurrentFilter as string, new { placeholder = "Enter a product name here.", @class = "search-input" })
                         <input type="submit" class="dropbtn" value="Search" style="border-radius:4px;cursor:pointer" />
+                    </div>
+                </div>
+            </div>
+        }
+
+    </div>
+</div>
+
+<div class="bs-docs-section container" style="background-color: #ededed91; width: 100%; padding-top: 20px; border-radius: 8px; ">
+    <div class="row d-flex justify-content-center">
+        @using (Html.BeginForm("OurProducts", "Products", FormMethod.Get))
+        {
+            <div class="form-group">
+                <div class="input-group">
+                    <div class="searchdiv">
+                        @Html.DropDownList("manufacture", (SelectList)ViewBag.manufacture, "-- Select vehicle manufacture --",  new { @class = "search-input", @Name= "manufacture" } )
+                        @Html.DropDownList("vModel", (SelectList)ViewBag.model,   "-- Select vehicle model --",  new { @class = "search-input", @Name = "vModel" } )
+                        @Html.DropDownList("bType", (SelectList)ViewBag.bType,   "-- Select vehicle model --",  new { @class = "search-input", @Name = "bType" } )
+                        <input type="submit" class="dropbtn" value="Filter" style="border-radius:4px;cursor:pointer" />
+                        <input type="button" class="dropbtn" value="Reset" style="border-radius:4px;cursor:pointer" onclick="window.location.href='@Url.Action("OurProducts","Products")'" />
                     </div>
                 </div>
             </div>
@@ -116,45 +122,57 @@
         </div>
     </div>
     <hr />
-    @foreach (var item in Model)
+    @if (Model.Count > 0)
     {
-        <div class="card1-columns px-3">
-            @{
+        foreach (var item in Model)
+        {
+            <div class="card1-columns px-3">
+                @{
 
-                ViewBag.ProductId = item.ProductId;
-                ViewBag.ProductName = item.ProductName;
+                    ViewBag.ProductId = item.ProductId;
+                    ViewBag.ProductName = item.ProductName;
 
 
-            }
+                }
 
-            <div class="column1 d-flex justify-content-center p-3">
-                <div class="grid1-container px-4" style="box-shadow: 0 4px 3px black; background:rgb(245, 245, 245);border-radius:4px">
-                    <div class="grid1-item">
+                <div class="column1 d-flex justify-content-center p-3">
+                    <div class="grid1-container px-4" style="box-shadow: 0 4px 3px black; background:rgb(245, 245, 245);border-radius:4px">
+                        <div class="grid1-item">
 
-                        <div class="card1 .center">
-                            <div class="card1-img .center">
-                                <img src="data:image;base64,@System.Convert.ToBase64String(item.ProductImage)"
-                                     style="width:300px; height:300px; margin:0px; padding:10px" alt="no photo" class="adsm-image; center-url" />
-                            </div>
+                            <div class="card1 .center">
+                                <div class="card1-img .center">
+                                    <img src="data:image;base64,@System.Convert.ToBase64String(item.ProductImage)"
+                                         style="width:300px; height:300px; margin:0px; padding:10px" alt="no photo" class="adsm-image; center-url" />
+                                </div>
 
-                            <div class="card1-body">
-                                <h4 class="card1-title">Name: <span class="card-value">@item.ProductName</span> </h4>
-                            </div>
+                                <div class="card1-body">
+                                    <h4 class="card1-title">Name: <span class="card-value">@item.ProductName</span> </h4>
+                                </div>
 
-                            <div class="card1-body">
-                                <h4 class="card1-title">Price: <span class="card-value">R @item.ProductPrice</span></h4>
-                            </div>
-                            <div class="card1-body d-flex justify-content-center">
-                                <div class="d-flex p-0 pb-1">
-                                    @* <span class="m-0 p-0" style="cursor: pointer" id="IncrsQty" onclick="IncrsQty()">
-                                            <i class="fa fa-plus"></i>
-                                        </span>*@ @if (item.ProductCatergoryId != 11)
-                                    {
-                                        <h4 class="m-0 p-0 mx-3" id="quantity">Available Currently<span class="card-value"> @item.ProductStock </span></h4>
-                                    }
-                                    @*<span class="m-0 p-0" id="DecrsQty" onclick="DecrsQty()">
-                                            <i class="fa fa-minus" style="cursor: pointer"></i>
-                                        </span>*@
+                                <div class="card1-body">
+                                    <h4 class="card1-title">Price: <span class="card-value">R @item.ProductPrice</span></h4>
+                                </div>
+                                <div class="card1-body d-flex justify-content-center">
+                                    <div class="d-flex p-0 pb-1">
+                                        @* <span class="m-0 p-0" style="cursor: pointer" id="IncrsQty" onclick="IncrsQty()">
+                                                <i class="fa fa-plus"></i>
+                                            </span>*@
+                                        @if (item.ProductCatergoryId != 11)
+                                        {
+                                            if (item.ProductStock > 10)
+                                            {
+                                                <h4 class="m-0 p-0 mx-3" style="color:green;" id="quantity">Available Currently<span class="card-value"> @item.ProductStock </span></h4>
+                                            }
+                                            else
+                                            {
+                                                <h4 class="m-0 p-0 mx-3" style="color:red;" id="quantity">Available Currently<span class="card-value"> @item.ProductStock - low in stock</span> </h4>
+                                            }
+
+                                        }
+
+                                        @*<span class="m-0 p-0" id="DecrsQty" onclick="DecrsQty()">
+                                                <i class="fa fa-minus" style="cursor: pointer"></i>
+                                            </span>*@
                                     </div>
                                 </div>
 
@@ -174,17 +192,19 @@
                                 <div class="d-flex justify-content-center pt-2">
                                     <a style="text-align:center; align-content:center; position:center" href="#" class="AddLink AddLinkTab" data-id="@item.ProductId" data-toggle="modal" data-target="#myModal"><i class="fa fa-cart-plus" aria-hidden="true"></i></a>
 
-                                <!--@Html.ActionLink("Add to cart", "AddToCart", "ShoppingCart", new { id = item.ProductId, }, new { htmlAttributes = new { @data_toggle = "modal", @data_target = "#myModal" } })-->
+                                    <!--@Html.ActionLink("Add to cart", "AddToCart", "ShoppingCart", new { id = item.ProductId, }, new { htmlAttributes = new { @data_toggle = "modal", @data_target = "#myModal" } })-->
 
                                 </div>
-                                @using (Html.BeginForm("Create", "SavedProducts", FormMethod.Post))
-                                {
-                                    @Html.Hidden("ProductId", (object)ViewBag.ProductId)
-                                    @Html.Hidden("ProductName", (object)ViewBag.ProductName)
+                                <div class="d-flex justify-content-center pt-2">
+                                    @using (Html.BeginForm("Create", "SavedProducts", FormMethod.Post))
+                                    {
+                                        @Html.Hidden("ProductId", (object)ViewBag.ProductId)
+                                        @Html.Hidden("ProductName", (object)ViewBag.ProductName)
 
-                                    <button type="submit" style="text-align:center; align-content:center; position:center; " class="fa fa-heart" value="Submit">       </button>
+                                        <button type="submit" style="text-align:center; align-content:center; position:center; " class="fa fa-heart" value="Submit">       </button>
+                                    }
+                                </div>
 
-                                }
 
                             </div>
                         </div>
@@ -193,9 +213,23 @@
             </div>
 
         }
-    <div style="height:400px">
 
-    </div>
+    }
+    else
+    {
+        <div class="bs-docs-section container" style="background-color:aliceblue; width:100%;padding-top:20px; border-radius:8px;margin-top:60px;">
+            <div class="row d-flex justify-content-center">
+                <div class="form-group">
+                    <div class="input-group">
+                        <div class="searchdiv">
+                            <p style="width:100%; color:red; padding-top:10px;"> <strong>No products found/Search result empty</strong> </p>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    }
 </body>
 <style>
     .card-value {
@@ -233,9 +267,10 @@
 <br />
 <br />
 <br />
+<div class="row col-md-12" style="justify-content:center;">
+    <div class="px-5" style="justify-content:center;">
+        Page @(Model.PageCount < Model.PageNumber ? 0 : Model.PageNumber) of @Model.PageCount
 
-<div class="px-5">
-    Page @(Model.PageCount < Model.PageNumber ? 0 : Model.PageNumber) of @Model.PageCount
-
-    @Html.PagedListPager(Model, page => Url.Action("OurProducts", new { page, sortOrder = ViewBag.CurrentSort, currentFilter = ViewBag.CurrentFilter }))
+        @Html.PagedListPager(Model, page => Url.Action("OurProducts", new { page, sortOrder = ViewBag.CurrentSort, currentFilter = ViewBag.CurrentFilter }))
+    </div>
 </div>

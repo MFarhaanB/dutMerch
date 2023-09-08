@@ -145,8 +145,7 @@ namespace BookStore.Controllers
 
             foreach (var item in getUsers)
             {
-                SendCouponEmail(item.Email, item.Name, coupon.CouponCode);
-
+                if (coupon != null) SendCouponEmail(item.Email, item.Name, coupon.CouponCode);
             }
 
             return RedirectToAction("Index");

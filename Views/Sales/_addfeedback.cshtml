@@ -1,14 +1,14 @@
-﻿@model Nullable<System.Int32>
+﻿@model BookStore.Models.Sale
 
-@*@using (Html.BeginForm()) 
-{*@    
+@using (Html.BeginForm("SaveRating", "Sales", FormMethod.Post))
+{
     <div class="form-horizontal">
         <h2>
             Hello Let us know your experince
         </h2>
         <h5>Note*   Your previous review will be replaced if submit a new one</h5>
 
-        
+        @Html.HiddenFor(model => model.ProductId, new {@Name ="Id"})
         <hr />
         @*<div class="form-group">
             @Html.LabelFor(model => model.BookId, htmlAttributes: new { @class = "control-label col-md-2" })
@@ -21,7 +21,7 @@
         <div class="form-group">
             @Html.Label("Comment", htmlAttributes: new { @class = "control-label col-md-2" })
             <div class="col-md-10">
-                @Html.Editor("Comment", new { htmlAttributes = new { @class = "form-control" } })
+                @Html.Editor("Comment", new { htmlAttributes = new { @class = "form-control", @Name= "Comment", @required= "required" } })
             </div>
         </div>
         <div>
@@ -30,21 +30,22 @@
         <div class="form-group">
             @Html.Label("Rating", htmlAttributes: new { @class = "control-label col-md-2" })
             <div class="col-md-10">
-                @Html.Editor("Rating", new { htmlAttributes = new { @class = "form-control" } })
+                @*<input type="number" max="5" class = "form-control"  name="Rating" required/>*@
+                @Html.Editor("Rating", new { htmlAttributes = new { @class = "form-control", @Name= "Rating" } })
             </div>
         </div>
 
         <div class="form-group">
             <div class="col-md-offset-2 col-md-10">
-                <input type="button" id="save" value="Create" class="btn btn-primary" />
+                <input type="button" id="save" value="Submit Rating" class="btn btn-primary" />
             </div>
         </div>
     </div>
-@*}*@
+}
 
 @*<div>
-    @Html.ActionLink("Back to List", "Index")
-</div>*@
+        @Html.ActionLink("Back to List", "Index")
+    </div>*@
 
 
 <script>
@@ -62,7 +63,7 @@
             else {
                 $.ajax({
                     type: 'POST',
-                    url: '@Url.Action("Addfeedback", "Sales")?id=' + @Model+"&comment=" + cmt + "&rating=" + rtng + "&bookname" + bkna,
+                    url: '@Url.Action("Addfeedback", "Sales")?id=' + @Model.ProductId +"&comment=" + cmt + "&rating=" + rtng + "&bookname" + bkna,
                     success: function (result) {
                         if (result != null && result != "Failed") {
                             window.location.reload();

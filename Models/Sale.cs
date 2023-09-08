@@ -69,6 +69,8 @@ namespace BookStore.Models
         //Mobile App OrderStatus
         public string OrderStatus { get; set; }
 
+        [NotMapped]
+        public int ProductId { get; set; }
 
     }
 }

@@ -13,13 +13,23 @@ using BookStore.ViewModels;
 using BookStore.Helpers;
 using System.EnterpriseServices;
 using System.Web.Helpers;
+using Microsoft.AspNetCore.Http;
 
 namespace BookStore.Controllers
 {
     public class SalesController : Controller
     {
         private ApplicationDbContext db = new ApplicationDbContext();
+        private readonly IHttpContextAccessor _httpContextAccessor;
 
+        public SalesController()
+        {
+
+        }
+        public SalesController(IHttpContextAccessor httpContextAccessor)
+        {
+            _httpContextAccessor = httpContextAccessor;
+        }
         // GET: 
         //[Authorize(Roles = "Driver")]
         public ViewResult Index(string sortOrder, string searchString, ApplicationUser applicationUser, Sale sale)
@@ -114,9 +124,11 @@ namespace BookStore.Controllers
             // CO = true;
             //  ViewBag.ConfirmOrder = CO;
 
+            var url = Request.Url;
+
             //Successful Delivery...
             string subject = "Approved Delivery For Order Number #" + sale.SaleId;
-            string body = "Dear Customer" + sale.Name + " your order has been Dispatched." + " https://2022grp32.azurewebsites.net/Manage/PurchaseHistory  " + "Use this link to confirm you have received your order";
+            string body = "Dear Customer" + sale.Name + " your order has been Dispatched. " + string.Format("{0}://{1}/Manage/PurchaseHistory Use this link to confirm you have received your order", url.Scheme,url.Authority) /* https://2022grp32.azurewebsites.net/Manage/PurchaseHistory */;
             try
             {
                 new Email().SendEmail(subject, body, sale.Email);
@@ -486,6 +498,13 @@ namespace BookStore.Controllers
 
 
         }
+
+        [HttpPost]
+        public  ActionResult SaveRating(int? Id, SaleDetail model, String Comment, int Rating)
+        {
+            return View();
+        }
+
 
         protected override void Dispose(bool disposing)
         {
