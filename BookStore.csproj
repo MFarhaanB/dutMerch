@@ -955,6 +955,8 @@
     <None Include="Properties\PublishProfiles\Bookstorev1 - Web Deploy9.pubxml" />
     <None Include="Properties\PublishProfiles\DutMerch25 - FTP.pubxml" />
     <None Include="Properties\PublishProfiles\DutMerch25 - Web Deploy.pubxml" />
+    <None Include="Properties\PublishProfiles\DutTT - FTP.pubxml" />
+    <None Include="Properties\PublishProfiles\DutTT - Web Deploy.pubxml" />
     <None Include="Properties\PublishProfiles\FolderProfile.pubxml" />
     <None Include="Properties\PublishProfiles\TheBookstore - FTP.pubxml" />
     <None Include="Properties\PublishProfiles\TheBookstore - FTP1.pubxml" />

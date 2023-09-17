@@ -84,8 +84,7 @@ namespace BookStore.Controllers
             delivery.DeliveryDate = DateTime.Now.ToString();
             delivery.CurrentLocation = sale.Address;
             delivery.isDelivered = true;
-
-
+            
 
             string subject = "Successful Delivery For Order Number #" + sale.SaleId;
             string body = "Dear Customer " + sale.Name + ", your order has been delivered successfully.";
@@ -98,6 +97,12 @@ namespace BookStore.Controllers
 
                 // throw;
             }
+
+            sale.Complete = true;
+            sale.OrderStatus = "Order Delivered To Customer";
+            sale.ConfirmDelivery = true;    
+            db.Entry(sale).State  = EntityState.Modified;
+            db.SaveChanges();
 
             //Set Sale State to Complete once delivered
             var completedSaleId = delivery.SaleId;
@@ -128,7 +133,7 @@ namespace BookStore.Controllers
 
             //Successful Delivery...
             string subject = "Approved Delivery For Order Number #" + sale.SaleId;
-            string body = "Dear Customer" + sale.Name + " your order has been Dispatched. " + string.Format("{0}://{1}/Manage/PurchaseHistory Use this link to confirm you have received your order", url.Scheme,url.Authority) /* https://2022grp32.azurewebsites.net/Manage/PurchaseHistory */;
+            string body = "Dear Customer" + sale.Name + " your order has been Dispatched. " + string.Format("{0}://{1}/Manage/PurchaseHistory Use this link to confirm you have received your order", url.Scheme, url.Authority) /* https://2022grp32.azurewebsites.net/Manage/PurchaseHistory */;
             try
             {
                 new Email().SendEmail(subject, body, sale.Email);
@@ -142,6 +147,7 @@ namespace BookStore.Controllers
             sale.ConfirmOrder = false;
             sale.Dispatched = true;
             sale.ConfirmDelivery = null;
+            sale.OrderStatus = "In Awaiting Order Confirmation";
 
             await db.SaveChangesAsync();
             return RedirectToAction("Details" + "/" + aid);
@@ -159,6 +165,7 @@ namespace BookStore.Controllers
             {
                 sale.ConfirmOrder = true;
                 sale.ConfirmDelivery = false;
+                sale.OrderStatus = "Order Confirmed By Customer";
             }
             else
             { ViewBag.ConfirmOrder = "Sceduled"; }
@@ -213,7 +220,7 @@ namespace BookStore.Controllers
                 DelId = item.DeliveryId;
             }
 
-            Delivery delivery = await db.Deliveries.FindAsync(DelId);
+            Delivery delivery = await db.Deliveries.OrderByDescending(a => a.DeliveryId).FirstOrDefaultAsync(c => c.DeliveryId == DelId);
             sale.ConfirmDelivery = delivery.isDelivered;
             ViewBag.Date = delivery.DeliveryDate;
             ViewBag.Delivery = delivery.CurrentLocation;

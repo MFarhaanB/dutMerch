@@ -97,18 +97,19 @@ namespace BookStore.Controllers
             {
                 if (requestBook.Admindecision)
                 {
+                    var model = db.VehicleModels.FirstOrDefault(a => a.Name.Contains(requestBook.Model))?.Id.ToString();
                     Products product = new Products
                     {
                         ProductName = requestBook.Name,
                         isActive = true,
-                        vModelKey = db.VehicleModels.FirstOrDefault(a=>a.Name.Contains(requestBook.Model)).Id.ToString()??null,
+                        vModelKey = model,
                         //vManufactureKey = db.VehicleModels.FirstOrDefault(a => a.Name.Contains(requestBook.Model)).Id.ToString() ?? null,
                     };
                     db.Products.Add(product);
                     db.SaveChanges();
 
                     // send out notification to user
-                    String body = $"Hi {requestBook.Email}\n\n A part [{requestBook.Name}] has been aproved, please login to action.";
+                    String body = $"Hi {requestBook.Email}\n\n A part {requestBook.Name} has been aproved, please login to action.";
                     new Email().SendEmail("Hendrix Auto: Part Request", body, "Admin@appdev.com");
                 }
 

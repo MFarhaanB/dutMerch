@@ -75,6 +75,28 @@ namespace BookStore.Helpers
 
 
 
+                List<Status> statuses = new List<Status>();
+                statuses.Add(new Status { Name = "Approved", Key = "STS_Approved"});
+                statuses.Add(new Status { Name = "Declined", Key = "STS_Declined" });
+                statuses.Add(new Status { Name = "Pending", Key = "STS_Pending" });
+                statuses.Add(new Status { Name = "In Awaiting Review", Key = "c_enquiry_pending" });
+                statuses.Add(new Status { Name = "In Awaiting Appointment", Key = "a_awaiting_appointment" });
+                statuses.Add(new Status { Name = "In Awaiting Repair Acceptance", Key = "a_await_repair_acceptance" });
+                statuses.Add(new Status { Name = "In Awaiting Auto Repairs", Key = "a_await_repair_by_m" });
+                statuses.Add(new Status { Name = "In Awaiting Auto Checkout: No Repairs", Key = "c_no_repair_checkout" });
+                statuses.Add(new Status { Name = "Auto Mobile Checked Out and/or Collected", Key = "c_auto_checkedout_or_colleced" });
+                statuses.Add(new Status { Name = "c_awaiting_checkout", Key = "c_awaiting_checkout" });
+
+                foreach(var status in statuses)
+                {
+                    if(dbContext.Statuses.FirstOrDefault(a=>a.Key == status.Key) == null)
+                    {
+                        status.IsActive = true;
+                        status.Description = status.Name;
+                        dbContext.Statuses.Add(status);
+                    }
+                }
+
                 dbContext.SaveChanges();
 
             }

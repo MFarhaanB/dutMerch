@@ -30,6 +30,7 @@ namespace BookStore.Models
         public Sale()
         {
             this.Complete = false;
+            this.OrderStatus = "In Awaiting Dispatch Confirmation";
         }
 
 

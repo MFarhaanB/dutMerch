@@ -36,6 +36,8 @@
                 <li class="nav-link">@Html.ActionLink("OverViewSales", "Analytics", "Analytics")</li>
                 <li class="nav-link">@Html.ActionLink("Coupon Manager", "Index", "Coupons")</li>
                 <li class="divider"></li>
+                <li class="dropdown-header">Sales </li>
+                <li class="nav-link">@Html.ActionLink("Order History", "Index", "Sales")</li>
             </ul>
         </li>
 
@@ -47,6 +49,7 @@
             <ul class="dropdown-menu">
                 <li class="dropdown-header">Deliver Order</li>
                 <li class="nav-link">@Html.ActionLink("Deliver Order", "Index", "Sales")</li>
+                <li class="nav-link">@Html.ActionLink("Pick Up Order", "PickUpOrder", "Sales")</li>
             </ul>
         </li>
     }
@@ -72,6 +75,8 @@
                 <li class="nav-link">@Html.ActionLink("Request Part", "Index", "RequestParts")</li>
                 @*<li class="nav-link">@Html.ActionLink("My Schedules", "MySchedued", "AutoRepair")</li>*@
 
+                <li class="dropdown-header">Wishlist</li>
+                <li class="nav-link">@Html.ActionLink("Wishlist", "Wlist", "WishLists")</li>
             </ul>
         </li>
     }

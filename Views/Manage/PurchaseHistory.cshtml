@@ -37,36 +37,20 @@
 
 <table class="panel panel-info" style="margin-left:200px ">
     <tr>
-        <th style="padding-right:200px">
-            @Html.DisplayNameFor(model => model.SaleDate)
-        </th>
-        <th style="padding-right:100px">
-            @Html.DisplayNameFor(model => model.Address)
-        </th>
-        <th style="padding-right: 50px">
-            @*@Html.DisplayNameFor(model => model.SaleTotal)*@
-            Total
-        </th>
-        <th>
-            Actions
-        </th>
-        
+        <th style="padding-right:200px"> @Html.DisplayNameFor(model => model.SaleDate) </th>
+        <th style="padding-right:100px"> @Html.DisplayNameFor(model => model.Address) </th>
+        <th style="padding-right: 300px"> Status </th>
+        <th style="padding-right: 50px"> Total </th>
+        <th> Actions </th>
     </tr>
 
     @foreach (var item in Model.Where(x => x.Email == User.Identity.Name))
     {
 <tr>
-    <td>
-        @Html.DisplayFor(modelItem => item.SaleDate)
-    </td>
-   
-    <td>
-        @Html.DisplayFor(modelItem => item.Address)
-    </td>
-    
-    <td>
-        &#82;@Html.DisplayFor(modelItem => item.SaleTotal)
-    </td>
+    <td> @Html.DisplayFor(modelItem => item.SaleDate) </td>
+    <td> @Html.DisplayFor(modelItem => item.Address) </td>
+    <td> @Html.Raw(item.OrderStatus) </td>
+    <td> &#82;@Html.DisplayFor(modelItem => item.SaleTotal) </td>
     <td>
         @Html.ActionLink("View And Track", "Details", "Sales", new { id = item.SaleId }, new { @class = "my-class" })
         <br />
