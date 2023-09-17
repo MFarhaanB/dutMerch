@@ -8,3 +8,13 @@
 /.vs/BookStore/FileContentIndex/55fa66ca-666a-44f0-9c2c-3d6eb78d7bc5.vsidx
 /App_Data/DefaultConnection.mdf
 /App_Data/DefaultConnection_log.ldf
+/.vs/BookStore/FileContentIndex/37e97933-53b0-4b61-8ec8-e7d3100474c1.vsidx
+*.vsidx
+/.vs/BookStore/v17/.suo
+/.vs/BookStore/v17/fileList.bin
+/.vs/BookStore/v17/HierarchyCache.v1.txt
+/bin/BookStore.dll
+/bin/BookStore.pdb
+/obj/Debug/BookStore.dll
+/obj/Debug/BookStore.pdb
+/obj/Debug/DesignTimeResolveAssemblyReferencesInput.cache
