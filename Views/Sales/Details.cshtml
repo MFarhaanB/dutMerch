@@ -5,7 +5,9 @@
     ViewBag.Title = "Order Details";
     var list = BookStore.Helpers.AnalyticsHelper.getfeedback(Model.SaleId);
 }
-
+<head>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/sweetalert2@11/dist/sweetalert2.min.css">
+</head>
 <h2 class="text-center text-info">Details Of Your Order Number #@Model.SaleId</h2>
 <style>
     .alerts {
@@ -222,7 +224,7 @@
     </p>
 </div>
 
-
+<script src="https://cdn.jsdelivr.net/npm/sweetalert2@11/dist/sweetalert2.all.min.js"></script>
 <script src="@Url.Content("~/ scripts / Datatables / jquery.dataTables.min.js")"></script>
 <script src="@Url.Content("~/ scripts / Datatables / dataTables.bootstrap.js")"></script>
 
@@ -248,10 +250,23 @@
             // Make a GET request and expect JSON response using $.getJSON() shorthand
             $.getJSON(`/Sales/ValidateCustomersOTP?Id=${id}&OTP=${otp}`, function (data) {
                 if (data) {
-                    alert(`Successs`)
-                    location.reload();
+                    Swal.fire({
+                        title: 'Success!',
+                        text: 'The one time pin has been sent to customer',
+                        icon: 'success',
+                        confirmButtonText: 'OK'
+                    }).then((result) => {
+                        location.reload();
+                    });
                 } else {
-                    alert(`Invalid otp entered`)
+                    Swal.fire({
+                        title: 'Invalid!',
+                        text: 'Invalid one time pin entered',
+                        icon: 'warning',
+                        confirmButtonText: 'OK'
+                    }).then((result) => {
+                        location.reload();
+                    });
                 }
             })
                 .fail(function (xhr, status, error) {
@@ -263,12 +278,14 @@
 
     function SendCustomerOTP(id) {
         $.getJSON(`/Sales/SendCustomerOtp?Id=${id}`, function (data) {
-            if (data) {
-                alert(`Successs`)
+            Swal.fire({
+                title: 'Success',
+                text: 'One time pin, sent to customer successfully',
+                icon: 'success',
+                confirmButtonText: 'OK'
+            }).then((result) => {
                 location.reload();
-            } else {
-                alert(`Invalid otp entered`)
-            }
+            });
         }).fail(function (xhr, status, error) {
                 // Handle errors, if any
                 console.error("Error:", error);
