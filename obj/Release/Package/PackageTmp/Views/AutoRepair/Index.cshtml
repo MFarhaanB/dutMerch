@@ -1,0 +1,68 @@
+﻿@model IEnumerable<BookStore.Models.AutoEnquiry>
+@using BookStore.Helpers;
+@using BookStore.Models;
+@{
+    ViewBag.Title = "Index";
+    Layout = "~/Views/Shared/_Layout1.cshtml";
+}
+<div style="margin:0 30px 30px 30px;">
+    <br />
+    <h2>Customer Enquiries Queue</h2>
+    <br />
+
+
+    <table id="table" class="table table-striped table-bordered dt-responsive nowrap">
+        <thead>
+            <tr>
+                <th>Reference</th>
+                <th>Vehicle Make</th>
+                @*<th>Vehicle  Model</th>
+        <th>Year </th>*@
+                <th>Status </th>
+                <th>Engine CC</th>
+                <th>Service Type</th>
+                <th>Date of Enquiry</th>
+                <th>Appointment Date</th>
+                <th></th>
+            </tr>
+        </thead>
+
+        <tbody>
+            @foreach (var item in Model.Where(a=>a.ServiceTypeKey!=null))
+            {
+                <tr>
+                    <td> @Html.DisplayFor(modelItem => item.ReferenceNumber) </td>
+                    <td> @Html.DisplayFor(modelItem => item.VehicleMake) </td>
+                    @*<td> @Html.DisplayFor(modelItem => item.VehicleModel) </td>
+                    <td> @Html.DisplayFor(modelItem => item.Year) </td>*@
+                    <td> @Html.Raw(AutoRepairHelper.GetStatus(new ApplicationDbContext(), item.StatusId).Name) </td>
+                    <td> @Html.DisplayFor(modelItem => item.EngineCapacity) </td>
+                    <td> @Html.Raw(AutoRepairHelper.GetService(new ApplicationDbContext(), Guid.Parse(item.ServiceTypeKey))) </td>
+                    <td> @Html.DisplayFor(modelItem => item.DateTimeCreated) </td>
+                    <td> @Html.Raw(ViewHelper.FormatAppointmentDate(item.AppointmentDate)) </td>
+                    <td>
+                        @if (AutoRepairHelper.GetStatus(new ApplicationDbContext(), item.StatusId).Key == "a_await_repair_acceptance")
+                        {
+                            @Html.ActionLink("View", "InspectionDetails", new { id = item.Id }, new { @class = "btn btn-lg btn-circle btn-outline-new-white", @style = "color:#000000; padding-bottom:0px; padding-top:0px; height:auto;" })
+                        }
+                        else
+                        {
+                            @Html.ActionLink("Details", "InspectionDetails", new { id = item.Id }, new { @class = "btn btn-lg btn-circle btn-outline-new-white", @style = "color:#000000; padding-bottom:0px; padding-top:0px; height:auto;" })
+                        }
+                    </td>
+                </tr>
+            }
+        </tbody>
+    </table>
+    <br /> <br />
+    <br /> <br />
+</div>
+
+<script src="@Url.Content( "~/scripts/Datatables/jquery.dataTables.min.js" )"></script>
+<script src="@Url.Content( "~/scripts/Datatables/dataTables.bootstrap.js" )"></script>
+
+<script>
+    $(document).ready(function () {
+        $("#table").DataTable();
+    });
+</script>

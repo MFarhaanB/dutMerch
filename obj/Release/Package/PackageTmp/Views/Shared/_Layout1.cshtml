@@ -13,7 +13,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
 
     <!-- Site Metas -->
-    <title>DUT Clothing Store </title>
+    <title>@ViewBag.Title | Hendrix Auto Repair </title>
     <meta name="keywords" content="">
     <meta name="description" content="">
     <meta name="author" content="">
@@ -47,13 +47,14 @@
     <!-- Start header -->
     <header class="top-navbar">
         <nav class="navbar navbar-expand-lg navbar-light bg-light">
-            <div class="container">
-                <a class="navbar-brand" href="index.html" style="display: -webkit-inline-box;">
-                    <img src="~/Content/Theme1/images/CustomIMAges/ClothingStore/clothing-store-logo-design-inspiration-vector-illustration_500223-481.jpg" alt="no image" style="height:45px"  />
+            <div class="container" style="max-width: 90%">
+                <a class="navbar-brand" href="/" style="display: -webkit-inline-box;">
+               
+                    <img src="~/Content/Theme1/logo.png" alt="no image" style="height:45px" />
                     @*<img src="~/images/Logo.jpg" alt="no image" style="height:45px" />*@
-                    <h1 style="margin-top: 5px;">
-                        DUT Clothing Store
-                    </h1>
+                <h1 style="margin-top: 5px;">
+                    Hendrix Auto Repair
+                </h1>
                 </a>
                 <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbars-rs-food" aria-controls="navbars-rs-food" aria-expanded="false" aria-label="Toggle navigation">
                     <span class="navbar-toggler-icon"></span>
@@ -63,8 +64,8 @@
 
 
                     <ul class="navbar-nav ml-auto">
-                        <li class="nav-item active"><a class="nav-link" href="@Url.Action("OurProducts", "Products")">Shop</a></li>
-                        <li class="nav-item active"><a class="nav-link" href="@Url.Action("Index", "Home")">Home</a></li>
+                        <li class="nav-item active"><a class="nav-link" href="@Url.Action("OurProducts", "Products")">Store</a></li>
+                        @*<li class="nav-item active"><a class="nav-link" href="@Url.Action("Index", "Home")">Home</a></li>*@
                         <li class="nav-item active">
                             <a href="@Html.Partial("_LoginPartial", new { @class = "" }) </a>
                         </li>
@@ -84,13 +85,13 @@
     <!-- End Gallery -->
     <!-- End Contact info -->
     <!-- Start Footer -->
-    <footer class="footer-area bg-f" style="position: relative; top: 5300px;">
-        <div class="container">
+    <footer class="footer-area bg-f" @*style="position: relative; top: auto;"*@>
+        <div class="container" >
             <div class="row" style="display: inline-flex !important">
                 <div class="col-lg-3 col-md-6">
                     <h3>About Us</h3>
                     <p>
-                        Welcome to DUT Clothing Store! We're a passionate team dedicated to bringing you the latest fashion trends and timeless classics. Discover your style, express your personality, and elevate your wardrobe with us. Happy shopping!
+                        Welcome to Hendrix Auto Repair! We're a dedicated team of automotive experts committed to keeping your vehicle in top-notch condition. Whether it's routine maintenance, repairs, or upgrades, we've got you covered. Drive with confidence, and trust us to keep your vehicle running smoothly. Welcome to the world of reliable automotive care!
                     </p>
                 </div>
                 <div class="col-lg-3 col-md-6">
@@ -105,7 +106,7 @@
                     <h3>Contact information</h3>
                     <p class="lead">41/43 M L Sultan Rd, Greyville, Durban, 4001</p>
                     <p class="lead"><a href="#">032 533 1431</a></p>
-                    <p><a href="#"> clothingshopsa@gmail.com</a></p>
+                    <p><a href="#"> support@hendrixauto.com</a></p>
                 </div>
                 <div class="col-lg-3 col-md-6">
                     <h3>Subscribe</h3>

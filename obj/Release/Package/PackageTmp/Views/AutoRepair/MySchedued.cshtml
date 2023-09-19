@@ -1,0 +1,76 @@
+﻿@model IEnumerable<BookStore.Models.Appointments.ScheduledAppointment>
+
+@{
+    ViewBag.Title = "MySchedued";
+    Layout = "~/Views/Shared/_Layout1.cshtml";
+}
+
+<h2>MySchedued</h2>
+
+<p>
+    @Html.ActionLink("Create New", "Create")
+</p>
+<table class="table">
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.UserId)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.ServicedByUserId)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.ServiceTypeKey)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.AppointmentDate)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.AdditionalInformation)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Approved)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Conducted)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Outcome)
+        </th>
+        <th></th>
+    </tr>
+
+@foreach (var item in Model) {
+    <tr>
+        <td>
+            @Html.DisplayFor(modelItem => item.UserId)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.ServicedByUserId)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.ServiceTypeKey)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.AppointmentDate)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.AdditionalInformation)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Approved)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Conducted)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Outcome)
+        </td>
+        <td>
+            @Html.ActionLink("Edit", "Edit", new { id=item.Id }) |
+            @Html.ActionLink("Details", "Details", new { id=item.Id }) |
+            @Html.ActionLink("Delete", "Delete", new { id=item.Id })
+        </td>
+    </tr>
+}
+
+</table>

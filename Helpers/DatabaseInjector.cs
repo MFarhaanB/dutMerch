@@ -4,7 +4,6 @@ using BookStore.Models.Product;
 using System;
 using System.Collections.Generic;
 using System.Linq;
-using System.Web;
 
 namespace BookStore.Helpers
 {
@@ -12,7 +11,7 @@ namespace BookStore.Helpers
     {
         public static void DBInjector()
         {
-            using (ApplicationDbContext  dbContext = new ApplicationDbContext()) 
+            using (ApplicationDbContext dbContext = new ApplicationDbContext())
             {
                 foreach (String maker in Manufactures())
                 {
@@ -32,7 +31,7 @@ namespace BookStore.Helpers
                         dbContext.VehicleModels.Add(new VehicleModel { Name = model, Id = Guid.NewGuid(), ManufactureKey = maker.Id.ToString().ToLower() });
                     }
                 }
-                    
+
                 dbContext.SaveChanges();
                 foreach (var type in vTypes())
                 {
@@ -41,9 +40,9 @@ namespace BookStore.Helpers
                     VehicleModel vehicleModel = dbContext.VehicleModels.FirstOrDefault(a => a.Name == key);
                     if (vehicleModel != null)
                     {
-                        foreach(string value in values)
+                        foreach (string value in values)
                         {
-                            if(dbContext.VehicleTypes.FirstOrDefault(a => a.Name == value) == null)
+                            if (dbContext.VehicleTypes.FirstOrDefault(a => a.Name == value) == null)
                             {
                                 dbContext.VehicleTypes.Add(new VehicleType
                                 {
@@ -55,11 +54,11 @@ namespace BookStore.Helpers
                             }
                         }
                     }
-                  
+
                 }
 
-                foreach(var chkiem in GetInspectionChecklist()) 
-                { 
+                foreach (var chkiem in GetInspectionChecklist())
+                {
                     int i = chkiem.Value.Count - 1;
                     while (i >= 0)
                     {
@@ -76,7 +75,7 @@ namespace BookStore.Helpers
 
 
                 List<Status> statuses = new List<Status>();
-                statuses.Add(new Status { Name = "Approved", Key = "STS_Approved"});
+                statuses.Add(new Status { Name = "Approved", Key = "STS_Approved" });
                 statuses.Add(new Status { Name = "Declined", Key = "STS_Declined" });
                 statuses.Add(new Status { Name = "Pending", Key = "STS_Pending" });
                 statuses.Add(new Status { Name = "In Awaiting Review", Key = "c_enquiry_pending" });
@@ -87,9 +86,9 @@ namespace BookStore.Helpers
                 statuses.Add(new Status { Name = "Auto Mobile Checked Out and/or Collected", Key = "c_auto_checkedout_or_colleced" });
                 statuses.Add(new Status { Name = "c_awaiting_checkout", Key = "c_awaiting_checkout" });
 
-                foreach(var status in statuses)
+                foreach (var status in statuses)
                 {
-                    if(dbContext.Statuses.FirstOrDefault(a=>a.Key == status.Key) == null)
+                    if (dbContext.Statuses.FirstOrDefault(a => a.Key == status.Key) == null)
                     {
                         status.IsActive = true;
                         status.Description = status.Name;
@@ -224,27 +223,101 @@ namespace BookStore.Helpers
         {
             return new List<string>
             {
-            "Toyota GR86",
-            "Toyota Corolla",
-            "Toyota Camry",
-            "Toyota RAV4",
-            "Toyota Highlander",
-            "Toyota Tacoma",
-            "Toyota Prius",
-            "Toyota Sienna",
-            "Toyota 4Runner",
-            "Toyota Tundra",
-            "Toyota Land Cruiser",
-            "Toyota Sequoia",
-            "Toyota C-HR",
-            "Toyota Venza",
-            "Toyota Yaris",
-            "Toyota Avalon",
-            "Toyota Supra",
-            "Toyota Prius Prime",
-            "Toyota Prius c",
-            "Toyota Prius v",
-            "Toyota Mirai"
+           // Toyota models
+        "Toyota GR86",
+        "Toyota Corolla",
+        "Toyota Camry",
+        "Toyota RAV4",
+        "Toyota Highlander",
+        "Toyota Tacoma",
+
+        // Honda models
+        "Honda Accord",
+        "Honda Civic",
+        "Honda CR-V",
+        "Honda Pilot",
+        "Honda Fit",
+        "Honda Odyssey",
+
+        // Ford models
+        "Ford Mustang",
+        "Ford F-150",
+        "Ford Explorer",
+        "Ford Escape",
+        "Ford Focus",
+        "Ford Edge",
+
+        // Volkswagen models
+        "Volkswagen Golf",
+        "Volkswagen Passat",
+        "Volkswagen Tiguan",
+        "Volkswagen Jetta",
+        "Volkswagen Atlas",
+        "Volkswagen Beetle",
+
+        // General Motors (Chevrolet) models
+        "Chevrolet Silverado",
+        "Chevrolet Malibu",
+        "Chevrolet Equinox",
+        "Chevrolet Impala",
+        "Chevrolet Camaro",
+        "Chevrolet Traverse",
+
+        // General Motors (GMC) models
+        "GMC Sierra",
+        "GMC Acadia",
+        "GMC Terrain",
+        "GMC Yukon",
+        "GMC Canyon",
+        "GMC Savana",
+
+        // BMW models
+        "BMW 3 Series",
+        "BMW 5 Series",
+        "BMW X3",
+        "BMW X5",
+        "BMW 7 Series",
+        "BMW i8",
+
+        // Nissan models
+        "Nissan Altima",
+        "Nissan Maxima",
+        "Nissan Rogue",
+        "Nissan Murano",
+        "Nissan Pathfinder",
+        "Nissan Sentra",
+
+        // Hyundai models
+        "Hyundai Elantra",
+        "Hyundai Sonata",
+        "Hyundai Tucson",
+        "Hyundai Santa Fe",
+        "Hyundai Kona",
+        "Hyundai Palisade",
+
+        // Fiat Chrysler (Dodge) models
+        "Dodge Charger",
+        "Dodge Challenger",
+        "Dodge Durango",
+        "Dodge Journey",
+        "Dodge Grand Caravan",
+        "Dodge Viper",
+
+        // Daimler AG (Mercedes-Benz) models
+        "Mercedes-Benz C-Class",
+        "Mercedes-Benz E-Class",
+        "Mercedes-Benz GLE",
+        "Mercedes-Benz GLC",
+        "Mercedes-Benz A-Class",
+        "Mercedes-Benz S-Class",
+
+        // Volvo Group models (Volvo)
+        "Volvo XC60",
+        "Volvo XC90",
+        "Volvo S60",
+        "Volvo V60",
+        "Volvo XC40",
+        "Volvo S90"
             // Add more models here if needed
             };
         }
@@ -254,27 +327,101 @@ namespace BookStore.Helpers
 
             return new Dictionary<string, List<string>>
         {
-            { "Toyota Corolla", new List<string> { "Sedan", "Hatchback" } },
-            { "Toyota Camry", new List<string> { "Sedan" } },
-            { "Toyota RAV4", new List<string> { "SUV", "Crossover" } },
-            { "Toyota Highlander", new List<string> { "SUV" } },
-            { "Toyota Tacoma", new List<string> { "Pickup Truck" } },
-            { "Toyota Prius", new List<string> { "Hybrid" } },
-            { "Toyota Sienna", new List<string> { "Minivan" } },
-            { "Toyota 4Runner", new List<string> { "SUV" } },
-            { "Toyota Tundra", new List<string> { "Pickup Truck" } },
-            { "Toyota Land Cruiser", new List<string> { "SUV" } },
-            { "Toyota Sequoia", new List<string> { "SUV" } },
-            { "Toyota C-HR", new List<string> { "Crossover" } },
-            { "Toyota Venza", new List<string> { "Crossover" } },
-            { "Toyota Yaris", new List<string> { "Sedan", "Hatchback" } },
-            { "Toyota Avalon", new List<string> { "Sedan" } },
-            { "Toyota Supra", new List<string> { "Sports Car" } },
-            { "Toyota Prius Prime", new List<string> { "Plug-in Hybrid" } },
-            { "Toyota Prius c", new List<string> { "Hybrid" } },
-            { "Toyota Prius v", new List<string> { "Hybrid" } },
-            { "Toyota GR86", new List<string> { "Coupe" } },
-            { "Toyota Mirai", new List<string> { "Fuel Cell Vehicle (FCV)" } }
+             // Toyota model types
+        { "Toyota Corolla", new List<string> { "Sedan", "Hatchback" } },
+        { "Toyota Camry", new List<string> { "Sedan" } },
+        { "Toyota RAV4", new List<string> { "SUV", "Crossover" } },
+        { "Toyota Highlander", new List<string> { "SUV" } },
+        { "Toyota Tacoma", new List<string> { "Pickup Truck" } },
+        { "Toyota GR86", new List<string> { "Coupe" } },
+
+        // Honda model types
+        { "Honda Accord", new List<string> { "Sedan" } },
+        { "Honda Civic", new List<string> { "Sedan", "Hatchback" } },
+        { "Honda CR-V", new List<string> { "SUV" } },
+        { "Honda Pilot", new List<string> { "SUV" } },
+        { "Honda Fit", new List<string> { "Hatchback" } },
+        { "Honda Odyssey", new List<string> { "Minivan" } },
+
+        // Ford model types
+        { "Ford Mustang", new List<string> { "Sports Car" } },
+        { "Ford F-150", new List<string> { "Pickup Truck" } },
+        { "Ford Explorer", new List<string> { "SUV" } },
+        { "Ford Escape", new List<string> { "SUV" } },
+        { "Ford Focus", new List<string> { "Sedan", "Hatchback" } },
+        { "Ford Edge", new List<string> { "SUV" } },
+
+        // Volkswagen model types
+        { "Volkswagen Golf", new List<string> { "Hatchback" } },
+        { "Volkswagen Passat", new List<string> { "Sedan" } },
+        { "Volkswagen Tiguan", new List<string> { "SUV" } },
+        { "Volkswagen Jetta", new List<string> { "Sedan" } },
+        { "Volkswagen Atlas", new List<string> { "SUV" } },
+        { "Volkswagen Beetle", new List<string> { "Hatchback" } },
+
+        // General Motors (Chevrolet) model types
+        { "Chevrolet Silverado", new List<string> { "Pickup Truck" } },
+        { "Chevrolet Malibu", new List<string> { "Sedan" } },
+        { "Chevrolet Equinox", new List<string> { "SUV" } },
+        { "Chevrolet Impala", new List<string> { "Sedan" } },
+        { "Chevrolet Camaro", new List<string> { "Sports Car" } },
+        { "Chevrolet Traverse", new List<string> { "SUV" } },
+
+        // General Motors (GMC) model types
+        { "GMC Sierra", new List<string> { "Pickup Truck" } },
+        { "GMC Acadia", new List<string> { "SUV" } },
+        { "GMC Terrain", new List<string> { "SUV" } },
+        { "GMC Yukon", new List<string> { "SUV" } },
+        { "GMC Canyon", new List<string> { "Pickup Truck" } },
+        { "GMC Savana", new List<string> { "Van" } },
+
+        // BMW model types
+        { "BMW 3 Series", new List<string> { "Sedan" } },
+        { "BMW 5 Series", new List<string> { "Sedan" } },
+        { "BMW X3", new List<string> { "SUV" } },
+        { "BMW X5", new List<string> { "SUV" } },
+        { "BMW 7 Series", new List<string> { "Sedan" } },
+        { "BMW i8", new List<string> { "Sports Car" } },
+
+        // Nissan model types
+        { "Nissan Altima", new List<string> { "Sedan" } },
+        { "Nissan Maxima", new List<string> { "Sedan" } },
+        { "Nissan Rogue", new List<string> { "SUV" } },
+        { "Nissan Murano", new List<string> { "SUV" } },
+        { "Nissan Pathfinder", new List<string> { "SUV" } },
+        { "Nissan Sentra", new List<string> { "Sedan" } },
+        
+        // Hyundai model types
+        { "Hyundai Elantra", new List<string> { "Sedan" } },
+        { "Hyundai Sonata", new List<string> { "Sedan" } },
+        { "Hyundai Tucson", new List<string> { "SUV" } },
+        { "Hyundai Santa Fe", new List<string> { "SUV" } },
+        { "Hyundai Kona", new List<string> { "SUV" } },
+        { "Hyundai Palisade", new List<string> { "SUV" } },
+        
+        // Fiat Chrysler (Dodge) model types
+        { "Dodge Charger", new List<string> { "Sedan" } },
+        { "Dodge Challenger", new List<string> { "Sports Car" } },
+        { "Dodge Durango", new List<string> { "SUV" } },
+        { "Dodge Journey", new List<string> { "SUV" } },
+        { "Dodge Grand Caravan", new List<string> { "Minivan" } },
+        { "Dodge Viper", new List<string> { "Sports Car" } },
+
+        // Daimler AG (Mercedes-Benz) model types
+        { "Mercedes-Benz C-Class", new List<string> { "Sedan" } },
+        { "Mercedes-Benz E-Class", new List<string> { "Sedan" } },
+        { "Mercedes-Benz GLE", new List<string> { "SUV" } },
+        { "Mercedes-Benz GLC", new List<string> { "SUV" } },
+        { "Mercedes-Benz A-Class", new List<string> { "Hatchback" } },
+        { "Mercedes-Benz S-Class", new List<string> { "Sedan" } },
+
+        // Volvo Group models (Volvo)
+        { "Volvo XC60", new List<string> { "SUV" } },
+        { "Volvo XC90", new List<string> { "SUV" } },
+        { "Volvo S60", new List<string> { "Sedan" } },
+        { "Volvo V60", new List<string> { "Wagon" } },
+        { "Volvo XC40", new List<string> { "SUV" } },
+        { "Volvo S90", new List<string> { "Sedan" } }
             // Add more models and types here if needed
         };
         }

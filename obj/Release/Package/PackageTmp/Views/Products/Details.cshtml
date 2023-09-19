@@ -1,69 +1,51 @@
 ﻿@model BookStore.Models.Products
-
+@using BookStore.Helpers;
 @{
     ViewBag.Title = "Details";
     Layout = "~/Views/Shared/_Layout1.cshtml";
 }
 
-<h2>Details</h2>
 
-<div>
+
+<div style="margin:0 30px 0 30px;">
+    <br />
+    <h2>Details: @Model.ProductName</h2>
     <h4>Products</h4>
-    <hr />
-    <dl class="dl-horizontal">
-        <dt>
-            @Html.DisplayNameFor(model => model.ProductCatergory.CatergoryName)
-        </dt>
+    <table class="table">
+        <tr>
+            <th>Product Name</th>
+            <th>Catergory</th>
+            <th>Manufacture</th>
+            <th>Vehicle Model</th>
+            <th>Part Price </th>
+            <th>Description </th>
+            <th></th>
+        </tr>
+        <tr>
+            <td> @Html.DisplayFor(modelItem => Model.ProductName) </td>
+            <td>@Html.DisplayFor(modelItem => Model.ProductCatergory.CatergoryName) </td>
+            <td>@Html.Raw(ViewHelper.getVManufacture(Guid.Parse(Model.vManufactureKey))) </td>
+            <td>@Html.Raw(ViewHelper.getVehicleModel(Guid.Parse(Model.vModelKey))) </td>
+            <td> @Html.DisplayFor(modelItem => Model.ProductPrice) </td>
+            <td> @Html.Raw(Model.ProductDescription) </td>
+        </tr>
 
-        <dd>
-            @Html.DisplayFor(model => model.ProductCatergory.CatergoryName)
-        </dd>
 
-        <dt>
-            @Html.DisplayNameFor(model => model.ProductName)
-        </dt>
-
-        <dd>
-            @Html.DisplayFor(model => model.ProductName)
-        </dd>
-
-        <dt>
-            @Html.DisplayNameFor(model => model.ProductAuthor)
-        </dt>
-
-        <dd>
-            @Html.DisplayFor(model => model.ProductAuthor)
-        </dd>
-
-        <dt>
-            @Html.DisplayNameFor(model => model.ProductStock)
-        </dt>
-
-        <dd>
-            @Html.DisplayFor(model => model.ProductStock)
-        </dd>
-
-        <dt>
-            @Html.DisplayNameFor(model => model.ProductDescription)
-        </dt>
-
-        <dd>
-            @Html.DisplayFor(model => model.ProductDescription)
-        </dd>
-
-        <dt>
-            @Html.DisplayNameFor(model => model.ProductPrice)
-        </dt>
-
-        <dd>
-            @Html.DisplayFor(model => model.ProductPrice)
-        </dd>
-
-     
-
-    </dl>
+    </table>
 </div>
+@if (User.IsInRole("Admin"))
+{
 <p>
     @Html.ActionLink("Modify", "Edit", new { id = Model.ProductId }) |
     @Html.ActionLink("Back to List", "Index")
 </p>
+}
+else
+{
+    <hr style="width:90%"/>
+   <input type="button" value="Back" onclick="window.history.back()" class="dropbtn"  style="border-radius:4px;cursor:pointer; margin-left:30px;" />
+}
+
+<br />
+<br />
+
