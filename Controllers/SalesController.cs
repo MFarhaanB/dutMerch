@@ -14,6 +14,11 @@ using BookStore.Helpers;
 using System.EnterpriseServices;
 using System.Web.Helpers;
 using Microsoft.AspNetCore.Http;
+using Org.BouncyCastle.Asn1.Ocsp;
+using System.Net.Http;
+using System.Text;
+using System.Configuration;
+using System.Text.Json;
 
 namespace BookStore.Controllers
 {
@@ -84,7 +89,7 @@ namespace BookStore.Controllers
             delivery.DeliveryDate = DateTime.Now.ToString();
             delivery.CurrentLocation = sale.Address;
             delivery.isDelivered = true;
-            
+
 
             string subject = "Successful Delivery For Order Number #" + sale.SaleId;
             string body = "Dear Customer " + sale.Name + ", your order has been delivered successfully.";
@@ -100,8 +105,8 @@ namespace BookStore.Controllers
 
             sale.Complete = true;
             sale.OrderStatus = "Order Delivered To Customer";
-            sale.ConfirmDelivery = true;    
-            db.Entry(sale).State  = EntityState.Modified;
+            sale.ConfirmDelivery = true;
+            db.Entry(sale).State = EntityState.Modified;
             db.SaveChanges();
 
             //Set Sale State to Complete once delivered
@@ -177,7 +182,7 @@ namespace BookStore.Controllers
         }
         // GET: Sales/Details/5
 
-        public async Task<ActionResult> Details([Bind(Include = "ConfirmOrder,Dispatched,ConfirmDelivery")] int? id , string message)
+        public async Task<ActionResult> Details([Bind(Include = "ConfirmOrder,Dispatched,ConfirmDelivery")] int? id, string message)
         {
 
             ViewBag.message = !string.IsNullOrEmpty(message) ? message : "";
@@ -210,7 +215,7 @@ namespace BookStore.Controllers
                                where db.SaleId == id
                                select db;
 
-            
+
 
             ViewBag.SaleDetails = productList;
             ViewBag.DeliveryDetails = confirmation;
@@ -230,12 +235,99 @@ namespace BookStore.Controllers
             return View(sale);
         }
 
+        public async Task<ActionResult> SendCustomerOtp(Int32 Id)
+        {
+            Delivery delivery = await db.Deliveries.OrderByDescending(a => a.DeliveryId).FirstOrDefaultAsync(c => c.SaleId == Id);
+            delivery.CustomerOTP = new Random().Next(100000, 1000000);
+            db.Entry(delivery).State = EntityState.Modified;
+            //await db.SaveChangesAsync();
+
+            Sale sale = await db.Sales.FindAsync(Id);
+            ApplicationUser user = await db.Users.FirstOrDefaultAsync(a => a.UserName == sale.Email);
+
+            SmsNotification smsNotification = new SmsNotification();
+            SMSViewModel sms = new SMSViewModel();
+            sms.messages = new Message[]
+            {
+                new Message
+            {
+                to =String.Format("+27{0}", user.PhoneNo.Substring(Math.Max(0, user.PhoneNo.Length - 9))),
+                source = "php",
+                body = $"{delivery.CustomerOTP} is your Hendrix auto delivery confirmation code.",
+                custom_string = $"{delivery.CustomerOTP} is your Hendrix auto delivery confirmation code."
+            }
+            };
+
+
+            string username = ConfigurationManager.AppSettings["sms_username"];
+            string api_key = ConfigurationManager.AppSettings["sms_api_key"];
+
+            // Concatenate username and password with a colon
+            string credentials = String.Format("{0}:{1}", username, api_key);
+
+            // Convert the concatenated string to a byte array
+            byte[] credentialsBytes = Encoding.UTF8.GetBytes(credentials);
+
+            // Encode the byte array as a Base64 string
+            string base64Credentials = Convert.ToBase64String(credentialsBytes);
+
+            var client = new HttpClient();
+            var request = new HttpRequestMessage(HttpMethod.Post, "https://rest.clicksend.com/v3/sms/send");
+            request.Headers.Add("Authorization", $"Basic {base64Credentials}");
+            var content = new StringContent(JsonSerializer.Serialize(sms), null, "application/json");
+            request.Content = content;
+            var response = await client.SendAsync(request);
+            response.EnsureSuccessStatusCode();
+            //Console.WriteLine(await response.Content.ReadAsStringAsync());
+            smsNotification.Request = JsonSerializer.Serialize(sms);
+            smsNotification.Response = await response.Content.ReadAsStringAsync();
+            smsNotification.SaleId = sale.SaleId;
+            smsNotification.DeliveryId = delivery.DeliveryId;
+            smsNotification.CreatedDateTime = DateTime.Now;
+            smsNotification.Driver = User.Identity.Name;
+            db.SmsNotifications.Add(smsNotification);
+            await db.SaveChangesAsync();
+            return Json(true, JsonRequestBehavior.AllowGet);
+        }
+
+        public async Task<ActionResult> ValidateCustomersOTP(Int32 Id, Int32 OTP)
+        {
+            Delivery delivery = await db.Deliveries.OrderByDescending(a => a.DeliveryId).FirstOrDefaultAsync(c => c.SaleId == Id && c.CustomerOTP == OTP);
+            if (delivery == null) return Json(false, JsonRequestBehavior.AllowGet);
+            Sale sale = await db.Sales.FindAsync(Id);
+
+            var deliverys = from db in db.Deliveries
+                            where db.SaleId == Id
+                            select db;
+
+            if (sale.ConfirmOrder == false)
+            {
+                sale.ConfirmOrder = true;
+                sale.ConfirmDelivery = false;
+                sale.OrderStatus = "Order Confirmed By Customer";
+            }
+            await db.SaveChangesAsync();
+            return Json(true, JsonRequestBehavior.AllowGet);
+        }
 
         public async Task<ActionResult> PickUpOrder(string message)
         {
-            var FindAllDeliver = await db.Deliveries.Include(x => x.sale).Where(x =>x.IsForReturn == true).ToListAsync();
+            var FindAllDeliver = await db.Deliveries.Include(x => x.sale).Where(x => x.IsForReturn == true).ToListAsync();
             ViewBag.message = message;
             return View(FindAllDeliver);
+        }
+
+        public class SMSViewModel
+        {
+            public Message[] messages { get; set; }
+        }
+
+        public class Message
+        {
+            public string source { get; set; }
+            public string body { get; set; }
+            public string to { get; set; }
+            public string custom_string { get; set; }
         }
 
 
@@ -410,7 +502,7 @@ namespace BookStore.Controllers
                 ProducId = ProductionId
             };
             ViewBag.ReasonId = new SelectList(db.ReasonDrops, "Id", "Name");
-            ViewBag.RNRId = new SelectList(db.RNRDatas.Where(x =>x.Name == "Refund" || x.Name == "Return").ToList(), "Id", "Name");
+            ViewBag.RNRId = new SelectList(db.RNRDatas.Where(x => x.Name == "Refund" || x.Name == "Return").ToList(), "Id", "Name");
             // ViewBag.OrderId = new SelectList(db.Sales, "SaleId", "SaleDate");
             ViewBag.StatusId = new SelectList(db.Statuses, "Id", "Name");
             return View(returnRefundVM);
@@ -422,7 +514,7 @@ namespace BookStore.Controllers
             string message = string.Empty;
             using (ApplicationDbContext core = new ApplicationDbContext())
             {
-                
+
                 var CheckIfAlreadyPending = core.ReturnAndRefunds.FirstOrDefault(x => x.OrderId == returnRefundVM.sale.SaleId && x.CustomerName == User.Identity.Name && x.ProductionId == returnRefundVM.ProducId) ?? null;
                 if (CheckIfAlreadyPending == null)
                 {
@@ -442,7 +534,7 @@ namespace BookStore.Controllers
                 {
                     message = string.Format($"Request for return already created , unable to create another, {DateTime.Now.ToString("yyyy-MM-dd")}");
                 }
-              
+
 
 
 
@@ -459,10 +551,10 @@ namespace BookStore.Controllers
             using (ApplicationDbContext core = new ApplicationDbContext())
             {
                 var bookid = (from f in core.Feedbacks
-                            join s in core.Sales on f.SaleId equals s.SaleId
-                            join sd in core.SaleDetails on s.SaleId equals sd.SaleId
-                            join p in core.Products on sd.ProductId equals p.ProductId
-                            select p).FirstOrDefault();
+                              join s in core.Sales on f.SaleId equals s.SaleId
+                              join sd in core.SaleDetails on s.SaleId equals sd.SaleId
+                              join p in core.Products on sd.ProductId equals p.ProductId
+                              select p).FirstOrDefault();
 
                 Feedback feedback = new Feedback();
                 feedback.Created = DateTime.Now;
@@ -474,7 +566,7 @@ namespace BookStore.Controllers
                 core.Feedbacks.Add(feedback);
 
                 Analytic analytic = new Analytic();
-                
+
 
 
 
@@ -498,8 +590,8 @@ namespace BookStore.Controllers
                                 Comment = feedback.Comment,
                                 Rating = feedback.Rating
                             }).ToList();
-                
-                
+
+
                 return View(list);
             }
 
@@ -507,7 +599,7 @@ namespace BookStore.Controllers
         }
 
         [HttpPost]
-        public  ActionResult SaveRating(int? Id, SaleDetail model, String Comment, int Rating)
+        public ActionResult SaveRating(int? Id, SaleDetail model, String Comment, int Rating)
         {
             return View();
         }
