@@ -1,5 +1,6 @@
 ﻿@model BookStore.Models.Sale
-
+@using BookStore.Models
+@using BookStore.Helpers
 @{
     ViewBag.Title = "Order Details";
     var list = BookStore.Helpers.AnalyticsHelper.getfeedback(Model.SaleId);
@@ -9,7 +10,7 @@
 <style>
     .alerts {
         padding: 20px;
-        background-color: #d0a772;
+        background-color: #838996;
         color: white;
         font-size: 20px;
     }
@@ -90,7 +91,7 @@
                         <th>
                             <h1>Product Price</h1>
                         </th>
-                        @if (User.IsInRole("Student"))
+                        @if (User.IsInRole("Customer"))
                         {
 
                             <th></th>
@@ -110,7 +111,7 @@
                             <td>
                                 @item.ProductPrice
                             </td>
-                            @if (User.IsInRole("Student"))
+                            @if (User.IsInRole("Customer"))
                             {
                                 if (item.ProductCatergoryId != 11)
                                 {
@@ -125,7 +126,7 @@
                                     <td>Refunds and/Or Return not Applicable</td>
                                 }
                                 <td>
-                                    @Html.Partial("~/Views/Sales/_addfeedback.cshtml", Model.SaleId)
+                                    @Html.Partial("~/Views/Sales/_addfeedback.cshtml", new Sale { ProductId = ViewBag.SalesId })
                                     @* @Html.Partial("~/Views/Sales/GetFeedback.cshtml", list);*@
                                 </td>
                             }
@@ -176,7 +177,7 @@
             <iframe width="1200"
                     height="500"
                     frameborder="0" style="position : relative; left : 5%;"
-                    src="https://www.google.com/maps/embed/v1/directions?key=AIzaSyA_8EM7Q50azfNqksq7HssOGb8O_txokjE&origin='@ViewBag.Delivery'&destination='@Model.Address'&avoid=tolls|highways" allowfullscreen>
+                    src="https://www.google.com/maps/embed/v1/directions?key=AIzaSyBBOS_zuDf2uugihp62OSar1Fpvfts3HWU&origin='@ViewBag.Delivery'&destination='@Model.Address'&avoid=tolls|highways" allowfullscreen>
             </iframe>
             <br />
             <br />
@@ -200,7 +201,7 @@
                 }
             }
         }
-        @if (User.IsInRole("Student"))
+        @if (User.IsInRole("Customer"))
         {
             if (Model.ConfirmOrder == false)
             {

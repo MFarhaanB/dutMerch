@@ -7,7 +7,7 @@
 
 <h2>Create</h2>
 <body>
-    @using (Html.BeginForm(actionName: "Create", controllerName: "Products", routeValues: null, method: FormMethod.Post, htmlAttributes: new { enctype = "multipart/form-data" }))
+    @using (Html.BeginForm(actionName: "Create", controllerName: "Products", routeValues: null, method: FormMethod.Post, htmlAttributes: new { enctype = "multipart/form-data", @style= "margin: 3%;" }))
     {
         @Html.AntiForgeryToken()
 
@@ -21,14 +21,7 @@
 
                         @Html.ValidationSummary(true, "", new { @class = "text-danger" })
 
-                        <thead class="form-group">
 
-                            <tr class="col-md-4">
-                                @Html.LabelFor(model => model.ProductCatergory.ProductCatergoryId,"Product Category", htmlAttributes: new { @class = "control-label col-md-2" })
-                                @Html.DropDownListFor(model => model.ProductCatergory.CatergoryName, (SelectList)ViewBag.ProductCatergories, "--Select--", htmlAttributes: new { @class = "form-control" })
-                                @Html.ValidationMessageFor(model => model.ProductCatergory, "", new { @class = "text-danger" })
-                            </tr>
-                        </thead>
 
                         <thead class="form-group">
                             @Html.LabelFor(model => model.ProductName, "Product Name", htmlAttributes: new { @class = "control-label col-md-2" })
@@ -38,13 +31,39 @@
                             </tr>
                         </thead>
 
+
                         <thead class="form-group">
-                            @Html.LabelFor(model => model.ProductAuthor, "Product Owner", htmlAttributes: new { @class = "control-label col-md-2" })
-                            <tr class="col-md-10">
-                                @Html.EditorFor(model => model.ProductAuthor, new { htmlAttributes = new { @class = "form-control" } })
-                                @Html.ValidationMessageFor(model => model.ProductAuthor, "", new { @class = "text-danger" })
+                            <tr class="col-md-4">
+                                @Html.LabelFor(model => model.ProductCatergory.ProductCatergoryId, "Product Category", htmlAttributes: new { @class = "control-label col-md-2" })
+                                @Html.DropDownListFor(model => model.ProductCatergory.CatergoryName, (SelectList)ViewBag.ProductCatergories, "--Select Category--", htmlAttributes: new { @class = "form-control" })
+                                @Html.ValidationMessageFor(model => model.ProductCatergory, "", new { @class = "text-danger" })
                             </tr>
                         </thead>
+
+                        <thead class="form-group">
+                            <tr class="col-md-4">
+                                @Html.LabelFor(model => model.vManufactureKey, "Vehicle Manufacture", htmlAttributes: new { @class = "control-label col-md-2" })
+                                @Html.DropDownListFor(model => model.vManufactureKey, (SelectList)ViewBag.Manufactures, "--Select Manufacture--", htmlAttributes: new { @Name = "vManufactureKey", @Id = "vManufactureKey", @class = "form-control" })
+                                @Html.ValidationMessageFor(model => model.vManufactureKey, "", new { @class = "text-danger" })
+                            </tr>
+                        </thead>
+
+                        <thead class="form-group">
+                            <tr class="col-md-4">
+                                @Html.LabelFor(model => model.vModelKey, "Vehicle Model", htmlAttributes: new { @class = "control-label col-md-2" })
+                                @Html.DropDownListFor(model => model.vModelKey, (SelectList)ViewBag.ProductCatergories, "--Select Model--", htmlAttributes: new { @Name= "vModelKey", @class = "form-control", @Id= "vModelKey", @disabled = "disabled" })
+                                @Html.ValidationMessageFor(model => model.vModelKey, "", new { @class = "text-danger" })
+                            </tr>
+                        </thead>
+
+                        <thead class="form-group">
+                            <tr class="col-md-4">
+                                @Html.LabelFor(model => model.vTypeKey, "Vehicle Type", htmlAttributes: new { @class = "control-label col-md-2" })
+                                @Html.DropDownListFor(model => model.vTypeKey, (SelectList)ViewBag.ProductCatergories, "--Select Type--", htmlAttributes: new { @class = "form-control", @Id= "vTypeKey",@Name= "vTypeKey", @disabled = "disabled" })
+                                @Html.ValidationMessageFor(model => model.vTypeKey, "", new { @class = "text-danger" })
+                            </tr>
+                        </thead>
+
 
                         <thead class="form-group">
                             @Html.LabelFor(model => model.ProductDescription, "Description", htmlAttributes: new { @class = "control-label col-md-2" })
@@ -129,3 +148,64 @@
             }
         }</script>
 }
+<script>
+    $("#vManufactureKey").change(function () {
+        console.log("testing110111....");
+        debugger;
+        var vManufactureK = document.getElementById("vManufactureKey").value;
+        if (vManufactureK !== '' && vManufactureK !== null) {
+            $("#vModelKey").empty();
+            var rrr = "";
+            $.ajax({
+                type: 'POST',
+                url: '@Url.Action("getVModels")',
+                dataType: 'json',
+                // data: { id: $("#PreferredUnitdll").val() },
+                data: { guid: vManufactureK },
+                success: function (mems) {
+                    debugger;
+                    $('#vModelKey').removeAttr('disabled');
+                    $("#vModelKey").append('<option value="">--Select Model--</option>');
+                    $.each(mems, function (i, member) {
+                       
+                        $("#vModelKey").append('<option value="' + member.Value + '">' + member.Text + '</option>');
+                    });
+                },
+                error: function (ex) {
+                    alert('Failed to retrieve units.' + ex);
+                }
+            });
+            return false;
+        }
+
+    });
+    $("#vModelKey").change(function () {
+        console.log("testing110111....");
+        debugger;
+        var vManufactureK = document.getElementById("vModelKey").value;
+        if (vManufactureK !== '' && vManufactureK !== null) {
+            $("#vTypeKey").empty();
+            var rrr = "";
+            $.ajax({
+                type: 'POST',
+                url: '@Url.Action("getVTypes")',
+                dataType: 'json',
+                // data: { id: $("#PreferredUnitdll").val() },
+                data: { guid: vManufactureK },
+                success: function (mems) {
+                    debugger;
+                    $('#vTypeKey').removeAttr('disabled');
+                    $("#vTypeKey").append('<option value="">--Select Model--</option>');
+                    $.each(mems, function (i, member) {
+                        $("#vTypeKey").append('<option value="' + member.Value + '">' + member.Text + '</option>');
+                    });
+                },
+                error: function (ex) {
+                    alert('Failed to retrieve units.' + ex);
+                }
+            });
+            return false;
+        }
+
+    });
+</script>

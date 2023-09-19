@@ -1,4 +1,4 @@
-﻿@model IEnumerable<BookStore.Models.RequestBook>
+﻿@model IEnumerable<BookStore.Models.PartRequest>
 
 @{
     ViewBag.Title = "Index";
@@ -17,12 +17,12 @@
 
 
     @if (Request.IsAuthenticated && User.IsInRole("Admin"))
-    {<h2>Requested Books</h2>
+    {<h2>Requested Parts</h2>
 
         <table id="table" class="table table-striped table-bordered dt-responsive nowrap">
             <tr>
                 <th>
-                    @Html.DisplayNameFor(model => model.Book_Request)
+                    @Html.DisplayNameFor(model => model.Name)
                 </th>
                 <th>
                     @Html.DisplayNameFor(model => model.Date_Requested)
@@ -31,7 +31,7 @@
                     @Html.DisplayNameFor(model => model.Admindecision)
                 </th>
                 <th>
-                    @Html.DisplayNameFor(model => model.Book_Author)
+                    @Html.DisplayNameFor(model => model.Decription)
                 </th>
                 <th></th>
             </tr>
@@ -40,27 +40,28 @@
             {
                 <tr>
                     <td>
-                        @Html.DisplayFor(modelItem => item.Book_Request)
+                        @Html.DisplayFor(modelItem => item.Name)
                     </td>
                     <td>
                         @Html.DisplayFor(modelItem => item.Date_Requested)
                     </td>
                     <td>
-                        @Html.DisplayFor(modelItem => item.Book_Author)
+                        @Html.DisplayFor(modelItem => item.Admindecision)
                     </td>
                     <td>
-                        @if (item.Admindecision == true)
-                        {
-                            @ViewBag.Approved
-                        }
-                        else if (item.Admindecision == false)
-                        {
-                            @ViewBag.Pending
-                        }
+                        @Html.DisplayFor(modelItem => item.Decription)
+                        @*@if (item.Admindecision == true)
+        {
+            @ViewBag.Approved
+        }
+        else if (item.Admindecision == false)
+        {
+            @ViewBag.Pending
+        }*@
                     </td>
                     <td>
-                        @Html.ActionLink("Approve", "Edit", new { id = item.Book_RequestId }, new { @class = "glyphicon glyphicon-ok-sign" })
-                        @Html.ActionLink("Delete", "Delete", new { id = item.Book_RequestId }, new { @class = "glyphicon glyphicon-trash" })
+                        @Html.ActionLink("Approve", "Edit", new { id = item.Id }, new { @class = "glyphicon glyphicon-ok-sign" })
+                        @Html.ActionLink("Delete", "Delete", new { id = item.Id }, new { @class = "glyphicon glyphicon-trash" })
                     </td>
                 </tr>
             }
@@ -68,9 +69,9 @@
         </table>
     }
 
-    else if (Request.IsAuthenticated && User.IsInRole("Student"))
+    else if (Request.IsAuthenticated && User.IsInRole("Customer"))
     {
-        <h2>Requested Books</h2>
+<h2>Requested Parts</h2>
 
         <p>
             @Html.ActionLink("Request", "Create")
@@ -78,7 +79,7 @@
         <table id="table" class="table table-striped table-bordered dt-responsive nowrap">
             <tr>
                 <th>
-                    @Html.DisplayNameFor(model => model.Book_Request)
+                    @Html.DisplayNameFor(model => model.Name)
                 </th>
                 <th>
                     @Html.DisplayNameFor(model => model.Date_Requested)
@@ -87,7 +88,7 @@
                     @Html.DisplayNameFor(model => model.Admindecision)
                 </th>
                 <th>
-                    @Html.DisplayNameFor(model => model.Book_Author)
+                    @Html.DisplayNameFor(model => model.Decription)
                 </th>
                 <th></th>
             </tr>
@@ -96,14 +97,13 @@
             {
                 <tr>
                     <td>
-                        @Html.DisplayFor(modelItem => item.Book_Request)
+                        @Html.DisplayFor(modelItem => item.Name)
                     </td>
                     <td>
                         @Html.DisplayFor(modelItem => item.Date_Requested)
                     </td>
-                    <td>
-                        @Html.DisplayFor(modelItem => item.Book_Author)
-                    </td>
+                    <td> @Html.DisplayFor(modelItem => item.Admindecision) </td>
+                    <td> @Html.DisplayFor(modelItem => item.Decription) </td>
                     <td>
                         @if (item.Admindecision == true)
                         {
@@ -122,9 +122,9 @@
 
     }
 
-    else if (Request.IsAuthenticated && User.IsInRole("Teacher"))
+    else if (Request.IsAuthenticated && User.IsInRole("Mechanic/Technician"))
     {
-        <h2>Requested Books</h2>
+<h2>Requested Parts</h2>
 
         <p>
             @Html.ActionLink("Request", "Create")
@@ -132,7 +132,7 @@
         <table class="table">
             <tr>
                 <th>
-                    @Html.DisplayNameFor(model => model.Book_Request)
+                    @Html.DisplayNameFor(model => model.Name)
                 </th>
                 <th>
                     @Html.DisplayNameFor(model => model.Date_Requested)
@@ -147,7 +147,7 @@
             {
                 <tr>
                     <td>
-                        @Html.DisplayFor(modelItem => item.Book_Request)
+                        @Html.DisplayFor(modelItem => item. Name)
                     </td>
                     <td>
                         @Html.DisplayFor(modelItem => item.Date_Requested)

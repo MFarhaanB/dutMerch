@@ -6,15 +6,16 @@
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.2/css/all.min.css" />
 
 @{
-    ViewBag.Title = "Our Products";
+    ViewBag.Title = "Auto Parts";
 }
 
-<h2 class="text-center text-info" style="color:azure">Store</h2>
+<h2 class="text-center text-info" style="color:azure">Store Parts</h2>
 
 <style>
     .fa-heart {
         background-color: #fcc072;
     }
+
     .footer-area {
         margin-top: 0px;
     }
@@ -44,7 +45,7 @@
             <div class="form-group">
                 <div class="input-group">
                     <div class="searchdiv">
-                        @Html.TextBox("SearchString", ViewBag.CurrentFilter as string, new { placeholder = "Enter a product name here.", @class = "search-input" })
+                        @Html.TextBox("SearchString", ViewBag.CurrentFilter as string, new { placeholder = "Enter a parts name here.", @class = "search-input" })
                         <input type="submit" class="dropbtn" value="Search" style="border-radius:4px;cursor:pointer" />
                     </div>
                 </div>
@@ -61,9 +62,9 @@
             <div class="form-group">
                 <div class="input-group">
                     <div class="searchdiv">
-                        @Html.DropDownList("manufacture", (SelectList)ViewBag.manufacture, "-- Select vehicle manufacture --",  new { @class = "search-input", @Name= "manufacture" } )
-                        @Html.DropDownList("vModel", (SelectList)ViewBag.model,   "-- Select vehicle model --",  new { @class = "search-input", @Name = "vModel" } )
-                        @Html.DropDownList("bType", (SelectList)ViewBag.bType,   "-- Select vehicle model --",  new { @class = "search-input", @Name = "bType" } )
+                        @Html.DropDownList("manufacture", (SelectList)ViewBag.manufacture, "-- Select vehicle manufacture --", new { @class = "search-input", @Name = "manufacture" })
+                        @Html.DropDownList("vModel", (SelectList)ViewBag.model, "-- Select vehicle model --", new { @class = "search-input", @Name = "vModel" })
+                        @Html.DropDownList("bType", (SelectList)ViewBag.bType, "-- Select vehicle model --", new { @class = "search-input", @Name = "bType" })
                         <input type="submit" class="dropbtn" value="Filter" style="border-radius:4px;cursor:pointer" />
                         <input type="button" class="dropbtn" value="Reset" style="border-radius:4px;cursor:pointer" onclick="window.location.href='@Url.Action("OurProducts","Products")'" />
                     </div>
@@ -154,9 +155,6 @@
                                 </div>
                                 <div class="card1-body d-flex justify-content-center">
                                     <div class="d-flex p-0 pb-1">
-                                        @* <span class="m-0 p-0" style="cursor: pointer" id="IncrsQty" onclick="IncrsQty()">
-                                                <i class="fa fa-plus"></i>
-                                            </span>*@
                                         @if (item.ProductCatergoryId != 11)
                                         {
                                             if (item.ProductStock > 10)
@@ -167,45 +165,29 @@
                                             {
                                                 <h4 class="m-0 p-0 mx-3" style="color:red;" id="quantity">Available Currently<span class="card-value"> @item.ProductStock - low in stock</span> </h4>
                                             }
-
                                         }
-
-                                        @*<span class="m-0 p-0" id="DecrsQty" onclick="DecrsQty()">
-                                                <i class="fa fa-minus" style="cursor: pointer"></i>
-                                            </span>*@
                                     </div>
                                 </div>
 
                                 <div class="card1-footer">
                                     <div class="dropdown">
-
                                         <input type="button" id="btnShowMore" class="dropbtn" onclick="showDesFunction('@item.ProductDescription')" value="Show More">
                                         <div id="Textbox" class="dropdown-content">
-
-
                                         </div>
-
                                     </div>
                                 </div>
 
-
                                 <div class="d-flex justify-content-center pt-2">
-                                    <a style="text-align:center; align-content:center; position:center" href="#" class="AddLink AddLinkTab" data-id="@item.ProductId" data-toggle="modal" data-target="#myModal"><i class="fa fa-cart-plus" aria-hidden="true"></i></a>
-
-                                    <!--@Html.ActionLink("Add to cart", "AddToCart", "ShoppingCart", new { id = item.ProductId, }, new { htmlAttributes = new { @data_toggle = "modal", @data_target = "#myModal" } })-->
-
-                                </div>
-                                <div class="d-flex justify-content-center pt-2">
-                                    @using (Html.BeginForm("Create", "SavedProducts", FormMethod.Post))
+                                    @using (Html.BeginForm("AddPartToRepair", "AutoRepair", FormMethod.Post))
                                     {
-                                        @Html.Hidden("ProductId", (object)ViewBag.ProductId)
-                                        @Html.Hidden("ProductName", (object)ViewBag.ProductName)
+                                        @Html.Hidden("Id", (object)ViewBag.AutoEnquiryId)
+                                        @Html.Hidden("PartId", (object)ViewBag.ProductId)
 
-                                        <button type="submit" style="text-align:center; align-content:center; position:center; " class="fa fa-heart" value="Submit">       </button>
+                                    <button type="submit" style="text-align:center; align-content:center; position:center; border-color:#fffcfc00; cursor:pointer" class="AddLink AddLinkTab" href="#" >
+                                        <span  class="fa fa-plus-square-o"></span>
+                                    </button>
                                     }
                                 </div>
-
-
                             </div>
                         </div>
                     </div>
@@ -222,7 +204,7 @@
                 <div class="form-group">
                     <div class="input-group">
                         <div class="searchdiv">
-                            <p style="width:100%; color:red; padding-top:10px;"> <strong>No products found/Search result empty</strong> </p>
+                            <p style="width:100%; color:red; padding-top:10px;"> <strong>No parts found/Search result empty</strong> </p>
                         </div>
                     </div>
                 </div>
