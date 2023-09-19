@@ -231,23 +231,9 @@
 <script>
     $(document).ready(function () {
         $("#table2").DataTable();
-
-
-        //$("#DistributionHistory").DataTable();
-        //$("#EmailHistoryTbl").DataTable();
-        //$("#SmsHistoryTbl").DataTable();
-        //$("#PetDetss").DataTable();
-        //$("#DeptResp").DataTable();
-        //$("#WardsTbl").DataTable();
-        //$("#StartObj").DataTable();
-        //$("#DocsTbl").DataTable();
-
-
-        /*    $("#ClosureTab").hide();*/
     });
     function SendOTPToBackEnd(otp, id) {
         if (otp.length == 6) {
-            // Make a GET request and expect JSON response using $.getJSON() shorthand
             $.getJSON(`/Sales/ValidateCustomersOTP?Id=${id}&OTP=${otp}`, function (data) {
                 if (data) {
                     Swal.fire({
@@ -270,7 +256,6 @@
                 }
             })
                 .fail(function (xhr, status, error) {
-                    // Handle errors, if any
                     console.error("Error:", error);
                 });
         }
@@ -287,7 +272,6 @@
                 location.reload();
             });
         }).fail(function (xhr, status, error) {
-                // Handle errors, if any
                 console.error("Error:", error);
             });
     }
