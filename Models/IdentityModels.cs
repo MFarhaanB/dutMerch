@@ -94,6 +94,7 @@ namespace BookStore.Models
         public DbSet<source> sources { get; set; }
         public DbSet<RepairPart> RepairParts { get; set; }
         public DbSet<PartRequest> PartRequests { get; set; }
+        public DbSet<SmsNotification> SmsNotifications { get; set; }
         protected override void OnModelCreating(DbModelBuilder modelBuilder)
         {
             base.OnModelCreating(modelBuilder);

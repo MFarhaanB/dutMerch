@@ -25,5 +25,8 @@ namespace BookStore.Models
         public bool? IsForReturn { get; set; }
         public DateTime? PickUpReturnDate { get; set; }
         public virtual Sale sale { get; set; }
+
+        public Int32? CustomerOTP { get; set; }
+
     }
 }

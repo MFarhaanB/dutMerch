@@ -192,7 +192,12 @@
                 else
                 if (item.ConfirmOrder == false)
                 {
-                    <H1 style="font-weight:600"> Informe customer to confirm order using email link </H1>
+                    <H1 style="font-weight:600"> Informe customer to confirm order using email link  Or </H1>
+                    <div class="row">
+                        <input type="text" class="form-control col-md-2" style="margin-right:10px;margin-left:40px;" maxlength="6" onkeyup="SendOTPToBackEnd(this.value, '@Model.SaleId')" />
+                        <button type="button" class="btn btn-success" onclick="SendCustomerOTP('@Model.SaleId')">Send OTP To Customer</button>
+                    </div>
+
                 }
                 else
                     if (item.ConfirmDelivery == false)
@@ -238,5 +243,35 @@
 
         /*    $("#ClosureTab").hide();*/
     });
+    function SendOTPToBackEnd(otp, id) {
+        if (otp.length == 6) {
+            // Make a GET request and expect JSON response using $.getJSON() shorthand
+            $.getJSON(`/Sales/ValidateCustomersOTP?Id=${id}&OTP=${otp}`, function (data) {
+                if (data) {
+                    alert(`Successs`)
+                    location.reload();
+                } else {
+                    alert(`Invalid otp entered`)
+                }
+            })
+                .fail(function (xhr, status, error) {
+                    // Handle errors, if any
+                    console.error("Error:", error);
+                });
+        }
+    }
 
+    function SendCustomerOTP(id) {
+        $.getJSON(`/Sales/SendCustomerOtp?Id=${id}`, function (data) {
+            if (data) {
+                alert(`Successs`)
+                location.reload();
+            } else {
+                alert(`Invalid otp entered`)
+            }
+        }).fail(function (xhr, status, error) {
+                // Handle errors, if any
+                console.error("Error:", error);
+            });
+    }
 </script>
