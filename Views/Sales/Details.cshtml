@@ -4,6 +4,7 @@
 @{
     ViewBag.Title = "Order Details";
     var list = BookStore.Helpers.AnalyticsHelper.getfeedback(Model.SaleId);
+    int rating = 1;
 }
 <head>
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/sweetalert2@11/dist/sweetalert2.min.css">
@@ -128,15 +129,15 @@
                                     <td>Refunds and/Or Return not Applicable</td>
                                 }
                                 <td>
-                                    @Html.Partial("~/Views/Sales/_addfeedback.cshtml", new Sale { ProductId = ViewBag.SalesId })
+                                    @Html.Partial("~/Views/Sales/_addfeedback.cshtml", new Sale { ProductId = ViewBag.SalesId, Rating= rating })
                                     @* @Html.Partial("~/Views/Sales/GetFeedback.cshtml", list);*@
                                 </td>
                             }
                         </tr>
                     </tbody>
 
-
-                 }
+                    rating++;
+                }
             </table>
         </div>
 

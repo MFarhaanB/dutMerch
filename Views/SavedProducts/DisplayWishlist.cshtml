@@ -152,7 +152,7 @@
                                     </div>
                                 </div>
 
-                               
+
                                 <div class="d-flex justify-content-center pt-2">
                                     <a style="text-align:center; align-content:center; position:center" href="#" class="AddLink AddLinkTab" data-id="@item.ProductId" data-toggle="modal" data-target="#myModal"><i class="fa fa-cart-plus" aria-hidden="true"></i> Add to cart</a>
                                     <!--@Html.ActionLink("Add to cart", "AddToCart", "ShoppingCart", new { id = item.ProductId, }, new { htmlAttributes = new { @data_toggle = "modal", @data_target = "#myModal" } })-->
@@ -164,8 +164,8 @@
                     </div>
                 </div>
             </div>
-        
-     }
+
+        }
 </body>
 
 
@@ -180,7 +180,9 @@
             <label for="femail"> Enter email you wish to share this list to</label>
             <input type="email" name="femail" />
             <input type="submit" value="Share" />
+            <input type="button" onclick="copyToClipboard('@Request.Url.AbsoluteUri.ToString()')" value="Share Link" />
         }
+
     </div>
 
 
@@ -191,6 +193,28 @@
     }
 </script>
 
+<script>
+    function copyToClipboard(text) {
+        // Create a temporary textarea element
+        var textarea = document.createElement("textarea");
+
+        // Set the value of the textarea to the text you want to copy
+        textarea.value = text;
+
+        // Append the textarea to the document
+        document.body.appendChild(textarea);
+
+        // Select the text in the textarea
+        textarea.select();
+
+        // Copy the selected text to the clipboard
+        document.execCommand("copy");
+
+        // Remove the temporary textarea from the document
+        document.body.removeChild(textarea);
+        alert('Link Copied!')
+    }
+</script>
 @{ string url = TempData["CurrentUrl"].ToString(); }
 <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"></script>
 <script src="https://cdn.jsdelivr.net/gh/vast-engineering/jquery-popup-overlay@2/jquery.popupoverlay.min.js"></script>

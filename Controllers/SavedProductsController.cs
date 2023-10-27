@@ -7,6 +7,7 @@ using System.Net;
 using System.Net.Mail;
 using System.Web.Mvc;
 using BookStore.Helpers;
+using System.Configuration;
 
 namespace BookStore.Controllers
 {
@@ -187,6 +188,15 @@ namespace BookStore.Controllers
             db.SaveChanges();
             return RedirectToAction("Index");
         }
+
+        public ActionResult ShareWhishList(Int32 Id)
+        {
+            var req = Request.Url;
+            var baseUrl = ConfigurationManager.AppSettings["SITE_URL"];
+            var link = string.Format("{0}/SavedProducts/DisplayWishlist/{1}", baseUrl, Id);
+            return Json(link, JsonRequestBehavior.AllowGet);
+        }
+
 
         protected override void Dispose(bool disposing)
         {

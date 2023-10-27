@@ -34,6 +34,11 @@
                
                 @Html.ActionLink("Delete", "Delete", new { id = item.ListId })
                 <button type="button" class="btn btn-success" onclick="location.href='@Url.Action("DisplayWishlist", "SavedProducts", new { id = item.ListId })'">View Wishlist</button>
+                <button type="button" class="btn btn-primary" onclick="copyToClipboard('')">
+                Share Wishlist
+                <span class="fa fa-share" style="margin:3px;">
+                    </span> 
+                </button>
             </td>
         </tr>
     }

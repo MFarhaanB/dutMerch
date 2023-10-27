@@ -11,94 +11,94 @@ namespace BookStore.Helpers
     {
         public static void DBInjector()
         {
-            using (ApplicationDbContext dbContext = new ApplicationDbContext())
-            {
-                foreach (String maker in Manufactures())
-                {
-                    if (dbContext.Manufactures.FirstOrDefault(a => a.Name.Equals(maker)) == null)
-                    {
-                        dbContext.Manufactures.Add(new Manufacture { Name = maker, Id = Guid.NewGuid(), UrlLogo = "" });
-                    }
-                }
-                dbContext.SaveChanges();
+            //using (ApplicationDbContext dbContext = new ApplicationDbContext())
+            //{
+            //    foreach (String maker in Manufactures())
+            //    {
+            //        if (dbContext.Manufactures.FirstOrDefault(a => a.Name.Equals(maker)) == null)
+            //        {
+            //            dbContext.Manufactures.Add(new Manufacture { Name = maker, Id = Guid.NewGuid(), UrlLogo = "" });
+            //        }
+            //    }
+            //    dbContext.SaveChanges();
 
-                foreach (String model in VModels())
-                {
-                    if (dbContext.VehicleModels.FirstOrDefault(a => a.Name.Equals(model)) == null)
-                    {
-                        var rr = model.Split(' ')[0];
-                        var maker = dbContext.Manufactures.FirstOrDefault(a => a.Name.Contains(rr));
-                        dbContext.VehicleModels.Add(new VehicleModel { Name = model, Id = Guid.NewGuid(), ManufactureKey = maker.Id.ToString().ToLower() });
-                    }
-                }
+            //    foreach (String model in VModels())
+            //    {
+            //        if (dbContext.VehicleModels.FirstOrDefault(a => a.Name.Equals(model)) == null)
+            //        {
+            //            var rr = model.Split(' ')[0];
+            //            var maker = dbContext.Manufactures.FirstOrDefault(a => a.Name.Contains(rr));
+            //            dbContext.VehicleModels.Add(new VehicleModel { Name = model, Id = Guid.NewGuid(), ManufactureKey = maker.Id.ToString().ToLower() });
+            //        }
+            //    }
 
-                dbContext.SaveChanges();
-                foreach (var type in vTypes())
-                {
-                    String key = type.Key;
-                    List<string> values = type.Value;
-                    VehicleModel vehicleModel = dbContext.VehicleModels.FirstOrDefault(a => a.Name == key);
-                    if (vehicleModel != null)
-                    {
-                        foreach (string value in values)
-                        {
-                            if (dbContext.VehicleTypes.FirstOrDefault(a => a.Name == value) == null)
-                            {
-                                dbContext.VehicleTypes.Add(new VehicleType
-                                {
-                                    Name = value,
-                                    Id = Guid.NewGuid(),
-                                    VehicleModelKey = vehicleModel.Id.ToString().ToLower(),
-                                    ManufactureKey = vehicleModel.ManufactureKey
-                                });
-                            }
-                        }
-                    }
+            //    dbContext.SaveChanges();
+            //    foreach (var type in vTypes())
+            //    {
+            //        String key = type.Key;
+            //        List<string> values = type.Value;
+            //        VehicleModel vehicleModel = dbContext.VehicleModels.FirstOrDefault(a => a.Name == key);
+            //        if (vehicleModel != null)
+            //        {
+            //            foreach (string value in values)
+            //            {
+            //                if (dbContext.VehicleTypes.FirstOrDefault(a => a.Name == value) == null)
+            //                {
+            //                    dbContext.VehicleTypes.Add(new VehicleType
+            //                    {
+            //                        Name = value,
+            //                        Id = Guid.NewGuid(),
+            //                        VehicleModelKey = vehicleModel.Id.ToString().ToLower(),
+            //                        ManufactureKey = vehicleModel.ManufactureKey
+            //                    });
+            //                }
+            //            }
+            //        }
 
-                }
+            //    }
 
-                foreach (var chkiem in GetInspectionChecklist())
-                {
-                    int i = chkiem.Value.Count - 1;
-                    while (i >= 0)
-                    {
-                        String itemname = chkiem.Value[i];
-                        if (dbContext.CheckListItems.FirstOrDefault(a => a.Group == chkiem.Key && a.Name == itemname) == null)
-                        {
-                            CheckListItem checkListItem = new CheckListItem { Name = chkiem.Value[i], Group = chkiem.Key, Description = chkiem.Value[i] };
-                            dbContext.CheckListItems.Add(checkListItem);
-                        }
-                        i--;
-                    }
-                }
+            //    foreach (var chkiem in GetInspectionChecklist())
+            //    {
+            //        int i = chkiem.Value.Count - 1;
+            //        while (i >= 0)
+            //        {
+            //            String itemname = chkiem.Value[i];
+            //            if (dbContext.CheckListItems.FirstOrDefault(a => a.Group == chkiem.Key && a.Name == itemname) == null)
+            //            {
+            //                CheckListItem checkListItem = new CheckListItem { Name = chkiem.Value[i], Group = chkiem.Key, Description = chkiem.Value[i] };
+            //                dbContext.CheckListItems.Add(checkListItem);
+            //            }
+            //            i--;
+            //        }
+            //    }
 
 
 
-                List<Status> statuses = new List<Status>();
-                statuses.Add(new Status { Name = "Approved", Key = "STS_Approved" });
-                statuses.Add(new Status { Name = "Declined", Key = "STS_Declined" });
-                statuses.Add(new Status { Name = "Pending", Key = "STS_Pending" });
-                statuses.Add(new Status { Name = "In Awaiting Review", Key = "c_enquiry_pending" });
-                statuses.Add(new Status { Name = "In Awaiting Appointment", Key = "a_awaiting_appointment" });
-                statuses.Add(new Status { Name = "In Awaiting Repair Acceptance", Key = "a_await_repair_acceptance" });
-                statuses.Add(new Status { Name = "In Awaiting Auto Repairs", Key = "a_await_repair_by_m" });
-                statuses.Add(new Status { Name = "In Awaiting Auto Checkout: No Repairs", Key = "c_no_repair_checkout" });
-                statuses.Add(new Status { Name = "Auto Mobile Checked Out and/or Collected", Key = "c_auto_checkedout_or_colleced" });
-                statuses.Add(new Status { Name = "c_awaiting_checkout", Key = "c_awaiting_checkout" });
+            //    List<Status> statuses = new List<Status>();
+            //    statuses.Add(new Status { Name = "Approved", Key = "STS_Approved" });
+            //    statuses.Add(new Status { Name = "Declined", Key = "STS_Declined" });
+            //    statuses.Add(new Status { Name = "Pending", Key = "STS_Pending" });
+            //    statuses.Add(new Status { Name = "In Awaiting Review", Key = "c_enquiry_pending" });
+            //    statuses.Add(new Status { Name = "In Awaiting Appointment", Key = "a_awaiting_appointment" });
+            //    statuses.Add(new Status { Name = "In Awaiting Repair Acceptance", Key = "a_await_repair_acceptance" });
+            //    statuses.Add(new Status { Name = "In Awaiting Auto Repairs", Key = "a_await_repair_by_m" });
+            //    statuses.Add(new Status { Name = "In Awaiting Auto Checkout: No Repairs", Key = "c_no_repair_checkout" });
+            //    statuses.Add(new Status { Name = "Auto Mobile Checked Out and/or Collected", Key = "c_auto_checkedout_or_colleced" });
+            //    statuses.Add(new Status { Name = "c_awaiting_checkout", Key = "c_awaiting_checkout" });
 
-                foreach (var status in statuses)
-                {
-                    if (dbContext.Statuses.FirstOrDefault(a => a.Key == status.Key) == null)
-                    {
-                        status.IsActive = true;
-                        status.Description = status.Name;
-                        dbContext.Statuses.Add(status);
-                    }
-                }
+            //    foreach (var status in statuses)
+            //    {
+            //        if (dbContext.Statuses.FirstOrDefault(a => a.Key == status.Key) == null)
+            //        {
+            //            status.IsActive = true;
+            //            status.Description = status.Name;
+            //            dbContext.Statuses.Add(status);
+            //        }
+            //    }
 
-                dbContext.SaveChanges();
+            //    dbContext.SaveChanges();
 
-            }
+            //}
         }
 
         static Dictionary<string, List<string>> GetInspectionChecklist()

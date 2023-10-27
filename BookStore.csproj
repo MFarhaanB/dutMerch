@@ -299,6 +299,7 @@
     <Compile Include="Helpers\ImageHelper.cs" />
     <Compile Include="Helpers\QrCodeHelper.cs" />
     <Compile Include="Helpers\StatusHelper.cs" />
+    <Compile Include="Helpers\TimelineHelper.cs" />
     <Compile Include="Helpers\ViewHelper.cs" />
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\AccountViewModels.cs" />
@@ -345,6 +346,7 @@
     <Compile Include="Models\ShoppingCart.cs" />
     <Compile Include="Models\SmsNotification.cs" />
     <Compile Include="Models\Status.cs" />
+    <Compile Include="Models\Timeline.cs" />
     <Compile Include="Models\UsedCouponList.cs" />
     <Compile Include="Models\WishList.cs" />
     <Compile Include="Models\WishListsProducts.cs" />
@@ -362,6 +364,7 @@
     <Compile Include="ViewModels\InquiriesVMBase.cs" />
     <Compile Include="ViewModels\ShoppingCartRemoveViewModel.cs" />
     <Compile Include="ViewModels\ShoppingCartViewModel.cs" />
+    <Compile Include="ViewModels\TimelinesViewModel.cs" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="Content\bootstrap-datepicker.css" />
@@ -502,6 +505,8 @@
     <Content Include="Content\paynowIcon.png" />
     <Content Include="Content\progress-steps.css" />
     <Content Include="Content\QuotationStyle.css" />
+    <Content Include="Content\Rating\index.js" />
+    <Content Include="Content\Rating\rating.js" />
     <Content Include="Content\ReferencesMKV\app.js" />
     <Content Include="Content\ReferencesMKV\bootstrap-rating.min.js" />
     <Content Include="Content\ReferencesMKV\bootstrap.min.css" />

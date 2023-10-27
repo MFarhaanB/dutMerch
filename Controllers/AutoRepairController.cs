@@ -16,6 +16,10 @@ using System.Web.Helpers;
 using System.Text.Json;
 using Newtonsoft.Json.Linq;
 using PagedList;
+using static BookStore.Controllers.SalesController;
+using System.Configuration;
+using System.Net.Http;
+using System.Text;
 
 namespace BookStore.Controllers
 {
@@ -84,7 +88,7 @@ namespace BookStore.Controllers
             autoEnquiry.UserId = new BaseHelper().CurrentUser(User).Id;
             autoEnquiry.ReferenceNumber = GenerateInqueryRef(String.Format("INQ{0}", new Random().Next(100000, 1000000).ToString()));
             AutoRepairHelper.SaveEnquiry(_context, autoEnquiry);
-
+            TimelineHelper.CreateTimelineEvent(autoEnquiry.Id, "Customer submited an enquery for his/her vehicle", $"Customer Message: {autoEnquiry.Message}, the enquery is awaiting review by technician.");
             ViewBag.ServiceTypes = new SelectList(_context.ServiceTypes.ToList(), "Id", "Name");
             ViewBag.message = "Your quiery was successfully submited, we'll be in touch as soon as possible!";
             return RedirectToAction("Index");   
@@ -177,6 +181,8 @@ namespace BookStore.Controllers
             _context.Entry(autoEnquiry).State = EntityState.Modified;
             _context.SaveChanges();
 
+            TimelineHelper.CreateTimelineEvent(autoEnquiry.Id, "Appointment Approved", $"Appointment has been approved for {ViewHelper.FormatAppointmentDate(autoEnquiry.AppointmentDate)}, customer required to avail him/herself at least 10 minutes prior.");
+
             // send out notification to user
             String body = $"Your appointment has been approved for {ViewHelper.FormatAppointmentDate(autoEnquiry.AppointmentDate)}, please avail yourself at least 10 minutes prior. This <strong>{autoEnquiry.ReferenceNumber}</strong> is your appointment ref, you are required to produce it on your arrival for verification purposes.";
             new Email().SendEmail("Hendrix Auto: Appointment Confirmation", autoEnquiry.FullName, body, autoEnquiry.Email, "e_appointment_confirm");
@@ -232,9 +238,15 @@ namespace BookStore.Controllers
             }
             _context.SaveChanges();
 
+            
+
             //send email to customer with cost or anyother things
             String body = $"This email confirms your vehicle has been reviewed by the Mechanic or Technician. For ref no <strong>{autoEnquiry.ReferenceNumber}</strong> you are required to indicate if you'd like to continue with the repairs, please login to our website to confirm. <br/><br/><strong>BREAKDOWN</strong><br/>{breakdown}<br/><br/> The total of your checklist is {cost.ToString("C")}";
             new Email().SendEmail("Hendrix Auto: Repair Confirmation", autoEnquiry.FullName, body, autoEnquiry.Email, "e_repair_confirmation");
+
+            breakdown = breakdown.Replace("<br/>", "\n");
+            var timeline = $"For ref no {autoEnquiry.ReferenceNumber} customer is required to indicate if he/she'd like to continue with the repairs.\n\nBREAKDOWN\n\n{breakdown}\n The total of your checklist is {cost.ToString("C")}";
+            TimelineHelper.CreateTimelineEvent(autoEnquiry.Id, "Mechanic or Technician Inspection Completed", timeline);
 
             return RedirectToAction("VehicleCheckIns");
         }
@@ -291,6 +303,11 @@ namespace BookStore.Controllers
                                         : _context.Statuses.FirstOrDefault(a => a.Key == "c_no_repair_checkout").Id;
                 _context.Entry(autoEnquiry).State = EntityState.Modified;
                 _context.SaveChanges();
+
+                if (PaymentForAll) TimelineHelper.CreateTimelineEvent(autoEnquiry.Id, "Cusomer Payment With Repairs", "Customer has chosen to proceed with repairs, the vehicle is now sent to mechanic.");
+                else TimelineHelper.CreateTimelineEvent(autoEnquiry.Id, "Cusomer Payment With No Repairs", "Customer has chosen not to proceed with repairs, the vehicle will be avaiting collection at wthe warehouse.");
+                
+                
 
                 return RedirectToAction("Index");
             }
@@ -456,6 +473,8 @@ namespace BookStore.Controllers
                 String body = $"This email confirms your vehicle has been repaired by the Mechanic or Technician. For ref no <strong>{autoEnquiry.ReferenceNumber}</strong>. Please collect your vehicle at our facility as soon as possible.";
                 new Email().SendEmail("Hendrix Auto: Repair Complete", autoEnquiry.FullName, body, autoEnquiry.Email, "e_auto_repair_complete");
 
+                body = $"The vehicle has been repaired by the Mechanic or Technician. For ref no {autoEnquiry.ReferenceNumber}. The customer is required to collect his/her vehicle at our facility as soon as possible.";
+                TimelineHelper.CreateTimelineEvent(autoEnquiry.Id, "Vehicle Repairs Complete", body);
 
                 return RedirectToAction("VehicleCheckIns");
             }
@@ -485,7 +504,83 @@ namespace BookStore.Controllers
             String body = $"This email confirms your vehicle has been repaired by the Mechanic or Technician. For ref no <strong>{autoEnquiry.ReferenceNumber}</strong>. Please collect your vehicle at our facility as soon as possible.";
             new Email().SendEmail("Hendrix Auto: Auto Mobile Checked Out/Collected", autoEnquiry.FullName, body, autoEnquiry.Email, "e_auto_repair_complete");
 
+            body = $"The vehicle has been been collected by customer - {model.AutoEnquiry.CollectedBy}, at our facility with assistance from - {model.AutoEnquiry.AdminBy}. The collection process was validated with an OTP to confirm the ownership of the vehicle.";
+            TimelineHelper.CreateTimelineEvent(autoEnquiry.Id, "Auto Mobile Checked Out/Collected", body);
+
             return RedirectToAction("VehicleCheckIns");
+        }
+
+
+        public async Task<ActionResult> SentCollectionOTP(Guid Id)
+        {
+            var random = new Random().Next(100000, 1000000).ToString();
+            AutoEnquiry autoEnquiry = _context.AutoEnquies.Find(Id);
+            autoEnquiry.OneTimePin = random;
+            _context.Entry(autoEnquiry).State= EntityState.Modified;
+            _context.SaveChanges();
+
+            String body = $"For ref no <strong>{autoEnquiry.ReferenceNumber}</strong>. Here is one time pin: {random}";
+            new Email().SendEmail("Hendrix Auto: One Time Pin", body, autoEnquiry.Email);
+            body = body.Replace("<strong>", "").Replace("</strong>", "");
+            ApplicationUser user = await _context.Users.FirstOrDefaultAsync(a => a.UserName == autoEnquiry.Email);
+
+            SmsNotification smsNotification = new SmsNotification();
+            SMSViewModel sms = new SMSViewModel();
+            sms.messages = new Message[]
+            {
+                new Message
+            {
+                to =String.Format("+27{0}", autoEnquiry.MobileNumber.Substring(Math.Max(0, autoEnquiry.MobileNumber.Length - 9))),
+                source = "php",
+                body = $"Hendrix Auto. One time pin {random}",
+                custom_string = $"Hendrix Auto. One time pin {random}"
+            }
+            };
+
+            body = $"An OTP has been requested and it has been sent out to customers mobile number on {DateTime.Now}";
+            TimelineHelper.CreateTimelineEvent(autoEnquiry.Id, "One Time Pin Requested", body);
+
+            string username = ConfigurationManager.AppSettings["sms_username"];
+            string api_key = ConfigurationManager.AppSettings["sms_api_key"];
+
+            // Concatenate username and password with a colon
+            string credentials = String.Format("{0}:{1}", username, api_key);
+
+            // Convert the concatenated string to a byte array
+            byte[] credentialsBytes = Encoding.UTF8.GetBytes(credentials);
+
+            // Encode the byte array as a Base64 string
+            string base64Credentials = Convert.ToBase64String(credentialsBytes);
+
+            var client = new HttpClient();
+            var request = new HttpRequestMessage(HttpMethod.Post, "https://rest.clicksend.com/v3/sms/send");
+            request.Headers.Add("Authorization", $"Basic {base64Credentials}");
+            var content = new StringContent(JsonSerializer.Serialize(sms), null, "application/json");
+            request.Content = content;
+            var response = await client.SendAsync(request);
+            response.EnsureSuccessStatusCode();
+            //Console.WriteLine(await response.Content.ReadAsStringAsync());
+            smsNotification.Request = JsonSerializer.Serialize(sms);
+            smsNotification.Response = await response.Content.ReadAsStringAsync();
+            smsNotification.CreatedDateTime = DateTime.Now;
+            
+            _context.SmsNotifications.Add(smsNotification);
+            await _context.SaveChangesAsync();
+
+            return Json(true, JsonRequestBehavior.AllowGet);
+        }
+
+        public ActionResult ValidateOTP(Guid Id, String OneTimePin)
+        {
+            AutoEnquiry autoEnquiry = _context.AutoEnquies.Find(Id);
+            if(autoEnquiry.OneTimePin == OneTimePin)
+            {
+                autoEnquiry.OneTimePin = null;
+                _context.Entry(autoEnquiry).State = EntityState.Modified;
+                _context.SaveChanges();
+                return Json(true, JsonRequestBehavior.AllowGet);
+            }
+            return Json(false, JsonRequestBehavior.AllowGet);
         }
     }
 }

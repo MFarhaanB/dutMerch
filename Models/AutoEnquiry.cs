@@ -71,6 +71,7 @@ namespace BookStore.Models
 
         public String AdminBy { get; set; }
         public String CollectedBy { get; set; }
+        public String OneTimePin { get; set; }
     }
 
     public class ServiceType

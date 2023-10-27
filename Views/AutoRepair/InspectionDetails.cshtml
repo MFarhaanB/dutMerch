@@ -4,6 +4,7 @@
 @{
     ViewBag.Title = "Inspection Details";
     Layout = "~/Views/Shared/_Layout1.cshtml";
+    string timelinedisplay = "";
 }
 <head>
     <link href="~/Content/tabsnacornd/app.min.css" rel="stylesheet" />
@@ -49,6 +50,9 @@
             transform: translate(0.3rem);
             box-shadow: 0 0.2rem 0 0 #f5d8b3;
         }
+    .page-content {
+        padding: calc(70px + -43px) calc(20px / 2) 60px calc(20px / 2);
+    }
 </style>
 
 <div class="col-xxl-12 col-xl-12" style="margin-bottom:80px;">
@@ -86,8 +90,14 @@
                     </a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" data-bs-toggle="tab" href="#settings2" role="tab">
+                    <a class="nav-link" data-bs-toggle="tab" href="#timeline" role="tab">
                         <span class="d-block d-sm-none"><i class="fas fa-cog"></i></span>
+                        <span class="d-none d-sm-block">TIMELINE <span class="fa fa-long-arrow-up" style="margin:4px;"></span></span>
+                    </a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" data-bs-toggle="tab" href="#settings2" role="tab">
+                        <span class="d-block d-sm-none"><i class="fas fa-line-chart"></i></span>
                         <span class="d-none d-sm-block">INSTRUCTIONS <span class="fa fa-info" style="margin:4px;"></span></span>
                     </a>
                 </li>
@@ -431,6 +441,96 @@
                         <p class="mb-0">
                             YOU NEED TO ADD INSTRUCTIONS OR SOME DUMMY ONES, ENSURE THIS TAB ISN'T BLANK. I GOT YOU :-)
                         </p>
+                    </div><!-- end tab pane -->
+
+                    <div class="tab-pane" id="timeline" role="tabpanel">
+                        <div class="main-content2">
+                           
+                            <div class="page-content">
+                                <div class="container-fluid">
+
+                                    <!-- start page title -->
+                                    <div class="row">
+                                        <div class="col-12">
+                                            <div class="page-title-box d-flex align-items-center justify-content-between">
+                                                <h4 class="mb-0">Enquiry Timeline</h4>
+
+                                                <div class="page-title-right">
+                                                    <ol class="breadcrumb m-0">
+                                                        <li class="breadcrumb-item"><a href="javascript: void(0);">Timeline</a></li>
+                                                        <li class="breadcrumb-item active">Progress & Timeline Events</li>
+                                                    </ol>
+                                                </div>
+
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <!-- end page title -->
+
+                                    <div class="p-3 m-0 border-0 bd-example">
+
+                                        <!-- Example Code -->
+
+                                        <div class="progress">
+                                            <div class="progress-bar" role="progressbar" aria-label="Example with label" style="width: @TimelineHelper.GETPROGRESS(Model.AutoEnquiry.Id)%" aria-valuenow="@TimelineHelper.GETPROGRESS(Model.AutoEnquiry.Id)" aria-valuemin="0" aria-valuemax="100">@TimelineHelper.GETPROGRESS(Model.AutoEnquiry.Id)%</div>
+                                        </div>
+                                        <br />
+                                        <br />
+                                        <br />
+                                        <!-- End Example Code -->
+                                    </div>
+                                    <div class="row justify-content-center">
+                                        <div class="col-xl-10">
+                                            <div class="verti-timeline">
+
+                                                @foreach (var timeline in @TimelineHelper.GETTIMELINE(Model.AutoEnquiry.Id).OrderBy(c=>c.GroupKey))
+                                                {
+
+                                                    <div class="timeline-item left">
+                                                        <div class="timeline-block">
+                                                            <div class="time-show-btn mt-0">
+                                                                <a href="#" class="btn btn-danger btn-rounded w-lg">@timeline.GroupKey</a>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+
+
+                                                    foreach (var TimeItem in timeline.Timelines.OrderBy(c => c.DateTime))
+                                                    {
+                                                        <div class="timeline-item @timelinedisplay">
+                                                            <div class="timeline-block">
+                                                                <div class="timeline-box card">
+                                                                    <div class="card-body">
+                                                                        <div class="timeline-date">@TimeItem.DateTime.ToLongDateString()</div>
+                                                                        <h5 class="mt-3 font-size-16"> @TimeItem.Action</h5>
+                                                                        <div class="text-muted">
+                                                                            <p class="mb-0">@TimeItem.Description</p>
+                                                                        </div>
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                        if (timelinedisplay.Equals("left"))
+                                                        {
+                                                            timelinedisplay = "";
+                                                        }
+                                                        else if (timelinedisplay.Equals(""))
+                                                        {
+                                                            timelinedisplay = "left";
+                                                        }
+                                                    }
+                                                    timelinedisplay = "";
+                                                }
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <!-- end row -->
+
+                                </div> <!-- container-fluid -->
+                            </div>
+                            <!-- End Page-content -->
+                        </div>
+                        <!-- end main content-->
                     </div><!-- end tab pane -->
 
                 </div><!-- end tab content -->

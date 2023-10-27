@@ -32,20 +32,14 @@
 </p>
 <table class="table">
     <tr>
-        <th>
-            @Html.DisplayNameFor(model => model.CouponCode)
-        </th>
-        <th>
-            @Html.DisplayNameFor(model => model.Discount)
-        </th>
-        <th>
-            Coupon Status
-        </th>
+        <th> Coupon Code </th>
+        <th> Discount </th>
+        <th>Coupon Status</th>
+        <th> Active Emails</th>
+        <th> Starts</th>
+        <th> Ends</th>
         <th>Send To All Users</th>
         <th></th>
-        <th>
-         Active Emails            
-        </th>
     </tr>
 
     @foreach (var item in Model)
@@ -67,15 +61,14 @@
                     <span style="font-weight:800">Currently Deactived</span>
                 }
             </td>
+            <td> @ViewBag.ActiveUsers </td>
+            <td> @Html.DisplayFor(modelItem => item.StartDate) </td>
+            <td> @Html.DisplayFor(modelItem => item.EndDate)</td>
             <td>
                 <button type="button" class="AddLinkTab" onclick="location.href='@Url.Action("SendCouponButton", "Coupons",new { couponId = item.CodeId } )'"><span>Send Out</span></button>
             </td>
             <td style="font-weight:800">
                 @Html.ActionLink("Delete", "Delete", new { id = item.CodeId })
-            </td>
-            
-            <td>
-                @ViewBag.ActiveUsers
             </td>
         </tr>
     }

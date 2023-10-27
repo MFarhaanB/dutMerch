@@ -55,7 +55,7 @@ namespace BookStore.Controllers
         // more details see https://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public ActionResult Create([Bind(Include = "CodeId,CouponCode,Discount,CouponCounter,CouponIsActive")] Coupon coupon)
+        public ActionResult Create(Coupon coupon)
         {
             
             coupon.CouponCounter = 0;

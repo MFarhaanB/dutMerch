@@ -3,6 +3,7 @@
 @{
     ViewBag.Title = "Inspections";
     Layout = "~/Views/Shared/_Layout1.cshtml";
+    string timelinedisplay = "";
 }
 <head>
     <link href="~/Content/tabsnacornd/app.min.css" rel="stylesheet" />
@@ -79,6 +80,12 @@
                     </a>
                 </li>
                 <li class="nav-item">
+                    <a class="nav-link" data-bs-toggle="tab" href="#timeline" role="tab">
+                        <span class="d-block d-sm-none"><i class="fas fa-cog"></i></span>
+                        <span class="d-none d-sm-block">TIMELINE <span class="fa fa-long-arrow-up" style="margin:4px;"></span></span>
+                    </a>
+                </li>
+                <li class="nav-item">
                     <a class="nav-link" data-bs-toggle="tab" href="#settings2" role="tab">
                         <span class="d-block d-sm-none"><i class="fas fa-cog"></i></span>
                         <span class="d-none d-sm-block">INSTRUCTIONS <span class="fa fa-info" style="margin:4px;"></span></span>
@@ -89,244 +96,335 @@
             @using (Html.BeginForm("VehicleInspection", "AutoRepair", FormMethod.Post))
             {
                 <!-- Tab panes -->
-                <div class="tab-content p-3 text-muted">
-                    <div class="tab-pane active" id="home2" role="tabpanel">
-                        <div class="row" style="font-size: 175%; width: 90%; margin: 0 0 5% 5%;">
-                            <div class="col-md-12 px-5">
-                                <section id="loginForm">
+        <div class="tab-content p-3 text-muted">
+            <div class="tab-pane active" id="home2" role="tabpanel">
+                <div class="row" style="font-size: 175%; width: 90%; margin: 0 0 5% 5%;">
+                    <div class="col-md-12 px-5">
+                        <section id="loginForm">
 
-                                    @Html.AntiForgeryToken()
-                                    <h1 class="px-3">ENQUIRY FORM DETAILS</h1><p style="font-size:70%;">
-                                        <strong style="color:red">Please fill in the form below to submit your enquiry.</strong><br />
-                                        Hendrix Auto Repair's service advisors will respond to your enquiry as soon as possible
-                                    </p>
+                            @Html.AntiForgeryToken()
+                            <h1 class="px-3">ENQUIRY FORM DETAILS</h1><p style="font-size:70%;">
+                                <strong style="color:red">Please fill in the form below to submit your enquiry.</strong><br />
+                                Hendrix Auto Repair's service advisors will respond to your enquiry as soon as possible
+                            </p>
 
-                                    <hr />
-                                    @Html.HiddenFor(m => m.AutoEnquiry.Id, new { @Name = "Id" })
-                                    @Html.ValidationSummary(true, "", new { @class = "text-danger" })
-                                    <div class="row form-group">
-                                        @Html.LabelFor(m => m.AutoEnquiry.FullName, new { @class = "col-md-2 control-label" })
-                                        <div class="col-md-4">
-                                            @Html.TextBoxFor(m => m.AutoEnquiry.FullName, new { @class = "form-control", @placeholder = "Thabo Xulu", @readonly = "readonly" })
-                                            @Html.ValidationMessageFor(m => m.AutoEnquiry.FullName, "", new { @class = "text-danger" })
-                                        </div>
-                                        @Html.LabelFor(m => m.AutoEnquiry.Email, new { @class = "col-md-2 control-label" })
-                                        <div class="col-md-4">
-                                            @Html.TextBoxFor(m => m.AutoEnquiry.Email, new { @class = "form-control", @placeholder = "email@example.com", @readonly = "readonly" })
-                                            @Html.ValidationMessageFor(m => m.AutoEnquiry.Email, "", new { @class = "text-danger" })
-                                        </div>
-                                    </div>
-
-                                    <div class="row form-group">
-                                        @Html.LabelFor(m => m.AutoEnquiry.MobileNumber, new { @class = "col-md-2 control-label" })
-                                        <div class="col-md-4">
-                                            @Html.TextBoxFor(m => m.AutoEnquiry.MobileNumber, new { @class = "form-control", @placeholder = "0800786629", @readonly = "readonly" })
-                                            @Html.ValidationMessageFor(m => m.AutoEnquiry.MobileNumber, "", new { @class = "text-danger" })
-                                        </div>
-                                        @Html.LabelFor(m => m.AutoEnquiry.ServiceTypeKey, new { @class = "col-md-2 control-label" })
-                                        <div class="col-md-4">
-                                            @Html.DropDownListFor(m => m.AutoEnquiry.ServiceTypeKey, (SelectList)ViewBag.ServiceTypes, new { @class = "form-control", @readonly = "readonly" })
-                                            @Html.ValidationMessageFor(m => m.AutoEnquiry.ServiceTypeKey, "", new { @class = "text-danger" })
-                                        </div>
-                                    </div>
-                                    <div class="row form-group">
-                                        @Html.LabelFor(m => m.AutoEnquiry.VehicleMake, new { @class = "col-md-2 control-label" })
-                                        <div class="col-md-4">
-                                            @Html.TextBoxFor(m => m.AutoEnquiry.VehicleMake, new { @class = "form-control", @placeholder = "Toyota", @readonly = "readonly" })
-                                            @Html.ValidationMessageFor(m => m.AutoEnquiry.VehicleMake, "", new { @class = "text-danger" })
-                                        </div>
-                                        @Html.LabelFor(m => m.AutoEnquiry.VehicleModel, new { @class = "col-md-2 control-label" })
-                                        <div class="col-md-4">
-                                            @Html.TextBoxFor(m => m.AutoEnquiry.VehicleModel, new { @class = "form-control", @placeholder = "GT86 low", @readonly = "readonly" })
-                                            @Html.ValidationMessageFor(m => m.AutoEnquiry.VehicleModel, "", new { @class = "text-danger" })
-                                        </div>
-                                    </div>
-                                    <div class="row form-group">
-                                        @Html.LabelFor(m => m.AutoEnquiry.Year, new { @class = "col-md-2 control-label" })
-                                        <div class="col-md-4">
-                                            @Html.TextBoxFor(m => m.AutoEnquiry.Year, new { @class = "form-control", @placeholder = "2014", @readonly = "readonly" })
-                                            @Html.ValidationMessageFor(m => m.AutoEnquiry.Year, "", new { @class = "text-danger" })
-                                        </div>
-                                        @Html.LabelFor(m => m.AutoEnquiry.EngineCapacity, new { @class = "col-md-2 control-label" })
-                                        <div class="col-md-4">
-                                            @Html.TextBoxFor(m => m.AutoEnquiry.EngineCapacity, new { @class = "form-control", @placeholder = "1989cc", @readonly = "readonly" })
-                                            @Html.ValidationMessageFor(m => m.AutoEnquiry.EngineCapacity, "", new { @class = "text-danger" })
-                                        </div>
-                                    </div>
-                                    <div class="row form-group">
-                                        @Html.LabelFor(m => m.AutoEnquiry.DateComponent, new { @class = "col-md-2 control-label" })
-                                        <div class="col-md-4">
-                                            @Html.TextBoxFor(m => m.AutoEnquiry.AppointmentDate, new { @class = "form-control", @readonly = "readonly" })
-                                            @Html.ValidationMessageFor(m => m.AutoEnquiry.DateComponent, "", new { @class = "text-danger" })
-                                        </div>
-                                    </div>
-                                    <div class="row form-group">
-                                        @Html.LabelFor(m => m.AutoEnquiry.Message, new { @class = "col-md-2 control-label" })
-                                        <div class="col-md-12">
-                                            @Html.TextAreaFor(m => m.AutoEnquiry.Message, new { @class = "form-control", @placeholder = "Message here..", @readonly = "readonly" })
-                                            @Html.ValidationMessageFor(m => m.AutoEnquiry.Message, "", new { @class = "text-danger" })
-                                        </div>
-
-                                    </div>
-                
-                                </section>
+                            <hr />
+                            @Html.HiddenFor(m => m.AutoEnquiry.Id, new { @Name = "Id" })
+                            @Html.ValidationSummary(true, "", new { @class = "text-danger" })
+                            <div class="row form-group">
+                                @Html.LabelFor(m => m.AutoEnquiry.FullName, new { @class = "col-md-2 control-label" })
+                                <div class="col-md-4">
+                                    @Html.TextBoxFor(m => m.AutoEnquiry.FullName, new { @class = "form-control", @placeholder = "Thabo Xulu", @readonly = "readonly" })
+                                    @Html.ValidationMessageFor(m => m.AutoEnquiry.FullName, "", new { @class = "text-danger" })
+                                </div>
+                                @Html.LabelFor(m => m.AutoEnquiry.Email, new { @class = "col-md-2 control-label" })
+                                <div class="col-md-4">
+                                    @Html.TextBoxFor(m => m.AutoEnquiry.Email, new { @class = "form-control", @placeholder = "email@example.com", @readonly = "readonly" })
+                                    @Html.ValidationMessageFor(m => m.AutoEnquiry.Email, "", new { @class = "text-danger" })
+                                </div>
                             </div>
 
-                        </div>
+                            <div class="row form-group">
+                                @Html.LabelFor(m => m.AutoEnquiry.MobileNumber, new { @class = "col-md-2 control-label" })
+                                <div class="col-md-4">
+                                    @Html.TextBoxFor(m => m.AutoEnquiry.MobileNumber, new { @class = "form-control", @placeholder = "0800786629", @readonly = "readonly" })
+                                    @Html.ValidationMessageFor(m => m.AutoEnquiry.MobileNumber, "", new { @class = "text-danger" })
+                                </div>
+                                @Html.LabelFor(m => m.AutoEnquiry.ServiceTypeKey, new { @class = "col-md-2 control-label" })
+                                <div class="col-md-4">
+                                    @Html.DropDownListFor(m => m.AutoEnquiry.ServiceTypeKey, (SelectList)ViewBag.ServiceTypes, new { @class = "form-control", @readonly = "readonly" })
+                                    @Html.ValidationMessageFor(m => m.AutoEnquiry.ServiceTypeKey, "", new { @class = "text-danger" })
+                                </div>
+                            </div>
+                            <div class="row form-group">
+                                @Html.LabelFor(m => m.AutoEnquiry.VehicleMake, new { @class = "col-md-2 control-label" })
+                                <div class="col-md-4">
+                                    @Html.TextBoxFor(m => m.AutoEnquiry.VehicleMake, new { @class = "form-control", @placeholder = "Toyota", @readonly = "readonly" })
+                                    @Html.ValidationMessageFor(m => m.AutoEnquiry.VehicleMake, "", new { @class = "text-danger" })
+                                </div>
+                                @Html.LabelFor(m => m.AutoEnquiry.VehicleModel, new { @class = "col-md-2 control-label" })
+                                <div class="col-md-4">
+                                    @Html.TextBoxFor(m => m.AutoEnquiry.VehicleModel, new { @class = "form-control", @placeholder = "GT86 low", @readonly = "readonly" })
+                                    @Html.ValidationMessageFor(m => m.AutoEnquiry.VehicleModel, "", new { @class = "text-danger" })
+                                </div>
+                            </div>
+                            <div class="row form-group">
+                                @Html.LabelFor(m => m.AutoEnquiry.Year, new { @class = "col-md-2 control-label" })
+                                <div class="col-md-4">
+                                    @Html.TextBoxFor(m => m.AutoEnquiry.Year, new { @class = "form-control", @placeholder = "2014", @readonly = "readonly" })
+                                    @Html.ValidationMessageFor(m => m.AutoEnquiry.Year, "", new { @class = "text-danger" })
+                                </div>
+                                @Html.LabelFor(m => m.AutoEnquiry.EngineCapacity, new { @class = "col-md-2 control-label" })
+                                <div class="col-md-4">
+                                    @Html.TextBoxFor(m => m.AutoEnquiry.EngineCapacity, new { @class = "form-control", @placeholder = "1989cc", @readonly = "readonly" })
+                                    @Html.ValidationMessageFor(m => m.AutoEnquiry.EngineCapacity, "", new { @class = "text-danger" })
+                                </div>
+                            </div>
+                            <div class="row form-group">
+                                @Html.LabelFor(m => m.AutoEnquiry.DateComponent, new { @class = "col-md-2 control-label" })
+                                <div class="col-md-4">
+                                    @Html.TextBoxFor(m => m.AutoEnquiry.AppointmentDate, new { @class = "form-control", @readonly = "readonly" })
+                                    @Html.ValidationMessageFor(m => m.AutoEnquiry.DateComponent, "", new { @class = "text-danger" })
+                                </div>
+                            </div>
+                            <div class="row form-group">
+                                @Html.LabelFor(m => m.AutoEnquiry.Message, new { @class = "col-md-2 control-label" })
+                                <div class="col-md-12">
+                                    @Html.TextAreaFor(m => m.AutoEnquiry.Message, new { @class = "form-control", @placeholder = "Message here..", @readonly = "readonly" })
+                                    @Html.ValidationMessageFor(m => m.AutoEnquiry.Message, "", new { @class = "text-danger" })
+                                </div>
 
-                    </div><!-- end tab pane -->
+                            </div>
 
-                    <div class="tab-pane" id="profile2" role="tabpanel">
-                        <div class="row" style="font-size: 175%; width: 90%; margin: 0 0 5% 5%;">
-                            <div class="col-md-12 px-5">
-                                <section id="loginForm">
-                                    <h1 class="px-3">VEHICLE CHECK-IST ITEMS</h1><p style="font-size:70%;">
-                                        <strong style="color:red">Please select all fields below accordingly.</strong><br />
-                                        Hendrix Auto Repair's charges will be calculated based on your selection.
-                                    </p>
-                                    <hr />
-                                    @Html.ValidationSummary(true, "", new { @class = "text-danger" })
+                        </section>
+                    </div>
+
+                </div>
+
+            </div><!-- end tab pane -->
+
+            <div class="tab-pane" id="profile2" role="tabpanel">
+                <div class="row" style="font-size: 175%; width: 90%; margin: 0 0 5% 5%;">
+                    <div class="col-md-12 px-5">
+                        <section id="loginForm">
+                            <h1 class="px-3">VEHICLE CHECK-IST ITEMS</h1><p style="font-size:70%;">
+                                <strong style="color:red">Please select all fields below accordingly.</strong><br />
+                                Hendrix Auto Repair's charges will be calculated based on your selection.
+                            </p>
+                            <hr />
+                            @Html.ValidationSummary(true, "", new { @class = "text-danger" })
 
 
-                                    @foreach (var grp in ViewHelper.VehicleCheckListItemsDb())
-                                    {
-                                        <div class="row form-group">
-                                            @Html.Label(grp.Key, new { @class = "col-md-12 control-label", @style = "text-align: center;" })
-                                            <div class="col-md-6">
-                                            </div>
+                            @foreach (var grp in ViewHelper.VehicleCheckListItemsDb())
+                            {
+                                <div class="row form-group">
+                                    @Html.Label(grp.Key, new { @class = "col-md-12 control-label", @style = "text-align: center;" })
+                                    <div class="col-md-6">
+                                    </div>
+                                </div>
+                                foreach (var item in grp.Value)
+                                {
+                                    var value = item.Split('|').ToList();
+
+                                    <div class="row form-group">
+                                        @Html.Label("", new { @class = "col-md-2 control-label" })
+                                        <div class="col-md-12" style="margin-top: -16px; margin-bottom: -16px; ">
+                                            <input type="checkbox" name="SelectedCheckListItem" value="@value[2]" class="checkbox-inline" />
+                                            @Html.Label(value[0], new { @class = "control-label" })
+                                            <br />
                                         </div>
-                                        foreach (var item in grp.Value)
-                                        {
-                                            var value = item.Split('|').ToList();
+                                    </div>
+                                }
+                            }
 
-                                            <div class="row form-group">
-                                                @Html.Label("", new { @class = "col-md-2 control-label" })
-                                                <div class="col-md-12" style="margin-top: -16px; margin-bottom: -16px; ">
-                                                    <input type="checkbox" name="SelectedCheckListItem" value="@value[2]" class="checkbox-inline" />
-                                                    @Html.Label(value[0], new { @class = "control-label" })
-                                                    <br />
+
+                            <div class="form-group">
+                                <div class="col-md-offset-2 col-md-10">
+                                    <button type="button" onclick="window.scrollTo({ top: 0, behavior: 'smooth' })" class="btn btn-lg btn-circle btn-outline-new-white" style="color:#000000"><span class="fa fa-long-arrow-up" style="margin:4px;"></span></button>
+                                </div>
+                            </div>
+
+                        </section>
+                    </div>
+
+                </div>
+            </div><!-- end tab pane -->
+            <div class="tab-pane" id="messages2" role="tabpanel">
+                <div class="row" style="font-size: 175%; width: 90%; margin: 0 0 5% 5%;">
+                    <div class="col-md-12 px-5">
+                        <section id="loginForm">
+                            <h1 class="px-3">VEHICLE DETAILS AND NOTES</h1><p style="font-size:70%;">
+                                <strong style="color:red">Please fill in all the applicable fields below.</strong><br />
+                                This informatin is recorded for [edit this section here ]
+                            </p>
+
+                            <hr />
+                            @Html.ValidationSummary(true, "", new { @class = "text-danger" })
+                            <div class="row form-group">
+                                @Html.LabelFor(m => m.VehicleInspection.VehicleIdentificationNumber, new { @class = "col-md-2 control-label" })
+                                <div class="col-md-4">
+                                    @Html.TextBoxFor(m => m.VehicleInspection.VehicleIdentificationNumber, new { @class = "form-control", @placeholder = "1HGCM82633A123456", @required = "required" })
+                                    @Html.ValidationMessageFor(m => m.VehicleInspection.VehicleIdentificationNumber, "", new { @class = "text-danger" })
+                                </div>
+                                @Html.LabelFor(m => m.Inspector.Email, "Inspector", new { @class = "col-md-2 control-label" })
+                                <div class="col-md-4">
+                                    @Html.TextBoxFor(m => m.Inspector.Email, new { @class = "form-control", @placeholder = "email@example.com", @readonly = "readonly" })
+                                    @Html.ValidationMessageFor(m => m.Inspector.Email, "", new { @class = "text-danger" })
+                                </div>
+                            </div>
+
+                            <div class="row form-group">
+                                @Html.LabelFor(m => m.VehicleInspection.PlateNumber, new { @class = "col-md-2 control-label" })
+                                <div class="col-md-4">
+                                    @Html.TextBoxFor(m => m.VehicleInspection.PlateNumber, new { @class = "form-control", @placeholder = "ND-123-456", @required = "required" })
+                                    @Html.ValidationMessageFor(m => m.VehicleInspection.PlateNumber, "", new { @class = "text-danger" })
+                                </div>
+                                @Html.LabelFor(m => m.VehicleInspection.InspectionDate, new { @class = "col-md-2 control-label" })
+                                <div class="col-md-4">
+                                    @Html.TextBoxFor(m => m.VehicleInspection.InspectionDate, new { @class = "form-control", @placeholder = "", @readonly = "readonly" })
+                                    @Html.ValidationMessageFor(m => m.VehicleInspection.InspectionDate, "", new { @class = "text-danger" })
+                                </div>
+                            </div>
+                            <div class="row form-group">
+                                @Html.LabelFor(m => m.VehicleInspection.VisualInspectionDetails, new { @class = "col-md-6 control-label" })
+                                <div class="col-md-12">
+                                    @Html.TextAreaFor(m => m.VehicleInspection.VisualInspectionDetails, new { @class = "form-control", @placeholder = "Description of any visible damage, wear, or issues observed on the exterior and interior of the vehicle..", @required = "required" })
+                                    @Html.ValidationMessageFor(m => m.VehicleInspection.VisualInspectionDetails, "", new { @class = "text-danger" })
+                                </div>
+                            </div>
+                            <div class="row form-group">
+                                @Html.LabelFor(m => m.VehicleInspection.OBDdiagnosticCodeAndDescriptions, new { @class = "col-md-10 control-label" })
+                                <div class="col-md-12">
+                                    @Html.TextAreaFor(m => m.VehicleInspection.OBDdiagnosticCodeAndDescriptions, new { @class = "form-control", @placeholder = "Enter codes and description here.." })
+                                    @Html.ValidationMessageFor(m => m.VehicleInspection.OBDdiagnosticCodeAndDescriptions, "", new { @class = "text-danger" })
+                                </div>
+                            </div>
+                            <div class="row form-group">
+                                @Html.LabelFor(m => m.VehicleInspection.Emissions, new { @class = "col-md-6 control-label" })
+                                <div class="col-md-12">
+                                    @Html.TextAreaFor(m => m.VehicleInspection.Emissions, new { @class = "form-control", @placeholder = "Enter emissions here.." })
+                                    @Html.ValidationMessageFor(m => m.VehicleInspection.Emissions, "", new { @class = "text-danger" })
+                                </div>
+                            </div>
+                            <div class="row form-group">
+                                @Html.LabelFor(m => m.VehicleInspection.TestDriveNotes, new { @class = "col-md-6 control-label" })
+                                <div class="col-md-12">
+                                    @Html.TextAreaFor(m => m.VehicleInspection.TestDriveNotes, new { @class = "form-control", @placeholder = "Any observations made during the test drive, including handling, steering responsiveness, unusual noises, etc..", @required = "required" })
+                                    @Html.ValidationMessageFor(m => m.VehicleInspection.TestDriveNotes, "", new { @class = "text-danger" })
+                                </div>
+                            </div>
+                            <div class="row form-group">
+                                @Html.LabelFor(m => m.VehicleInspection.RemarksAndRecommendations, new { @class = "col-md-6 control-label" })
+                                <div class="col-md-12">
+                                    @Html.TextAreaFor(m => m.VehicleInspection.RemarksAndRecommendations, new { @class = "form-control", @placeholder = "Notes on any issues or concerns identified during the inspection..", @required = "required" })
+                                    @Html.ValidationMessageFor(m => m.VehicleInspection.RemarksAndRecommendations, "", new { @class = "text-danger" })
+                                </div>
+                            </div>
+                            <div class="row form-group">
+                                @Html.LabelFor(m => m.VehicleInspection.AdditionalInformation, new { @class = "col-md-6 control-label" })
+                                <div class="col-md-12">
+                                    @Html.TextAreaFor(m => m.VehicleInspection.AdditionalInformation, new { @class = "form-control", @placeholder = "Any additional information required by local regulations or specific inspection requirements.." })
+                                    @Html.ValidationMessageFor(m => m.VehicleInspection.AdditionalInformation, "", new { @class = "text-danger" })
+                                </div>
+                            </div>
+
+                            <div class="row form-group">
+                                @Html.LabelFor(m => m.VehicleInspection.SignatureAndAuthorization, new { @class = "col-md-6 control-label" })
+                                <div class="col-md-12">
+                                    @Html.TextBoxFor(m => m.VehicleInspection.SignatureAndAuthorization, new { @class = "form-control", @placeholder = "Thabo Xulu", @required = "required" })
+                                    @Html.ValidationMessageFor(m => m.VehicleInspection.SignatureAndAuthorization, "", new { @class = "text-danger" })
+                                </div>
+                            </div>
+
+
+                            <div class="form-group">
+                                <div class="col-md-offset-2 col-md-10">
+                                    <button type="submit" class="btn btn-lg btn-circle btn-outline-new-white" style="color:#000000"> Submit Inspection<span class="fa fa-send" style="margin:4px;"></span></button>
+                                </div>
+                            </div>
+
+                        </section>
+                    </div>
+
+                </div>
+            </div><!-- end tab pane -->
+            <div class="tab-pane" id="timeline" role="tabpanel">
+                <div class="main-content2">
+
+                    <div class="page-content">
+                        <div class="container-fluid">
+
+                            <!-- start page title -->
+                            <div class="row">
+                                <div class="col-12">
+                                    <div class="page-title-box d-flex align-items-center justify-content-between">
+                                        <h4 class="mb-0">Enquiry Timeline</h4>
+
+                                        <div class="page-title-right">
+                                            <ol class="breadcrumb m-0">
+                                                <li class="breadcrumb-item"><a href="javascript: void(0);">Timeline</a></li>
+                                                <li class="breadcrumb-item active">Progress & Timeline Events</li>
+                                            </ol>
+                                        </div>
+
+                                    </div>
+                                </div>
+                            </div>
+                            <!-- end page title -->
+
+                            <div class="p-3 m-0 border-0 bd-example">
+
+                                <!-- Example Code -->
+
+                                <div class="progress">
+                                    <div class="progress-bar" role="progressbar" aria-label="Example with label" style="width: @TimelineHelper.GETPROGRESS(Model.AutoEnquiry.Id)%" aria-valuenow="@TimelineHelper.GETPROGRESS(Model.AutoEnquiry.Id)" aria-valuemin="0" aria-valuemax="100">@TimelineHelper.GETPROGRESS(Model.AutoEnquiry.Id)%</div>
+                                </div>
+                                <br />
+                                <br />
+                                <br />
+                                <!-- End Example Code -->
+                            </div>
+                            <div class="row justify-content-center">
+                                <div class="col-xl-10">
+                                    <div class="verti-timeline">
+
+                                        @foreach (var timeline in @TimelineHelper.GETTIMELINE(Model.AutoEnquiry.Id).OrderBy(c => c.GroupKey))
+                                        {
+
+                                            <div class="timeline-item left">
+                                                <div class="timeline-block">
+                                                    <div class="time-show-btn mt-0">
+                                                        <a href="#" class="btn btn-danger btn-rounded w-lg">@timeline.GroupKey</a>
+                                                    </div>
                                                 </div>
                                             </div>
+
+
+                                            foreach (var TimeItem in timeline.Timelines.OrderBy(c => c.DateTime))
+                                            {
+                                                <div class="timeline-item @timelinedisplay">
+                                                    <div class="timeline-block">
+                                                        <div class="timeline-box card">
+                                                            <div class="card-body">
+                                                                <div class="timeline-date">@TimeItem.DateTime.ToLongDateString()</div>
+                                                                <h5 class="mt-3 font-size-16"> @TimeItem.Action</h5>
+                                                                <div class="text-muted">
+                                                                    <p class="mb-0">@TimeItem.Description</p>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                if (timelinedisplay.Equals("left"))
+                                                {
+                                                    timelinedisplay = "";
+                                                }
+                                                else if (timelinedisplay.Equals(""))
+                                                {
+                                                    timelinedisplay = "left";
+                                                }
+                                            }
+                                            timelinedisplay = "";
                                         }
-                                    }
-
-
-                                    <div class="form-group">
-                                        <div class="col-md-offset-2 col-md-10">
-                                            <button type="button" onclick="window.scrollTo({ top: 0, behavior: 'smooth' })" class="btn btn-lg btn-circle btn-outline-new-white" style="color:#000000"><span class="fa fa-long-arrow-up" style="margin:4px;"></span></button>
-                                        </div>
                                     </div>
-
-                                </section>
+                                </div>
                             </div>
+                            <!-- end row -->
 
-                        </div>
-                    </div><!-- end tab pane -->
-                    <div class="tab-pane" id="messages2" role="tabpanel">
-                        <div class="row" style="font-size: 175%; width: 90%; margin: 0 0 5% 5%;">
-                            <div class="col-md-12 px-5">
-                                <section id="loginForm">
-                                    <h1 class="px-3">VEHICLE DETAILS AND NOTES</h1><p style="font-size:70%;">
-                                        <strong style="color:red">Please fill in all the applicable fields below.</strong><br />
-                                        This informatin is recorded for [edit this section here ]
-                                    </p>
-
-                                    <hr />
-                                    @Html.ValidationSummary(true, "", new { @class = "text-danger" })
-                                    <div class="row form-group">
-                                        @Html.LabelFor(m => m.VehicleInspection.VehicleIdentificationNumber, new { @class = "col-md-2 control-label" })
-                                        <div class="col-md-4">
-                                            @Html.TextBoxFor(m => m.VehicleInspection.VehicleIdentificationNumber, new { @class = "form-control", @placeholder = "1HGCM82633A123456", @required = "required" })
-                                            @Html.ValidationMessageFor(m => m.VehicleInspection.VehicleIdentificationNumber, "", new { @class = "text-danger" })
-                                        </div>
-                                        @Html.LabelFor(m => m.Inspector.Email, "Inspector", new { @class = "col-md-2 control-label" })
-                                        <div class="col-md-4">
-                                            @Html.TextBoxFor(m => m.Inspector.Email, new { @class = "form-control", @placeholder = "email@example.com", @readonly = "readonly" })
-                                            @Html.ValidationMessageFor(m => m.Inspector.Email, "", new { @class = "text-danger" })
-                                        </div>
-                                    </div>
-
-                                    <div class="row form-group">
-                                        @Html.LabelFor(m => m.VehicleInspection.PlateNumber, new { @class = "col-md-2 control-label" })
-                                        <div class="col-md-4">
-                                            @Html.TextBoxFor(m => m.VehicleInspection.PlateNumber, new { @class = "form-control", @placeholder = "ND-123-456", @required = "required" })
-                                            @Html.ValidationMessageFor(m => m.VehicleInspection.PlateNumber, "", new { @class = "text-danger" })
-                                        </div>
-                                        @Html.LabelFor(m => m.VehicleInspection.InspectionDate, new { @class = "col-md-2 control-label" })
-                                        <div class="col-md-4">
-                                            @Html.TextBoxFor(m => m.VehicleInspection.InspectionDate, new { @class = "form-control", @placeholder = "", @readonly = "readonly" })
-                                            @Html.ValidationMessageFor(m => m.VehicleInspection.InspectionDate, "", new { @class = "text-danger" })
-                                        </div>
-                                    </div>
-                                    <div class="row form-group">
-                                        @Html.LabelFor(m => m.VehicleInspection.VisualInspectionDetails, new { @class = "col-md-6 control-label" })
-                                        <div class="col-md-12">
-                                            @Html.TextAreaFor(m => m.VehicleInspection.VisualInspectionDetails, new { @class = "form-control", @placeholder = "Description of any visible damage, wear, or issues observed on the exterior and interior of the vehicle..", @required = "required" })
-                                            @Html.ValidationMessageFor(m => m.VehicleInspection.VisualInspectionDetails, "", new { @class = "text-danger" })
-                                        </div>
-                                    </div>
-                                    <div class="row form-group">
-                                        @Html.LabelFor(m => m.VehicleInspection.OBDdiagnosticCodeAndDescriptions, new { @class = "col-md-10 control-label" })
-                                        <div class="col-md-12">
-                                            @Html.TextAreaFor(m => m.VehicleInspection.OBDdiagnosticCodeAndDescriptions, new { @class = "form-control", @placeholder = "Enter codes and description here.." })
-                                            @Html.ValidationMessageFor(m => m.VehicleInspection.OBDdiagnosticCodeAndDescriptions, "", new { @class = "text-danger" })
-                                        </div>
-                                    </div>
-                                    <div class="row form-group">
-                                        @Html.LabelFor(m => m.VehicleInspection.Emissions, new { @class = "col-md-6 control-label" })
-                                        <div class="col-md-12">
-                                            @Html.TextAreaFor(m => m.VehicleInspection.Emissions, new { @class = "form-control", @placeholder = "Enter emissions here.." })
-                                            @Html.ValidationMessageFor(m => m.VehicleInspection.Emissions, "", new { @class = "text-danger" })
-                                        </div>
-                                    </div>
-                                    <div class="row form-group">
-                                        @Html.LabelFor(m => m.VehicleInspection.TestDriveNotes, new { @class = "col-md-6 control-label" })
-                                        <div class="col-md-12">
-                                            @Html.TextAreaFor(m => m.VehicleInspection.TestDriveNotes, new { @class = "form-control", @placeholder = "Any observations made during the test drive, including handling, steering responsiveness, unusual noises, etc..", @required = "required" })
-                                            @Html.ValidationMessageFor(m => m.VehicleInspection.TestDriveNotes, "", new { @class = "text-danger" })
-                                        </div>
-                                    </div>
-                                    <div class="row form-group">
-                                        @Html.LabelFor(m => m.VehicleInspection.RemarksAndRecommendations, new { @class = "col-md-6 control-label" })
-                                        <div class="col-md-12">
-                                            @Html.TextAreaFor(m => m.VehicleInspection.RemarksAndRecommendations, new { @class = "form-control", @placeholder = "Notes on any issues or concerns identified during the inspection..", @required = "required" })
-                                            @Html.ValidationMessageFor(m => m.VehicleInspection.RemarksAndRecommendations, "", new { @class = "text-danger" })
-                                        </div>
-                                    </div>
-                                    <div class="row form-group">
-                                        @Html.LabelFor(m => m.VehicleInspection.AdditionalInformation, new { @class = "col-md-6 control-label" })
-                                        <div class="col-md-12">
-                                            @Html.TextAreaFor(m => m.VehicleInspection.AdditionalInformation, new { @class = "form-control", @placeholder = "Any additional information required by local regulations or specific inspection requirements.." })
-                                            @Html.ValidationMessageFor(m => m.VehicleInspection.AdditionalInformation, "", new { @class = "text-danger" })
-                                        </div>
-                                    </div>
-
-                                    <div class="row form-group">
-                                        @Html.LabelFor(m => m.VehicleInspection.SignatureAndAuthorization, new { @class = "col-md-6 control-label" })
-                                        <div class="col-md-12">
-                                            @Html.TextBoxFor(m => m.VehicleInspection.SignatureAndAuthorization, new { @class = "form-control", @placeholder = "Thabo Xulu", @required = "required" })
-                                            @Html.ValidationMessageFor(m => m.VehicleInspection.SignatureAndAuthorization, "", new { @class = "text-danger" })
-                                        </div>
-                                    </div>
+                        </div> <!-- container-fluid -->
+                    </div>
+                    <!-- End Page-content -->
+                </div>
+                <!-- end main content-->
+            </div><!-- end tab pane -->
 
 
-                                    <div class="form-group">
-                                        <div class="col-md-offset-2 col-md-10">
-                                            <button type="submit"  class="btn btn-lg btn-circle btn-outline-new-white" style="color:#000000"> Submit Inspection<span class="fa fa-send" style="margin:4px;"></span></button>
-                                        </div>
-                                    </div>
-
-                                </section>
-                            </div>
-
-                        </div>
-                    </div><!-- end tab pane -->
-                    <div class="tab-pane" id="settings2" role="tabpanel">
-                        <p class="mb-0">
-                            YOU NEED TO ADD INSTRUCTIONS OR SOME DUMMY ONES, ENSURE THIS TAB ISN'T BLANK. I GOT YOU :-)
-                        </p>
-                    </div><!-- end tab pane -->
-                </div><!-- end tab content -->
+            <div class="tab-pane" id="settings2" role="tabpanel">
+                <p class="mb-0">
+                    YOU NEED TO ADD INSTRUCTIONS OR SOME DUMMY ONES, ENSURE THIS TAB ISN'T BLANK. I GOT YOU :-)
+                </p>
+            </div><!-- end tab pane -->
+        </div><!-- end tab content -->
             }
             </div><!-- end card body -->
     </div><!-- end card -->

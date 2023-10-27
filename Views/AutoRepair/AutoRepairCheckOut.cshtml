@@ -49,6 +49,9 @@
             transform: translate(0.3rem);
             box-shadow: 0 0.2rem 0 0 #f5d8b3;
         }
+    body {
+        font-family: "Open Sans", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen-Sans, Ubuntu, Cantarell, "Helvetica Neue", Helvetica, Arial, sans-serif;
+    }
 </style>
 
 <div class="col-xxl-12 col-xl-12" style="margin-bottom:80px;">
@@ -507,8 +510,23 @@
                                             @Html.ValidationMessageFor(m => m.AutoEnquiry.AdminBy, "", new { @class = "text-danger" })
                                         </div>
                                     </div>
-                                    <div class="form-group">
-                                        <div class="col-md-offset-2 col-md-10">
+                                    <div class="row form-group" id="requestotpId">
+                                        <div class="col-md-2">
+                                            <button type="button" class="btn btn-lg btn-circle btn-outline-new-white" onclick="SendOtpToCustomer()" style="color:#000000">
+                                                Request OTP
+                                                <span class="fa fa-mobile-phone" style="margin:4px;">
+                                                </span>
+                                            </button>
+                                        </div>
+                                        <div class="col-md-4">
+                                            @Html.TextBoxFor(m => m.AutoEnquiry.CollectedBy, new { @class = "form-control",@onkeyup="ValidateOTP(this.value)", @placeholder = "Please enter OTP that was sent to customers cell", @type="number", @required = "required" })
+                                            @Html.ValidationMessageFor(m => m.AutoEnquiry.CollectedBy, "", new { @class = "text-danger" })
+                                        </div>
+                                    </div>
+
+
+                                    <div class="form-group" id="submitId" style="display:none">
+                                        <div class="col-md-offset-2 col-md-3">
                                             <button type="submit" class="btn btn-lg btn-circle btn-outline-new-white" style="color:#000000">
                                                 Process For Checkout
                                                 <span class="fa fa-pencil-square-o" style="margin:4px;">
@@ -530,3 +548,27 @@
 <script src="~/Content/tabsnacornd/bootstrap.bundle.min.js"></script>
 <script src="~/Content/tabsnacornd/feather.min.js"></script>
 <script src="~/Content/tabsnacornd/simplebar.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+<script>
+    function ValidateOTP(number) {
+        debugger;
+        if (number.length == 6) {
+            $.getJSON("/AutoRepair/ValidateOTP?Id=@Model.AutoEnquiry.Id&OneTimePin=" + number,
+                function (result) {
+                    debugger;
+                    if (result) {
+                        $('#submitId').show();
+                        $('#requestotpId').hide();
+                    } else {
+                        alert('The otp entered is invalid for this enq');
+                    }
+                });
+        }
+    }
+    function SendOtpToCustomer() {
+        $.getJSON("/AutoRepair/SentCollectionOTP?Id=@Model.AutoEnquiry.Id",
+            function (result) {
+                alert('An otp has been sent out to customers email/cell number');
+            });
+    }
+</script>

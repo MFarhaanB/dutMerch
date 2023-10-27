@@ -19,5 +19,9 @@ namespace BookStore.Models
         // Email list will be stored in controller 
 
         public bool CouponIsActive { get; set; }
+
+
+        public DateTime StartDate { get; set; }
+        public DateTime EndDate { get; set; }
     }
 }

@@ -73,5 +73,8 @@ namespace BookStore.Models
         [NotMapped]
         public int ProductId { get; set; }
 
+        [NotMapped]
+        public int Rating { get; set; }
+
     }
 }

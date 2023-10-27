@@ -1,5 +1,7 @@
 ﻿@model BookStore.Models.Sale
-
+@{
+    var rating = "RatingValue-" + Model.Rating;
+}
 @using (Html.BeginForm("SaveRating", "Sales", FormMethod.Post))
 {
     <div class="form-horizontal">
@@ -8,7 +10,7 @@
         </h2>
         <h5>Note*   Your previous review will be replaced if submit a new one</h5>
 
-        @Html.HiddenFor(model => model.ProductId, new {@Name ="Id"})
+        @Html.HiddenFor(model => model.ProductId, new { @Name = "Id" })
         <hr />
         @*<div class="form-group">
             @Html.LabelFor(model => model.BookId, htmlAttributes: new { @class = "control-label col-md-2" })
@@ -21,20 +23,24 @@
         <div class="form-group">
             @Html.Label("Comment", htmlAttributes: new { @class = "control-label col-md-2" })
             <div class="col-md-10">
-                @Html.Editor("Comment", new { htmlAttributes = new { @class = "form-control", @Name= "Comment", @required= "required" } })
+                @Html.Editor("Comment", new { htmlAttributes = new { @class = "form-control", @Name = "Comment", @required = "required" } })
             </div>
         </div>
-        <div>
+        <div style="padding-left:15px;">
             Give us a rating out of 5 and let us know what you think
         </div>
         <div class="form-group">
-            @Html.Label("Rating", htmlAttributes: new { @class = "control-label col-md-2" })
+            @*@Html.Label("Rating", htmlAttributes: new { @class = "control-label col-md-2" })*@
             <div class="col-md-10">
                 @*<input type="number" max="5" class = "form-control"  name="Rating" required/>*@
-                @Html.Editor("Rating", new { htmlAttributes = new { @class = "form-control", @Name= "Rating" } })
+                @Html.Editor("Rating", new { htmlAttributes = new { @class = "form-control", @Name = "Rating", @Id= rating, @style="display:none;" } })
             </div>
         </div>
-
+        <div dir="ltr" style="padding-left:15px; margin-bottom:20px;">
+            <div id="raterreset-@Model.Rating" class="align-middle"></div>
+            <span class="clear-rating"></span>
+            @*<button id="raterreset-@Model.Rating-button" type="button" class="btn btn-outline-light btn-sm ms-2">Reset</button>*@
+        </div>
         <div class="form-group">
             <div class="col-md-offset-2 col-md-10">
                 <input type="button" id="save" value="Submit Rating" class="btn btn-primary" />
@@ -46,13 +52,15 @@
 @*<div>
         @Html.ActionLink("Back to List", "Index")
     </div>*@
-
+<script src="~/Content/Rating/rating.js"></script>
+<script src="~/Content/Rating/index.js"></script>
 
 <script>
     $(document).ready(function () {
         $('#save').on('click', function () {
+            debugger;
             var cmt = $("#Comment").val();
-            var rtng = $("#Rating").val();
+            var rtng = $("#RatingValue-@Model.Rating").val();
             var bkna = $("#Bookname").val();
             if (cmt == null) {
                 alert("invalid");
@@ -79,4 +87,16 @@
             }
         });
     });
+    var starRatingreset = raterJs({
+        starSize: 22,
+        element: document.querySelector("#raterreset-@Model.Rating"),
+        rateCallback: function (e, t) {
+            this.setRating(e), t()
+        }
+    });
+    document.querySelector("#raterreset-@Model.Rating").addEventListener("click", function () {
+        debugger;
+        const value_data = document.getElementById("raterreset-@Model.Rating").dataset.rating;
+        document.querySelector("#RatingValue-@Model.Rating").value = value_data
+    }, !1);
 </script>

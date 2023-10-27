@@ -48,10 +48,10 @@ namespace BookStore.Controllers
         public ActionResult Create([Bind(Include = "Id,CouponEntry,userId,CouponUsed,CouponUserIsValid,CouponDiscountAmount")] UsedCouponList usedCouponList, Coupon coupon, Cart cart)
         {
             //Queries
-            var ValidCoupon = db.Coupons.Where(x => x.CouponCode != null && x.CouponIsActive == true).ToList();
+            var nowDate = DateTime.Now;
+            var ValidCoupon = db.Coupons.Where(x => x.CouponCode != null && x.CouponIsActive == true && x.EndDate < nowDate && x.StartDate > nowDate).ToList();
             var getUsersInTable = db.UsedCouponLists.Where(x => x.userId != null).ToList();
             var getUsers = db.Users.Where(x => x.Id != null).ToList();
-
             //ViewBag
 
             if (usedCouponList.CouponEntry != null)

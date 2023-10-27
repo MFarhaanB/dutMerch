@@ -11,8 +11,8 @@ namespace BookStore.Models
     {
         [Key, DatabaseGenerated(DatabaseGeneratedOption.Identity)]  
         public int Id { get; set; }
-        public int SaleId { get; set; }
-        public int DeliveryId { get; set; }
+        public int? SaleId { get; set; }
+        public int? DeliveryId { get; set; }
         public String Driver { get; set; }
         public String Request { get; set; }
         public String Response { get; set; }
