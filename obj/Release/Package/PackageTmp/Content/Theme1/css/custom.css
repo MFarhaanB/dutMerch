@@ -4,7 +4,7 @@
     height: 2.0rem;
     padding: 0 1rem;
     border-radius: 0.9rem;
-    background: linear-gradient( -45deg, #d0a772, #e8b779, #fcc072 );
+    background: linear-gradient( -45deg, #838996, #e8b779, #fcc072 );
     background-size: 400%;
     background-position: 90% 0;
     color: #ffffff;
@@ -17,14 +17,14 @@
 }
 
 .dropbtn:hover, .dropbtn:focus {
-    background-color: #d0a772;
+    background-color: #838996;
 }
 
 .AddLinkTab {
     height: 4.5rem;
     padding: 0 1rem;
     border-radius: 0.375rem;
-    background: #d0a772;
+    background: #838996;
     color: #ffffff;
     box-shadow: 0 0.4rem 0 0 #f7d2a1;
     letter-spacing: 3px;
