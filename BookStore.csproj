@@ -298,9 +298,11 @@
     <Compile Include="Helpers\EmailTemplates.cs" />
     <Compile Include="Helpers\ImageHelper.cs" />
     <Compile Include="Helpers\QrCodeHelper.cs" />
+    <Compile Include="Helpers\SMSHelper.cs" />
     <Compile Include="Helpers\StatusHelper.cs" />
     <Compile Include="Helpers\TimelineHelper.cs" />
     <Compile Include="Helpers\ViewHelper.cs" />
+    <Compile Include="Helpers\VisitorsHelper.cs" />
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\AccountViewModels.cs" />
     <Compile Include="Models\Analytic.cs" />
@@ -346,6 +348,7 @@
     <Compile Include="Models\ShoppingCart.cs" />
     <Compile Include="Models\SmsNotification.cs" />
     <Compile Include="Models\Status.cs" />
+    <Compile Include="Models\SystemVisitors.cs" />
     <Compile Include="Models\Timeline.cs" />
     <Compile Include="Models\UsedCouponList.cs" />
     <Compile Include="Models\WishList.cs" />

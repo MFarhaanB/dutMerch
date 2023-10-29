@@ -6,6 +6,7 @@ using System.Net.Mail;
 using System.Net;
 using BookStore.Helpers;
 using System.Web.Helpers;
+using System;
 
 namespace BookStore.Controllers
 {
@@ -15,6 +16,7 @@ namespace BookStore.Controllers
         public ActionResult Index()
         {
             DatabaseInjector.DBInjector();
+            VisitorsHelper.SaveVisitor(Guid.NewGuid().ToString());
             var product = db.Products.ToList();
             return View(product);
         }

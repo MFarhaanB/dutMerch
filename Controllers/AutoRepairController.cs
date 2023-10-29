@@ -524,6 +524,10 @@ namespace BookStore.Controllers
             body = body.Replace("<strong>", "").Replace("</strong>", "");
             ApplicationUser user = await _context.Users.FirstOrDefaultAsync(a => a.UserName == autoEnquiry.Email);
 
+
+            SMSHelper _helper = new SMSHelper(_context);
+            await _helper.SMSSend("Test message", "0799815312");
+
             SmsNotification smsNotification = new SmsNotification();
             SMSViewModel sms = new SMSViewModel();
             sms.messages = new Message[]
