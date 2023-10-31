@@ -16,7 +16,7 @@ namespace BookStore.Controllers
         public ActionResult Index()
         {
             DatabaseInjector.DBInjector();
-            VisitorsHelper.SaveVisitor(Guid.NewGuid().ToString());
+            if (Request.IsAuthenticated) VisitorsHelper.SaveVisitor(Guid.NewGuid().ToString());
             var product = db.Products.ToList();
             return View(product);
         }

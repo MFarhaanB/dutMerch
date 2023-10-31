@@ -6,6 +6,7 @@ using System.Data.Entity;
 using System.Linq;
 using System.Net;
 using System.Net.Mail;
+using System.Threading.Tasks;
 using System.Web.Mvc;
 
 namespace BookStore.Controllers
@@ -135,19 +136,18 @@ namespace BookStore.Controllers
             base.Dispose(disposing);
         }
 
-        public ActionResult SendCouponButton(int couponId)
+        public async Task< ActionResult> SendCouponButton(int couponId)
         {
-
             var coupon = db.Coupons.FirstOrDefault(x => x.CouponIsActive == true && x.CodeId == couponId);
             var getUsers = db.Users.Where(x => x.Email != null).ToList();
-            
-
 
             foreach (var item in getUsers)
             {
+                string subject = "Get a Discount .Use our Coupon to get discount on your purchase -  " + coupon.CouponCode;
+                SMSHelper _helper = new SMSHelper(db);
+                await _helper.SMSSend(subject, item.PhoneNumber);
                 if (coupon != null) SendCouponEmail(item.Email, item.Name, coupon.CouponCode);
             }
-
             return RedirectToAction("Index");
         }
 
