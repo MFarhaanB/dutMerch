@@ -370,6 +370,7 @@
     <Compile Include="ViewModels\TimelinesViewModel.cs" />
   </ItemGroup>
   <ItemGroup>
+    <Content Include="Content\apex\apexcharts.min.js" />
     <Content Include="Content\bootstrap-datepicker.css" />
     <Content Include="Content\bootstrap-datepicker.min.css" />
     <Content Include="Content\bootstrap-multiselect.css" />
