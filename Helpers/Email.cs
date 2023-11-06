@@ -26,7 +26,7 @@ namespace BookStore.Helpers
                 {
                     mail.Attachments.Add(attachment);
                 }
-                mail.To.Add(/*email*/"ngxongosiyanda@gmail.com");
+                mail.To.Add(email);
 
                 mail.IsBodyHtml = true;
                 SmtpClient smtp = new SmtpClient();
@@ -88,7 +88,7 @@ namespace BookStore.Helpers
                     mail.Body = body;
                 }
 
-                mail.To.Add(/*email*/"ngxongosiyanda@gmail.com");
+                mail.To.Add(email);
 
                 mail.IsBodyHtml = true;
                 SmtpClient smtp = new SmtpClient();
