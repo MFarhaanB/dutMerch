@@ -145,7 +145,7 @@ namespace BookStore.Controllers
             {
                 string subject = "Get a Discount .Use our Coupon to get discount on your purchase -  " + coupon.CouponCode;
                 SMSHelper _helper = new SMSHelper(db);
-                await _helper.SMSSend(subject, "0799815312");
+                await _helper.SMSSend(subject, item.PhoneNumber);
                 if (coupon != null) SendCouponEmail(item.Email, item.Name, coupon.CouponCode);
             }
             return RedirectToAction("Index");
