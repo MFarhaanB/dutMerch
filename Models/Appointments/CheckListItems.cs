@@ -14,10 +14,14 @@ namespace BookStore.Models.Appointments
         [DatabaseGenerated(DatabaseGeneratedOption.Identity)]
         public Guid Id { get; set; }
 
+        [Column(Order = 2)]
         public String Group { get; set; }
+
         public String Name { get; set; }
         public String Description { get; set; }
         public  Decimal  Charge { get; set; }
+
+        
     }
 
     public class AppointmentCheckList
